@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { Marquee } from "@/components/Marquee";
 import { Section } from "@/components/Section";
 import { ProjectCard } from "@/components/ProjectCard";
 import { StatsGrid } from "@/components/StatsGrid";
@@ -25,6 +26,8 @@ export default function Home() {
         primaryCta={{ label: text.home.heroCtaPrimary, href: "/projetos" }}
         secondaryCta={{ label: text.home.heroCtaSecondary, href: "/contato" }}
       />
+
+      <Marquee words={text.home.marqueeWords} />
 
       <Reveal>
         <Section title={text.home.statsHeading.title} highlight={text.home.statsHeading.highlight}>

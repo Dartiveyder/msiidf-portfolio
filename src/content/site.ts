@@ -825,6 +825,7 @@ export type SiteText = {
     heroSkills: string[];
     heroCtaPrimary: string;
     heroCtaSecondary: string;
+    marqueeWords: string[];
     statsHeading: Heading;
     projectsHeading: Heading;
     projectsCta: string;
@@ -913,6 +914,7 @@ const pt: SiteText = {
     heroSkills: ["Product Design", "UX Design", "UI Design", "UX Research"],
     heroCtaPrimary: "VER PROJETOS",
     heroCtaSecondary: "CONTATO",
+    marqueeWords: ["UX/UI", "Produto", "Branding", "Web", "Mobile", "B2B", "B2C", "Estratégia"],
     statsHeading: { title: "Feitos e", highlight: "Realizações" },
     projectsHeading: { title: "Projetos e", highlight: "Trabalhos" },
     projectsCta: "VER TODOS OS PROJETOS",
@@ -1119,6 +1121,7 @@ const en: SiteText = {
     heroSkills: ["Product Design", "UX Design", "UI Design", "UX Research"],
     heroCtaPrimary: "VIEW PROJECTS",
     heroCtaSecondary: "CONTACT",
+    marqueeWords: ["UX/UI", "Product", "Branding", "Web", "Mobile", "B2B", "B2C", "Strategy"],
     statsHeading: { title: "Highlights and", highlight: "Achievements" },
     projectsHeading: { title: "Projects and", highlight: "Work" },
     projectsCta: "VIEW ALL PROJECTS",
