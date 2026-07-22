@@ -29,11 +29,10 @@ export default function Home() {
 
       <Marquee words={text.home.marqueeWords} />
 
-      <Reveal>
+      <Reveal className="mt-9 content:mt-16">
         <Section
           title={text.home.projectsHeading.title}
           highlight={text.home.projectsHeading.highlight}
-          tight
         >
           <div className="mb-10 grid w-full grid-cols-1 gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, i) => (
