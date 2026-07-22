@@ -440,6 +440,67 @@ Também seria importante revisar a acessibilidade da interface, documentar o sis
       description:
         "CTAs claros e navegação intuitiva, focada em experiência e personalização do usuário com segmentação de personagens. Visual imersivo e responsivo integra comunidade e e-sports, elevando a experiência além do gameplay.",
       tags: ["Games", "E-sports", "UI Visual"],
+      imageAlt: "Interface do projeto FighterX com hero de destaque e grade de seleção de personagens.",
+      externalUrlLabel: "VER PROTÓTIPO",
+      caseStudy: {
+        heroSubtitle: "Landing page e experiência visual para um jogo mobile de e-sports",
+        role: "UI/UX Designer",
+        type: "Projeto autoral · Landing page para jogo mobile",
+        skills: ["UI Design", "Design de interação", "Prototipação", "Responsividade"],
+        problem:
+          "Jogos mobile de e-sports competem por atenção em poucos segundos: a landing page precisa comunicar a proposta do jogo, gerar desejo de download e apresentar o elenco de personagens sem sobrecarregar quem está apenas descobrindo o produto.\n\nO desafio era estruturar uma experiência que funcionasse tanto para o público competitivo, interessado em classes e estilos de jogo, quanto para um público mais casual, atraído pela estética e pelo apelo visual do jogo.",
+        solution:
+          "A solução foi organizar a página em blocos de intenção clara: um hero com CTA de download em destaque, uma seção de seleção de personagens (soldiers) com nome, classe e uma frase de identidade para cada um, e blocos de apoio com os diferenciais do jogo.\n\nA grade de personagens foi desenhada para funcionar como um catálogo rápido de reconhecer — cada card combina retrato, categoria (Sniper, Assassin, Tank, Support) e uma descrição curta, permitindo explorar o elenco sem sair da página.",
+        impact: [
+          {
+            value: "01",
+            label: "Hierarquia de conversão clara",
+            description:
+              "O CTA de download aparece logo no hero e se repete nos blocos seguintes, mantendo o caminho para a conversão sempre visível.",
+          },
+          {
+            value: "02",
+            label: "Catálogo de personagens escaneável",
+            description:
+              "Cards padronizados com classe e descrição curta facilitam comparar os personagens rapidamente, mesmo em uma primeira visita.",
+          },
+          {
+            value: "03",
+            label: "Identidade visual imersiva",
+            description:
+              "Paleta escura, tipografia de impacto e composições com sensação de movimento reforçam o tom competitivo do jogo em toda a página.",
+          },
+        ],
+        body: `## Contexto
+
+FighterX é um projeto autoral de landing page para um jogo mobile de e-sports, com foco em apresentar o universo do jogo e conduzir o visitante até o download do aplicativo.
+
+A referência de tom era a comunicação de jogos competitivos: mensagens diretas, senso de urgência e uma estética que remete a ação e tecnologia, sem perder a legibilidade das informações.
+
+## Estrutura da página
+
+A página foi dividida em blocos com uma única intenção cada um. O hero apresenta a proposta do jogo e o CTA principal de download. Em seguida, uma seção explica o contexto narrativo do jogo, e outra apresenta a seleção de personagens.
+
+Cada bloco de apoio reforça um diferencial diferente — plataformas disponíveis, comunidade e chamadas repetidas para download — mantendo o caminho de conversão sempre acessível, sem depender de o usuário rolar até o fim da página.
+
+![Interface do projeto FighterX com hero de destaque e grade de seleção de personagens.](/assets/fighterx-screenshot.png)
+
+## Seleção de personagens
+
+A grade de "soldiers" foi pensada como um catálogo rápido de explorar. Cada card combina retrato, nome, classe (Sniper, Assassin, Tank, Support) e uma frase curta de identidade, permitindo comparar personagens sem abrir telas adicionais.
+
+Essa estrutura repetível facilita adicionar novos personagens no futuro sem alterar a lógica da página, já que cada card segue o mesmo padrão de informação.
+
+## Sistema visual
+
+A paleta escura, combinada com tipografia de alto impacto e composições com sensação de movimento, reforça o tom competitivo do jogo. Elementos de UI como botões e badges usam contraste alto para se destacar sobre o fundo escuro.
+
+## Próximos passos
+
+Como evolução do projeto, seria importante validar a hierarquia de informação com usuários reais, testar a usabilidade da seleção de personagens em telas menores e revisar o contraste de acessibilidade nas áreas com fundo escuro.
+
+Também valeria a pena documentar o sistema visual e transformar o protótipo conceitual em uma especificação preparada para desenvolvimento.`,
+      },
     },
     "universal-streaming": {
       name: "Universal — Streaming Musical",
@@ -448,6 +509,67 @@ Também seria importante revisar a acessibilidade da interface, documentar o sis
       description:
         "Design mobile-first com recomendações inteligentes e planos flexíveis para todos os perfis. Plataforma de streaming musical com experiência personalizada, navegação intuitiva e onboarding fluido, com destaque para engajamento e usabilidade sem atritos.",
       tags: ["Streaming", "Mobile-first", "Conversão"],
+      imageAlt: "Interface do projeto Universal com hero de destaque, funcionalidades e comparação de planos.",
+      externalUrlLabel: "VER PROTÓTIPO",
+      caseStudy: {
+        heroSubtitle: "Landing page mobile-first para um app de streaming musical",
+        role: "UI/UX Designer",
+        type: "Projeto autoral · Landing page para app de streaming",
+        skills: ["UI Design", "Mobile-first", "Prototipação", "Design de conversão"],
+        problem:
+          "Apps de streaming musical competem em um mercado com poucas diferenças reais de catálogo entre concorrentes, então a decisão de assinar costuma depender de como a proposta de valor é comunicada e de quão simples é comparar os planos disponíveis.\n\nO desafio era estruturar uma landing page mobile-first capaz de apresentar os recursos do app e guiar o usuário até a escolha de um plano sem gerar fricção ou dúvida sobre o que cada opção inclui.",
+        solution:
+          "A solução foi priorizar a hierarquia mobile-first, com blocos curtos e objetivos: um hero com a proposta de valor e uma prévia do player, uma seção de funcionalidades organizadas em cards, e uma comparação de planos com preços, recursos incluídos e CTA de teste gratuito em cada opção.\n\nOs planos foram desenhados lado a lado com os mesmos critérios de comparação, destacando o plano recomendado e deixando claro o que muda entre o gratuito, o individual e o familiar.",
+        impact: [
+          {
+            value: "01",
+            label: "Comparação de planos objetiva",
+            description:
+              "Os três planos usam os mesmos critérios de comparação lado a lado, facilitando a decisão sem depender de blocos longos de texto.",
+          },
+          {
+            value: "02",
+            label: "Fluxo mobile-first",
+            description:
+              "Layout pensado primeiro para telas pequenas, com blocos curtos e CTAs sempre visíveis ao longo da rolagem.",
+          },
+          {
+            value: "03",
+            label: "Onboarding guiado por recursos",
+            description:
+              "A seção de funcionalidades antecede os planos, dando contexto de valor antes de pedir a decisão de assinatura.",
+          },
+        ],
+        body: `## Contexto
+
+Universal é um projeto autoral de landing page para um app de streaming musical, com foco em apresentar a proposta de valor do produto e converter visitantes em assinantes de um dos planos.
+
+O ponto de partida foi pensar mobile-first, já que a maior parte do consumo de streaming musical acontece no celular, e a página precisava funcionar bem antes de qualquer adaptação para telas maiores.
+
+## Estrutura mobile-first
+
+A página foi organizada em blocos curtos, pensados primeiro para a tela do celular. O hero apresenta a proposta de valor com uma prévia do player de música, seguido por uma seção com as principais funcionalidades do app organizadas em cards.
+
+Essa ordem — proposta de valor, depois funcionalidades, depois planos — dá contexto ao usuário antes de pedir uma decisão de assinatura, em vez de apresentar preços logo de início.
+
+![Interface do projeto Universal com hero de destaque, funcionalidades e comparação de planos.](/assets/universal-screenshot.png)
+
+## Comparação de planos
+
+Os três planos (gratuito, individual e familiar) foram desenhados lado a lado, usando os mesmos critérios de comparação em cada card: recursos incluídos, preço e um CTA de teste grátis. O plano recomendado recebe destaque visual para facilitar a decisão.
+
+Manter os mesmos critérios em todos os planos evita que o usuário precise ler blocos longos de texto para entender as diferenças entre as opções.
+
+## Sistema visual
+
+A paleta e a tipografia priorizam contraste e legibilidade em telas pequenas, com CTAs de alto contraste sempre visíveis ao longo da rolagem, reforçando o caminho até a assinatura.
+
+## Próximos passos
+
+Como evolução do projeto, seria importante validar a comparação de planos com testes de usabilidade, testar o fluxo de assinatura ponta a ponta e revisar a experiência de onboarding logo após o cadastro.
+
+Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispositivo e documentar o sistema visual como especificação para desenvolvimento.`,
+      },
     },
   },
   en: {
@@ -786,6 +908,67 @@ It would also be important to review the interface's accessibility, document the
       description:
         "Clear CTAs and intuitive navigation, focused on user experience and personalization through character segmentation. An immersive, responsive visual language brings community and e-sports together, elevating the experience beyond gameplay.",
       tags: ["Games", "E-sports", "Visual UI"],
+      imageAlt: "FighterX project interface with a featured hero and character selection grid.",
+      externalUrlLabel: "VIEW PROTOTYPE",
+      caseStudy: {
+        heroSubtitle: "Landing page and visual experience for a mobile e-sports game",
+        role: "UI/UX Designer",
+        type: "Personal project · Landing page for a mobile game",
+        skills: ["UI Design", "Interaction Design", "Prototyping", "Responsiveness"],
+        problem:
+          "Mobile e-sports games compete for attention in a matter of seconds: the landing page needs to communicate the game's proposition, create the desire to download it and present the character roster without overwhelming someone who's just discovering the product.\n\nThe challenge was structuring an experience that worked both for the competitive audience, interested in classes and playstyles, and for a more casual audience drawn in by the game's aesthetic and visual appeal.",
+        solution:
+          "The solution was to organize the page into blocks with a single clear intent each: a hero with a prominent download CTA, a character selection ('soldiers') section with a name, class and identity line for each one, and supporting blocks highlighting the game's differentiators.\n\nThe character grid was designed to work as a catalog that's quick to scan — each card combines a portrait, a category (Sniper, Assassin, Tank, Support) and a short description, letting visitors explore the roster without leaving the page.",
+        impact: [
+          {
+            value: "01",
+            label: "Clear conversion hierarchy",
+            description:
+              "The download CTA appears right in the hero and repeats through the following blocks, keeping the path to conversion always visible.",
+          },
+          {
+            value: "02",
+            label: "Scannable character catalog",
+            description:
+              "Standardized cards with class and a short description make it easy to compare characters quickly, even on a first visit.",
+          },
+          {
+            value: "03",
+            label: "Immersive visual identity",
+            description:
+              "A dark palette, high-impact typography and compositions with a sense of motion reinforce the game's competitive tone throughout the page.",
+          },
+        ],
+        body: `## Context
+
+FighterX is a personal landing page project for a mobile e-sports game, focused on introducing the game's world and guiding visitors toward downloading the app.
+
+The tone reference was competitive game marketing: direct messaging, a sense of urgency and an aesthetic that evokes action and technology, without losing the legibility of the information.
+
+## Page structure
+
+The page was split into blocks, each with a single intent. The hero presents the game's proposition and the main download CTA. Next, one section explains the game's narrative context, and another presents the character selection.
+
+Each supporting block reinforces a different differentiator — available platforms, community and repeated download prompts — keeping the conversion path always accessible, without relying on the visitor scrolling all the way down.
+
+![FighterX project interface with a featured hero and character selection grid.](/assets/fighterx-screenshot.png)
+
+## Character selection
+
+The "soldiers" grid was designed as a catalog that's quick to explore. Each card combines a portrait, name, class (Sniper, Assassin, Tank, Support) and a short identity line, making it possible to compare characters without opening additional screens.
+
+This repeatable structure makes it easy to add new characters in the future without changing the page's logic, since every card follows the same information pattern.
+
+## Visual system
+
+The dark palette, combined with high-impact typography and compositions with a sense of motion, reinforces the game's competitive tone. UI elements like buttons and badges use high contrast to stand out against the dark background.
+
+## Next steps
+
+As an evolution of the project, it would be important to validate the information hierarchy with real users, test the usability of the character selection on smaller screens and review accessibility contrast in the darker areas.
+
+It would also be worth documenting the visual system and turning the conceptual prototype into a specification ready for development.`,
+      },
     },
     "universal-streaming": {
       name: "Universal — Music Streaming",
@@ -794,6 +977,67 @@ It would also be important to review the interface's accessibility, document the
       description:
         "Mobile-first design with smart recommendations and flexible plans for every profile. A music streaming platform with a personalized experience, intuitive navigation and smooth onboarding, focused on engagement and frictionless usability.",
       tags: ["Streaming", "Mobile-first", "Conversion"],
+      imageAlt: "Universal project interface with a featured hero, features and plan comparison.",
+      externalUrlLabel: "VIEW PROTOTYPE",
+      caseStudy: {
+        heroSubtitle: "Mobile-first landing page for a music streaming app",
+        role: "UI/UX Designer",
+        type: "Personal project · Landing page for a streaming app",
+        skills: ["UI Design", "Mobile-first", "Prototyping", "Conversion Design"],
+        problem:
+          "Music streaming apps compete in a market with few real catalog differences between competitors, so the decision to subscribe often depends on how the value proposition is communicated and how easy it is to compare the available plans.\n\nThe challenge was structuring a mobile-first landing page capable of presenting the app's features and guiding the user toward choosing a plan without creating friction or doubt about what each option includes.",
+        solution:
+          "The solution was to prioritize a mobile-first hierarchy, with short, focused blocks: a hero with the value proposition and a player preview, a features section organized into cards, and a plan comparison with pricing, included features and a free-trial CTA on each option.\n\nThe plans were laid out side by side using the same comparison criteria, highlighting the recommended plan and making clear what changes between the free, individual and family tiers.",
+        impact: [
+          {
+            value: "01",
+            label: "Objective plan comparison",
+            description:
+              "All three plans use the same comparison criteria side by side, making the decision easier without relying on long blocks of text.",
+          },
+          {
+            value: "02",
+            label: "Mobile-first flow",
+            description:
+              "A layout designed for small screens first, with short blocks and CTAs that stay visible throughout the scroll.",
+          },
+          {
+            value: "03",
+            label: "Feature-led onboarding",
+            description:
+              "The features section comes before the plans, giving context on value before asking for the subscription decision.",
+          },
+        ],
+        body: `## Context
+
+Universal is a personal landing page project for a music streaming app, focused on presenting the product's value proposition and converting visitors into subscribers of one of its plans.
+
+The starting point was thinking mobile-first, since most music streaming consumption happens on the phone, and the page needed to work well before any adaptation to larger screens.
+
+## Mobile-first structure
+
+The page was organized into short blocks, designed for the phone screen first. The hero presents the value proposition alongside a music player preview, followed by a section with the app's main features organized into cards.
+
+That order — value proposition, then features, then plans — gives the user context before asking for a subscription decision, instead of leading with pricing.
+
+![Universal project interface with a featured hero, features and plan comparison.](/assets/universal-screenshot.png)
+
+## Plan comparison
+
+The three plans (free, individual and family) were laid out side by side, using the same comparison criteria on every card: included features, price and a free-trial CTA. The recommended plan gets visual emphasis to make the decision easier.
+
+Keeping the same criteria across every plan avoids making the user read long blocks of text to understand the differences between options.
+
+## Visual system
+
+The palette and typography prioritize contrast and legibility on small screens, with high-contrast CTAs that stay visible throughout the scroll, reinforcing the path toward subscribing.
+
+## Next steps
+
+As an evolution of the project, it would be important to validate the plan comparison with usability testing, test the end-to-end subscription flow and review the onboarding experience right after sign-up.
+
+It would also be worth adapting every screen for different device sizes and documenting the visual system as a development-ready specification.`,
+      },
     },
   },
 };
