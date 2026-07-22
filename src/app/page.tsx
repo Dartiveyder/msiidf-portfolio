@@ -14,7 +14,7 @@ import { getProjects, getSiteText } from "@/content/site";
 export default function Home() {
   const { lang } = useLanguage();
   const text = getSiteText(lang);
-  const projects = getProjects(lang).slice(0, 3);
+  const projects = getProjects(lang).slice(0, 5);
   const workflowPreview = text.workflow.slice(0, 3);
 
   return (
@@ -30,29 +30,23 @@ export default function Home() {
       <Marquee words={text.home.marqueeWords} />
 
       <Reveal>
-        <Section title={text.home.statsHeading.title} highlight={text.home.statsHeading.highlight}>
-          <StatsGrid stats={text.stats} />
-        </Section>
-      </Reveal>
-
-      <Reveal>
         <Section
           title={text.home.projectsHeading.title}
           highlight={text.home.projectsHeading.highlight}
           tight
         >
-          <div className="mb-10 grid w-full grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 text-left">
+          <div className="mb-10 grid w-full grid-cols-1 gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, i) => (
-              <Reveal key={project.slug} delay={i * 80}>
+              <Reveal key={project.slug} delay={i * 80} className={i === 0 ? "sm:col-span-2 lg:col-span-2" : ""}>
                 <ProjectCard
-                  variant="card"
+                  variant="showcase"
                   slug={project.slug}
                   icon={project.icon}
                   title={project.title}
                   name={project.name}
                   summary={project.summary}
                   image={project.image}
-                  viewMoreLabel={text.common.viewMore}
+                  tags={project.tags}
                 />
               </Reveal>
             ))}
@@ -63,6 +57,12 @@ export default function Home() {
           >
             {text.home.projectsCta}
           </Link>
+        </Section>
+      </Reveal>
+
+      <Reveal>
+        <Section title={text.home.statsHeading.title} highlight={text.home.statsHeading.highlight}>
+          <StatsGrid stats={text.stats} />
         </Section>
       </Reveal>
 

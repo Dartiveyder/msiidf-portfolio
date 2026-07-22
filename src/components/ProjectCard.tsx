@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export type ProjectCardVariant = "row" | "card";
+export type ProjectCardVariant = "row" | "card" | "showcase";
 
 export type ProjectCardProps = {
   variant: ProjectCardVariant;
@@ -11,7 +11,7 @@ export type ProjectCardProps = {
   title: string;
   /** Used for alt text and the placeholder label */
   name?: string;
-  /** Short copy, used by the "card" variant */
+  /** Short copy, used by the "card" variant and as the hover description on "showcase" */
   summary?: string;
   /** Longer copy, used by the "row" variant */
   description?: string;
@@ -27,6 +27,10 @@ export type ProjectCardProps = {
   requestAccessLabel?: string;
   /** Href for the request-access button ("row" variant only) */
   requestAccessHref?: string;
+  /** "showcase" variant only — skill/tag pills shown over the image */
+  tags?: string[];
+  /** "showcase" variant only — extra classes on the outer link (e.g. grid column span) */
+  className?: string;
 };
 
 function isImagePath(icon: string) {
@@ -95,8 +99,60 @@ export function ProjectCard({
   viewMoreLabel = "VER MAIS",
   requestAccessLabel = "SOLICITAR ACESSO",
   requestAccessHref = "/contato",
+  tags,
+  className = "",
 }: ProjectCardProps) {
   const resolvedHref = href ?? `/projetos/${slug}`;
+
+  if (variant === "showcase") {
+    return (
+      <Link
+        href={resolvedHref}
+        className={`group relative block h-[240px] w-full overflow-hidden rounded-2xl border border-border content:h-[340px] ${className}`}
+      >
+        {image ? (
+          <Image
+            src={image}
+            alt={name ?? title}
+            fill
+            className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, #1c1c1c 0px, #1c1c1c 10px, #171717 10px, #171717 20px)",
+            }}
+          />
+        )}
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+
+        <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2.5 p-5 transition-opacity duration-300 group-hover:opacity-0">
+          <h4 className="m-0 font-display text-lg font-bold text-white content:text-xl">{title}</h4>
+          {tags && tags.length > 0 ? (
+            <div className="flex flex-wrap gap-1.5">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full bg-white/15 px-2.5 py-1 font-mono text-[0.65rem] font-semibold tracking-[0.04em] text-white uppercase backdrop-blur-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          ) : null}
+        </div>
+
+        {summary ? (
+          <div className="absolute inset-0 flex items-end bg-black/75 p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p className="m-0 font-body text-sm leading-[1.5] text-white content:text-base">{summary}</p>
+          </div>
+        ) : null}
+      </Link>
+    );
+  }
 
   if (variant === "card") {
     return (
