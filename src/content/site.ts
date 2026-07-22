@@ -838,7 +838,7 @@ export type SiteText = {
     contactHeading: Heading;
     contactCta: string;
   };
-  stats: { emoji: string; title: string; desc: string }[];
+  stats: { emoji: string; title: string; desc: string; value?: string }[];
   workflow: { n: string; title: string; desc: string }[];
   sobre: {
     eyebrow: string;
@@ -930,17 +930,20 @@ const pt: SiteText = {
   stats: [
     {
       emoji: "😄",
-      title: "Satisfação 90%",
+      value: "90%",
+      title: "Satisfação",
       desc: "Melhoria da experiência e do contentamento do usuário, com base em metodologias centradas no usuário e estudos de comportamento.",
     },
     {
       emoji: "⏱️",
-      title: "Redução de 37%",
+      value: "37%",
+      title: "Redução",
       desc: "Redução de 37% no tempo de criação de perfil para candidatura a vagas.",
     },
     {
       emoji: "⬆️",
-      title: "+1 milhão de usuários",
+      value: "+1M",
+      title: "Usuários impactados",
       desc: "Criação de soluções para recrutamento e seleção com impacto em mais de 1 milhão de usuários.",
     },
     {
@@ -1137,17 +1140,20 @@ const en: SiteText = {
   stats: [
     {
       emoji: "😄",
-      title: "90% Satisfaction",
+      value: "90%",
+      title: "Satisfaction",
       desc: "Improved user experience and satisfaction, based on user-centered methods and behavior studies.",
     },
     {
       emoji: "⏱️",
-      title: "37% Reduction",
+      value: "37%",
+      title: "Reduction",
       desc: "37% reduction in the time to build a profile for job applications.",
     },
     {
       emoji: "⬆️",
-      title: "+1 million users",
+      value: "+1M",
+      title: "Impacted users",
       desc: "Recruitment and selection solutions impacting over 1 million users.",
     },
     {
