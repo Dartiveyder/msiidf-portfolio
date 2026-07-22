@@ -12,6 +12,7 @@ import { SiteChrome } from "@/components/SiteChrome";
 import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransitionProvider } from "@/components/PageTransitionProvider";
 import { SprayOverlay } from "@/components/SprayOverlay";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -64,6 +65,7 @@ export default function RootLayout({
             <CustomCursor />
             <SprayOverlay />
             <SiteChrome>{children}</SiteChrome>
+            <ScrollToTopButton />
           </PageTransitionProvider>
         </LanguageProvider>
       </body>
