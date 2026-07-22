@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
   Space_Grotesk,
   Inter,
@@ -6,6 +7,7 @@ import {
   Michroma,
   Audiowide,
 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { SiteChrome } from "@/components/SiteChrome";
@@ -60,12 +62,22 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} ${michroma.variable} ${audiowide.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bg font-body">
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "xqlxd3g7xs");
+          `}
+        </Script>
         <LanguageProvider>
           <PageTransitionProvider>
             <CustomCursor />
             <SprayOverlay />
             <SiteChrome>{children}</SiteChrome>
             <ScrollToTopButton />
+            <Analytics />
           </PageTransitionProvider>
         </LanguageProvider>
       </body>
