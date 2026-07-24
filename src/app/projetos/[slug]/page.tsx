@@ -9,8 +9,14 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject("pt", slug);
+  const title = project ? `${project.title} — MSIIDF` : "Projeto — MSIIDF";
+  const description = project?.summary;
+
   return {
-    title: project ? `${project.title} — MSIIDF` : "Projeto — MSIIDF",
+    title,
+    description,
+    openGraph: { title, description },
+    twitter: { title, description },
   };
 }
 

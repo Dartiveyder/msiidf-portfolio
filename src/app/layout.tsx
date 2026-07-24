@@ -46,9 +46,49 @@ const audiowide = Audiowide({
   weight: ["400"],
 });
 
+const siteUrl = "https://msiidf-portfolio.vercel.app";
+const siteName = "MSIIDF — Mateus Silva, Product Designer";
+const siteDescription =
+  "Portfólio de Mateus Silva, Product Designer e UX/UI Designer com experiência em produtos B2B e B2C, recrutamento, gestão de pessoas e rotinas de RH.";
+
 export const metadata: Metadata = {
-  title: "MSIIDF — Mateus Silva, Product Designer",
-  description: "Transformando ideias em experiências digitais memoráveis",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: siteName,
+    template: "%s",
+  },
+  description: siteDescription,
+  keywords: [
+    "Product Designer",
+    "UX Designer",
+    "UI Designer",
+    "UX Research",
+    "Design de produto",
+    "Portfólio de design",
+    "Mateus Silva",
+  ],
+  authors: [{ name: "Mateus Silva" }],
+  creator: "Mateus Silva",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: siteUrl,
+    siteName,
+    title: siteName,
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description: siteDescription,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
