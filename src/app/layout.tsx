@@ -99,6 +99,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "bzILKneSAskNzheQmdmTS5EpOsakFhU3efByirEHPUs",
+  },
 };
 
 const personJsonLd = {
