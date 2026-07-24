@@ -15,6 +15,7 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransitionProvider } from "@/components/PageTransitionProvider";
 import { SprayOverlay } from "@/components/SprayOverlay";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { socialLinks } from "@/content/site";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -100,6 +101,17 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mateus Silva",
+  jobTitle: "Product Designer",
+  url: siteUrl,
+  image: `${siteUrl}/og-image.png`,
+  description: siteDescription,
+  sameAs: [socialLinks.linkedin, socialLinks.behance],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -110,6 +122,9 @@ export default function RootLayout({
       lang="pt"
       className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} ${michroma.variable} ${audiowide.variable} h-full antialiased`}
     >
+      <head>
+        <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
+      </head>
       <body className="min-h-full flex flex-col bg-bg font-body">
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
