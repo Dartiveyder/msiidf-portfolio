@@ -72,6 +72,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon-32.png",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -79,11 +86,13 @@ export const metadata: Metadata = {
     siteName,
     title: siteName,
     description: siteDescription,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: siteName }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteName,
     description: siteDescription,
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
