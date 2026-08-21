@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectCard } from "@/components/ProjectCard";
+import { PasswordGateButton } from "@/components/PasswordGateButton";
 import { Reveal } from "@/components/Reveal";
 import { ImpactMetrics } from "@/components/ImpactMetrics";
 import { CaseStudyMarkdown } from "@/components/CaseStudyMarkdown";
@@ -188,7 +189,15 @@ export function ProjetoDetalheClient({ slug }: { slug: string }) {
         {project.requestAccess || project.externalUrl ? (
           <div className={caseStudy ? "mb-4 flex flex-wrap gap-4" : "mb-16 flex flex-wrap gap-4"}>
             {project.requestAccess ? (
-              /^https?:\/\//.test(project.requestAccessHref ?? "") ? (
+              project.requestAccessPassword ? (
+                <PasswordGateButton
+                  href={project.requestAccessHref ?? "/contato"}
+                  password={project.requestAccessPassword}
+                  label={projetoDetalhe.requestAccess}
+                  texts={projetoDetalhe.passwordGate}
+                  className="inline-block rounded-lg bg-primary px-6 py-3 font-mono text-sm font-bold tracking-[0.04em] text-text-oninverted no-underline transition-colors hover:bg-primary-hover"
+                />
+              ) : /^https?:\/\//.test(project.requestAccessHref ?? "") ? (
                 <a
                   href={project.requestAccessHref}
                   target="_blank"

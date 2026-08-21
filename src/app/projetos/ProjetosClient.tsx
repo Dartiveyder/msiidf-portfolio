@@ -34,6 +34,8 @@ export function ProjetosClient() {
               viewMoreLabel={text.common.viewMore}
               requestAccessLabel={text.projetoDetalhe.requestAccess}
               requestAccessHref={project.requestAccessHref}
+              requestAccessPassword={project.requestAccessPassword}
+              passwordGateTexts={text.projetoDetalhe.passwordGate}
             />
           </Reveal>
         ))}

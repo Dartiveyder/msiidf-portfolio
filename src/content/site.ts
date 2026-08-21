@@ -39,6 +39,8 @@ export type Project = {
   requestAccess?: boolean;
   /** Overrides the default "/contato" destination for the request-access button. */
   requestAccessHref?: string;
+  /** If set, the request-access button prompts for this password before opening requestAccessHref. */
+  requestAccessPassword?: string;
   name: string;
   title: string;
   summary: string;
@@ -58,6 +60,7 @@ const projectsMeta: ProjectMeta[] = [
     tools: ["Figma", "Clarity", "Teams", "ChatGPT"],
     requestAccess: true,
     requestAccessHref: "https://drive.google.com/file/d/1M5yybTueiNiDDY5bqZ-LWgXka-X8i-3f/view?usp=sharing",
+    requestAccessPassword: "991232350",
   },
   {
     slug: "jobfy",
@@ -1120,6 +1123,14 @@ export type SiteText = {
     toolsHeading: string;
     requestAccess: string;
     visitSite: string;
+    passwordGate: {
+      title: string;
+      description: string;
+      passwordLabel: string;
+      submitLabel: string;
+      cancelLabel: string;
+      wrongPasswordMessage: string;
+    };
     otherProjects: Heading;
     notFoundTitle: string;
     notFoundBack: string;
@@ -1321,6 +1332,14 @@ const pt: SiteText = {
     toolsHeading: "Ferramentas utilizadas",
     requestAccess: "SOLICITAR ACESSO",
     visitSite: "IR PARA O SITE",
+    passwordGate: {
+      title: "Acesso restrito",
+      description: "Digite a senha para acessar este conteúdo.",
+      passwordLabel: "Senha",
+      submitLabel: "Acessar",
+      cancelLabel: "Cancelar",
+      wrongPasswordMessage: "Senha incorreta. Tente novamente.",
+    },
     otherProjects: { title: "Outros", highlight: "projetos" },
     notFoundTitle: "Projeto não encontrado",
     notFoundBack: "← Voltar para projetos",
@@ -1531,6 +1550,14 @@ const en: SiteText = {
     toolsHeading: "Tools used",
     requestAccess: "REQUEST ACCESS",
     visitSite: "VISIT SITE",
+    passwordGate: {
+      title: "Restricted access",
+      description: "Enter the password to access this content.",
+      passwordLabel: "Password",
+      submitLabel: "Access",
+      cancelLabel: "Cancel",
+      wrongPasswordMessage: "Incorrect password. Please try again.",
+    },
     otherProjects: { title: "Other", highlight: "projects" },
     notFoundTitle: "Project not found",
     notFoundBack: "← Back to projects",
