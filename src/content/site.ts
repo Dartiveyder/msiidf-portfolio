@@ -68,6 +68,8 @@ const projectsMeta: ProjectMeta[] = [
     image: "/assets/jobfy-screenshot.png",
     tools: ["Figma", "Clarity", "Teams", "ChatGPT"],
     requestAccess: true,
+    requestAccessHref: "https://drive.google.com/drive/folders/1l3a5vZgDZMJtKnqagBcs1DTzsSieNC3r",
+    requestAccessPassword: "991232350",
   },
   {
     slug: "delivery-de-roupas",
