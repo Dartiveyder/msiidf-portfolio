@@ -61,16 +61,16 @@ export function Hero({
           {subtitle}
         </p>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <div className="mt-10 flex flex-col items-center gap-4 content:flex-row content:flex-wrap content:justify-center">
           <Link
             href={primaryCta.href}
-            className="box-border inline-flex min-w-[180px] items-center justify-center rounded-lg bg-primary px-[26px] py-3.5 font-nav text-base font-normal tracking-[0.04em] text-text-oninverted no-underline transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="box-border inline-flex w-full max-w-[280px] min-w-[180px] items-center justify-center rounded-lg bg-primary px-[26px] py-3.5 font-nav text-base font-normal tracking-[0.04em] text-text-oninverted no-underline transition-colors hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary content:w-auto content:max-w-none"
           >
             {primaryCta.label}
           </Link>
           <Link
             href={secondaryCta.href}
-            className="box-border inline-flex min-w-[180px] items-center justify-center rounded-lg border border-border-strong bg-transparent px-[26px] py-3.5 font-nav text-base font-normal tracking-[0.04em] text-text no-underline transition-colors hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="box-border inline-flex w-full max-w-[280px] min-w-[180px] items-center justify-center rounded-lg border border-border-strong bg-transparent px-[26px] py-3.5 font-nav text-base font-normal tracking-[0.04em] text-text no-underline transition-colors hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary content:w-auto content:max-w-none"
           >
             {secondaryCta.label}
           </Link>
