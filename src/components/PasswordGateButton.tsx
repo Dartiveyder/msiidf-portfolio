@@ -17,9 +17,11 @@ export type PasswordGateButtonProps = {
   label: string;
   className: string;
   texts: PasswordGateTexts;
+  /** If true, opens `href` as a file download instead of a new tab. */
+  download?: boolean;
 };
 
-export function PasswordGateButton({ href, password, label, className, texts }: PasswordGateButtonProps) {
+export function PasswordGateButton({ href, password, label, className, texts, download = false }: PasswordGateButtonProps) {
   const { title, description, passwordLabel, submitLabel, cancelLabel, wrongPasswordMessage } = texts;
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
@@ -46,11 +48,21 @@ export function PasswordGateButton({ href, password, label, className, texts }: 
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (value === password) {
-      close();
-      window.open(href, "_blank", "noopener,noreferrer");
-    } else {
+    if (value !== password) {
       setError(true);
+      return;
+    }
+
+    close();
+    if (download) {
+      const link = document.createElement("a");
+      link.href = href;
+      link.download = "";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    } else {
+      window.open(href, "_blank", "noopener,noreferrer");
     }
   };
 

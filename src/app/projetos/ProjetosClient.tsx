@@ -32,9 +32,10 @@ export function ProjetosClient() {
               image={project.image}
               showRequestAccess={project.requestAccess}
               viewMoreLabel={text.common.viewMore}
-              requestAccessLabel={text.projetoDetalhe.requestAccess}
+              requestAccessLabel={project.requestAccessLabel ?? text.projetoDetalhe.requestAccess}
               requestAccessHref={project.requestAccessHref}
               requestAccessPassword={project.requestAccessPassword}
+              requestAccessDownload={project.requestAccessDownload}
               passwordGateTexts={text.projetoDetalhe.passwordGate}
             />
           </Reveal>

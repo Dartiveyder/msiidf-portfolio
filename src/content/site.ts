@@ -41,6 +41,10 @@ export type Project = {
   requestAccessHref?: string;
   /** If set, the request-access button prompts for this password before opening requestAccessHref. */
   requestAccessPassword?: string;
+  /** Overrides the default "Solicitar acesso" label for this project's request-access button. */
+  requestAccessLabel?: string;
+  /** If true, entering the correct password downloads requestAccessHref instead of opening it in a new tab. */
+  requestAccessDownload?: boolean;
   name: string;
   title: string;
   summary: string;
@@ -49,8 +53,8 @@ export type Project = {
   caseStudy?: CaseStudy;
 };
 
-type ProjectMeta = Omit<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt">;
-type ProjectText = Pick<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt">;
+type ProjectMeta = Omit<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt" | "requestAccessLabel">;
+type ProjectText = Pick<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt" | "requestAccessLabel">;
 
 const projectsMeta: ProjectMeta[] = [
   {
@@ -59,8 +63,9 @@ const projectsMeta: ProjectMeta[] = [
     image: "/assets/flow-screenshot.png",
     tools: ["Figma", "Clarity", "Teams", "ChatGPT"],
     requestAccess: true,
-    requestAccessHref: "https://drive.google.com/file/d/1M5yybTueiNiDDY5bqZ-LWgXka-X8i-3f/view?usp=sharing",
+    requestAccessHref: "/assets/flow-project.pdf",
     requestAccessPassword: "991232350",
+    requestAccessDownload: true,
   },
   {
     slug: "jobfy",
@@ -116,6 +121,7 @@ const projectsText: Record<Lang, Record<string, ProjectText>> = {
       description:
         "Sistema ERP voltado para o RH, Folha de pagamento, Ponto, Férias, Saúde e Segurança do Trabalho, melhoria de fluxos e UI de sistema.",
       tags: ["ERP", "RH", "Sistemas complexos"],
+      requestAccessLabel: "BAIXAR PROJETO",
     },
     jobfy: {
       name: "Jobfy",
@@ -585,6 +591,7 @@ Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispos
       description:
         "ERP system for HR, payroll, timekeeping, leave, and workplace health & safety, with flow and system UI improvements.",
       tags: ["ERP", "HR", "Complex systems"],
+      requestAccessLabel: "DOWNLOAD PROJECT",
     },
     jobfy: {
       name: "Jobfy",

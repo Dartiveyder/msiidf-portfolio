@@ -193,8 +193,9 @@ export function ProjetoDetalheClient({ slug }: { slug: string }) {
                 <PasswordGateButton
                   href={project.requestAccessHref ?? "/contato"}
                   password={project.requestAccessPassword}
-                  label={projetoDetalhe.requestAccess}
+                  label={project.requestAccessLabel ?? projetoDetalhe.requestAccess}
                   texts={projetoDetalhe.passwordGate}
+                  download={project.requestAccessDownload}
                   className="inline-block rounded-lg bg-primary px-6 py-3 font-mono text-sm font-bold tracking-[0.04em] text-text-oninverted no-underline transition-colors hover:bg-primary-hover"
                 />
               ) : /^https?:\/\//.test(project.requestAccessHref ?? "") ? (

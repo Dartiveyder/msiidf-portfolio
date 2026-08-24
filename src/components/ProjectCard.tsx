@@ -32,6 +32,8 @@ export type ProjectCardProps = {
   requestAccessPassword?: string;
   /** Localized copy for the password-gate dialog, required when requestAccessPassword is set */
   passwordGateTexts?: PasswordGateTexts;
+  /** If true, entering the correct password downloads requestAccessHref instead of opening it in a new tab */
+  requestAccessDownload?: boolean;
   /** "showcase" variant only — skill/tag pills shown over the image */
   tags?: string[];
   /** "showcase" variant only — extra classes on the outer link (e.g. grid column span) */
@@ -106,6 +108,7 @@ export function ProjectCard({
   requestAccessHref = "/contato",
   requestAccessPassword,
   passwordGateTexts,
+  requestAccessDownload = false,
   tags,
   className = "",
 }: ProjectCardProps) {
@@ -212,6 +215,7 @@ export function ProjectCard({
                 password={requestAccessPassword}
                 label={requestAccessLabel}
                 texts={passwordGateTexts}
+                download={requestAccessDownload}
                 className="rounded-lg bg-primary px-5 py-2.5 font-mono text-sm font-bold tracking-[0.04em] text-text-oninverted no-underline transition-colors hover:bg-primary-hover"
               />
             ) : isExternalHref(requestAccessHref) ? (
