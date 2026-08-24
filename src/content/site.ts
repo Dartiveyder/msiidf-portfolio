@@ -73,8 +73,9 @@ const projectsMeta: ProjectMeta[] = [
     image: "/assets/jobfy-screenshot.png",
     tools: ["Figma", "Clarity", "Teams", "ChatGPT"],
     requestAccess: true,
-    requestAccessHref: "https://drive.google.com/drive/folders/1l3a5vZgDZMJtKnqagBcs1DTzsSieNC3r",
+    requestAccessHref: "/assets/jobfy-project.pdf",
     requestAccessPassword: "991232350",
+    requestAccessDownload: true,
   },
   {
     slug: "delivery-de-roupas",
@@ -191,6 +192,7 @@ Como evolução do projeto, os próximos passos envolvem validar as mudanças co
       description:
         "Criação de currículos com uma experiência guiada por IA, oferecendo templates, e personalização focada em empregabilidade. Interface intuitiva e feedback em tempo real garantem adaptação fácil do usuário em todas as etapas.",
       tags: ["Product Design", "IA", "Recrutamento"],
+      requestAccessLabel: "BAIXAR PROJETO",
       caseStudy: {
         note:
           "Este case apresenta um dos trabalhos que desenvolvi para a Jobfy durante minha atuação como UX/UI Designer.",
@@ -720,6 +722,7 @@ As an evolution of the project, next steps involve validating the changes with u
       description:
         "AI-guided resume building experience, offering templates and personalization focused on employability. An intuitive interface and real-time feedback make it easy for users to adapt at every step.",
       tags: ["Product Design", "AI", "Recruitment"],
+      requestAccessLabel: "DOWNLOAD PROJECT",
       caseStudy: {
         note:
           "This case features one of the projects I worked on for Jobfy during my time as a UX/UI Designer.",
