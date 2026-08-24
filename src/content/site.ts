@@ -122,6 +122,66 @@ const projectsText: Record<Lang, Record<string, ProjectText>> = {
         "Sistema ERP voltado para o RH, Folha de pagamento, Ponto, Férias, Saúde e Segurança do Trabalho, melhoria de fluxos e UI de sistema.",
       tags: ["ERP", "RH", "Sistemas complexos"],
       requestAccessLabel: "BAIXAR PROJETO",
+      caseStudy: {
+        heroSubtitle: "Redesign do módulo de Frequência do FLOW, sistema de gestão de RH e ponto",
+        note: "Este case apresenta um dos trabalhos que desenvolvi para o FLOW, sistema de gestão de RH, ponto e folha de pagamento.",
+        role: "UX/UI Designer",
+        type: "Produto B2B · Sistemas de RH e Ponto",
+        skills: ["Pesquisa com usuários", "Auditoria de UI", "Design de interação", "Design system", "Prototipação"],
+        problem:
+          "O módulo de Frequência do FLOW acumulava problemas de contraste, legibilidade e hierarquia visual: ícones fora de padrão e repetidos, pesos de texto inconsistentes entre botões, componentes muito próximos sem hierarquia clara, alertas grandes demais ocupando espaço de ação, e uma tabela que dominava a tela principal mesmo sendo usada com pouca frequência.\n\nAntes de qualquer decisão de redesign, conduzimos pesquisas qualitativas com clientes usuários do sistema para entender o fluxo de uso real e as dores com a usabilidade atual. As entrevistas revelaram atritos consistentes: correções de ponto feitas dia a dia em vez de em lote, navegação entre múltiplos módulos só para lançar um atestado, ausência de uma calculadora de ponto nativa (dependência de um app externo), impossibilidade de ajustar a escala de vários colaboradores de uma vez, e mensagens de erro que não explicavam causa, impacto ou como corrigir.",
+        solution:
+          "A partir da auditoria de interface e das entrevistas, priorizamos as dores com maior impacto no dia a dia dos usuários e redesenhamos o módulo de Frequência junto com ajustes na plataforma FLOW como um todo. Padronizamos ícones e cores em toda a plataforma, reorganizamos o header agrupando as opções de conta dentro de configurações, e adicionamos um campo de busca entre módulos.\n\nNo módulo de Frequência, o acesso passou a abrir uma lista de empresa, estabelecimento e contrato — em vez da tabela diretamente — permitindo abrir múltiplos contratos ao mesmo tempo, com breadcrumbs para orientação. Adicionamos filtros e busca de registros, seleção de dias por tipo, confirmação e edição de múltiplas marcações de uma vez, e destaque visual para os dias com marcação programada ou digitada, reduzindo o tempo necessário para encontrar e corrigir inconsistências na tabela.",
+        impact: [
+          {
+            value: "01",
+            label: "Correção de ponto em lote",
+            description:
+              "Seleção, confirmação e edição de múltiplos dias de uma vez, no lugar do lançamento de justificativas dia a dia.",
+          },
+          {
+            value: "02",
+            label: "Navegação simplificada",
+            description:
+              "Breadcrumbs, filtros e abertura de múltiplos contratos reduzem a necessidade de alternar entre módulos para tarefas do dia a dia.",
+          },
+          {
+            value: "03",
+            label: "Identidade visual padronizada",
+            description:
+              "Ícones, cores e pesos de texto unificados em toda a plataforma, substituindo os múltiplos padrões identificados na auditoria de interface.",
+          },
+        ],
+        body: `## Descoberta
+
+Antes de redesenhar qualquer tela, conduzimos pesquisas qualitativas com clientes usuários do sistema, buscando identificar pontos de atrito no fluxo de uso e entender como as informações eram interpretadas no dia a dia.
+
+As entrevistas revelaram dores recorrentes: correções de ponto lançadas dia por dia em vez de em lote, dificuldade em separar faltas justificadas de injustificadas, ausência de uma calculadora de ponto nativa, impossibilidade de ajustar a escala de vários colaboradores de uma vez, e a necessidade de navegar entre múltiplos módulos só para lançar um atestado ou consultar documentos.
+
+> Boa parte das dores não vinha de funcionalidades ausentes, mas da forma como as tarefas do dia a dia estavam distribuídas entre módulos diferentes.
+
+## Problemas identificados
+
+Em paralelo à pesquisa, uma auditoria de interface mapeou inconsistências visuais que afetavam a clareza do sistema: quatro tipos de ícone distintos em uso, pesos de texto diferentes entre botões, componentes muito próximos sem hierarquia clara, alertas ocupando espaço de ação desproporcional ao seu conteúdo, e uma tabela que dominava a tela principal mesmo sendo consultada com pouca frequência.
+
+Cruzando os achados da pesquisa com a auditoria, priorizamos as dores com maior impacto no uso diário para orientar o redesign, em vez de tentar resolver tudo de uma vez.
+
+## Mudanças na plataforma
+
+Para reduzir a sobrecarga visual identificada na auditoria, padronizamos ícones e cores em toda a plataforma FLOW, usando uma única biblioteca no lugar dos quatro padrões distintos em uso. O header foi reorganizado, agrupando as opções de conta dentro de configurações para diminuir sua carga visual, e um campo de busca entre módulos foi adicionado para reduzir a dependência de navegação manual pelos menus.
+
+![Interface do módulo de Frequência do FLOW](/assets/flow-screenshot.png)
+
+## Mudanças no módulo de Frequência
+
+O acesso ao módulo passou a abrir uma lista de empresa, estabelecimento e contrato, em vez da tabela diretamente — permitindo abrir mais de um contrato ao mesmo tempo, com breadcrumbs para orientar a navegação. Adicionamos um campo de busca de registros e filtros para facilitar a visualização de inconsistências.
+
+Para reduzir o retrabalho relatado nas entrevistas, passou a ser possível selecionar dias por tipo, confirmar e editar múltiplas marcações de uma só vez, no lugar de justificar dia por dia. Dias com marcação programada ou digitada passaram a ter destaque visual, e o peso do texto na tabela foi ajustado para reforçar a hierarquia entre as informações.
+
+## Próximos passos
+
+Como evolução do projeto, os próximos passos envolvem validar as mudanças com testes de usabilidade junto aos clientes entrevistados, acompanhar métricas de uso do módulo redesenhado após o lançamento, e aplicar a mesma padronização visual aos demais módulos do FLOW que ainda não passaram pelo redesign.`,
+      },
     },
     jobfy: {
       name: "Jobfy",
@@ -592,6 +652,66 @@ Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispos
         "ERP system for HR, payroll, timekeeping, leave, and workplace health & safety, with flow and system UI improvements.",
       tags: ["ERP", "HR", "Complex systems"],
       requestAccessLabel: "DOWNLOAD PROJECT",
+      caseStudy: {
+        heroSubtitle: "Redesign of FLOW's Timekeeping module, an HR and time-tracking management system",
+        note: "This case presents one of the works I developed for FLOW, an HR, timekeeping and payroll management system.",
+        role: "UX/UI Designer",
+        type: "B2B Product · HR and Timekeeping Systems",
+        skills: ["User research", "UI audit", "Interaction design", "Design system", "Prototyping"],
+        problem:
+          "FLOW's Timekeeping module had accumulated contrast, legibility and visual hierarchy problems: off-standard and repeated icons, inconsistent text weights across buttons, components placed too close together with no clear hierarchy, oversized alerts taking up action space, and a table that dominated the main screen despite being used infrequently.\n\nBefore making any redesign decisions, we ran qualitative research with client users of the system to understand real usage flows and pain points with the current usability. The interviews revealed consistent friction: time corrections made day by day instead of in batch, navigating across multiple modules just to log a medical certificate, no native time calculator (relying on an external app instead), no way to adjust the schedule for several employees at once, and error messages that didn't explain the cause, impact or how to fix it.",
+        solution:
+          "Based on the interface audit and the interviews, we prioritized the pain points with the biggest impact on daily use and redesigned the Timekeeping module alongside adjustments to the FLOW platform as a whole. We standardized icons and colors across the platform, reorganized the header by grouping account options inside settings, and added a search field across modules.\n\nIn the Timekeeping module, access now opens a list of company, establishment and contract — instead of the table directly — allowing more than one contract to be open at once, with breadcrumbs for orientation. We added record search and filters, day-type selection, and the ability to confirm and edit multiple entries at once, plus visual highlighting for days with a scheduled or manually entered mark, reducing the time needed to find and fix inconsistencies in the table.",
+        impact: [
+          {
+            value: "01",
+            label: "Batch time correction",
+            description:
+              "Selecting, confirming and editing multiple days at once, replacing day-by-day justification entries.",
+          },
+          {
+            value: "02",
+            label: "Simplified navigation",
+            description:
+              "Breadcrumbs, filters and multi-contract views reduce the need to switch between modules for everyday tasks.",
+          },
+          {
+            value: "03",
+            label: "Standardized visual identity",
+            description:
+              "Icons, colors and text weights unified across the platform, replacing the multiple patterns found in the interface audit.",
+          },
+        ],
+        body: `## Discovery
+
+Before redesigning any screen, we ran qualitative research with client users of the system, aiming to identify friction points in the usage flow and understand how information was being interpreted day to day.
+
+The interviews revealed recurring pain points: time corrections logged day by day instead of in batch, difficulty separating justified from unjustified absences, no native time calculator, no way to adjust the schedule for several employees at once, and the need to navigate across multiple modules just to log a medical certificate or look up documents.
+
+> Much of the friction didn't come from missing features, but from how everyday tasks were spread across different modules.
+
+## Problems identified
+
+Alongside the research, an interface audit mapped visual inconsistencies affecting the system's clarity: four distinct icon types in use, different text weights across buttons, components placed too close together with no clear hierarchy, alerts taking up action space disproportionate to their content, and a table dominating the main screen despite being consulted infrequently.
+
+Cross-referencing the research findings with the audit, we prioritized the pain points with the biggest impact on daily use to guide the redesign, instead of trying to fix everything at once.
+
+## Platform-wide changes
+
+To reduce the visual overload identified in the audit, we standardized icons and colors across the FLOW platform, using a single library instead of the four distinct patterns in use. The header was reorganized, grouping account options inside settings to reduce its visual weight, and a cross-module search field was added to reduce reliance on manual menu navigation.
+
+![FLOW Timekeeping module interface](/assets/flow-screenshot.png)
+
+## Timekeeping module changes
+
+Accessing the module now opens a list of company, establishment and contract, instead of the table directly — allowing more than one contract to be open at once, with breadcrumbs to guide navigation. We added record search and filters to make spotting inconsistencies easier.
+
+To reduce the rework reported in the interviews, users can now select days by type, confirm and edit multiple entries at once, instead of justifying day by day. Days with a scheduled or manually entered mark now stand out visually, and the table's text weight was adjusted to reinforce the hierarchy between information.
+
+## Next steps
+
+As an evolution of the project, next steps involve validating the changes with usability testing alongside the interviewed clients, tracking usage metrics for the redesigned module after launch, and applying the same visual standardization to FLOW's remaining modules that haven't gone through the redesign yet.`,
+      },
     },
     jobfy: {
       name: "Jobfy",
