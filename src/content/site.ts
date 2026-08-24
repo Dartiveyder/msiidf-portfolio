@@ -570,11 +570,15 @@ Cada bloco de apoio reforça um diferencial diferente — plataformas disponíve
 
 A grade de "soldiers" foi pensada como um catálogo rápido de explorar. Cada card combina retrato, nome, classe (Sniper, Assassin, Tank, Support) e uma frase curta de identidade, permitindo comparar personagens sem abrir telas adicionais.
 
+![Grade de seleção de personagens do FighterX com filtros por classe e cards padronizados](/assets/fighterx-soldiers.png)
+
 Essa estrutura repetível facilita adicionar novos personagens no futuro sem alterar a lógica da página, já que cada card segue o mesmo padrão de informação.
 
 ## Sistema visual
 
 A paleta escura, combinada com tipografia de alto impacto e composições com sensação de movimento, reforça o tom competitivo do jogo. Elementos de UI como botões e badges usam contraste alto para se destacar sobre o fundo escuro.
+
+![Hero do FighterX na versão mobile, com CTAs e badges de download em alto contraste](/assets/fighterx-hero-mobile.png)
 
 ## Próximos passos
 
@@ -1112,11 +1116,15 @@ Each supporting block reinforces a different differentiator — available platfo
 
 The "soldiers" grid was designed as a catalog that's quick to explore. Each card combines a portrait, name, class (Sniper, Assassin, Tank, Support) and a short identity line, making it possible to compare characters without opening additional screens.
 
+![FighterX character selection grid with class filters and standardized cards](/assets/fighterx-soldiers.png)
+
 This repeatable structure makes it easy to add new characters in the future without changing the page's logic, since every card follows the same information pattern.
 
 ## Visual system
 
 The dark palette, combined with high-impact typography and compositions with a sense of motion, reinforces the game's competitive tone. UI elements like buttons and badges use high contrast to stand out against the dark background.
+
+![FighterX mobile hero with high-contrast CTAs and download badges](/assets/fighterx-hero-mobile.png)
 
 ## Next steps
 
