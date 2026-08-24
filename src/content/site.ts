@@ -109,7 +109,7 @@ const projectsMeta: ProjectMeta[] = [
     icon: "/assets/universal-streaming-icon.png",
     image: "/assets/universal-screenshot.png",
     tools: ["Figma", "Framer"],
-    externalUrl: "https://independent-acknowledgment-093223.framer.app/#funcionalidades",
+    externalUrl: "https://universalport.framer.website/",
   },
 ];
 
@@ -635,9 +635,13 @@ Essa ordem — proposta de valor, depois funcionalidades, depois planos — dá 
 
 ![Interface do projeto Universal com hero de destaque, funcionalidades e comparação de planos.](/assets/universal-screenshot.png)
 
+![Hero da versão mobile do Universal, com CTAs de download logo abaixo da proposta de valor](/assets/universal-hero-mobile.png)
+
 ## Comparação de planos
 
 Os três planos (gratuito, individual e familiar) foram desenhados lado a lado, usando os mesmos critérios de comparação em cada card: recursos incluídos, preço e um CTA de teste grátis. O plano recomendado recebe destaque visual para facilitar a decisão.
+
+![Comparação dos três planos do Universal lado a lado, com o plano recomendado em destaque](/assets/universal-plans.png)
 
 Manter os mesmos critérios em todos os planos evita que o usuário precise ler blocos longos de texto para entender as diferenças entre as opções.
 
@@ -1173,9 +1177,13 @@ That order — value proposition, then features, then plans — gives the user c
 
 ![Universal project interface with a featured hero, features and plan comparison.](/assets/universal-screenshot.png)
 
+![Mobile hero for Universal, with download CTAs right below the value proposition](/assets/universal-hero-mobile.png)
+
 ## Plan comparison
 
 The three plans (free, individual and family) were laid out side by side, using the same comparison criteria on every card: included features, price and a free-trial CTA. The recommended plan gets visual emphasis to make the decision easier.
+
+![Side-by-side comparison of Universal's three plans, with the recommended plan highlighted](/assets/universal-plans.png)
 
 Keeping the same criteria across every plan avoids making the user read long blocks of text to understand the differences between options.
 
