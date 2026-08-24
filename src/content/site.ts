@@ -244,9 +244,13 @@ Cada decisão de fluxo foi validada com protótipos navegáveis antes de ir para
 
 Não foi possível retirar todos os campos ou dividir etapas no cadastro do usuário, pois muitos dos dados solicitados eram obrigatórios para o sistema.
 
+![Mapa de calor do Microsoft Clarity usado para reorganizar o menu lateral por frequência de uso](/assets/jobfy-heatmap.png)
+
 ## Design system e handoff
 
 Para reduzir divergências entre o Figma e o que era efetivamente entregue, documentei componentes e todos os seus estados: carregamento, sucesso, erro, ausência de dados e restrições de acesso, junto com especificações de comportamento e regras de interação. Isso deu ao time de desenvolvimento uma referência única, sem depender de decisões implícitas durante a implementação.
+
+![Especificação de componente com estados e regras de interação documentadas](/assets/jobfy-design-system.png)
 
 ## Resultados e aprendizados
 
@@ -774,9 +778,13 @@ Every flow decision was validated with clickable prototypes before moving to hig
 
 Not every field could be removed, nor could the sign-up be split into fewer steps, since much of the requested data was mandatory for the system.
 
+![Microsoft Clarity heatmap used to reorganize the sidebar menu by usage frequency](/assets/jobfy-heatmap.png)
+
 ## Design system and handoff
 
 To reduce divergence between Figma and what actually shipped, I documented components and all of their states: loading, success, error, empty and restricted-access, along with behavior specs and interaction rules. This gave the development team a single source of truth, instead of relying on implicit decisions during implementation.
+
+![Component specification with documented states and interaction rules](/assets/jobfy-design-system.png)
 
 ## Results and takeaways
 
