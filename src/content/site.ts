@@ -161,9 +161,13 @@ As entrevistas revelaram dores recorrentes: correções de ponto lançadas dia p
 
 > Boa parte das dores não vinha de funcionalidades ausentes, mas da forma como as tarefas do dia a dia estavam distribuídas entre módulos diferentes.
 
+![Insights da pesquisa qualitativa com os principais pontos de atrito relatados pelos usuários](/assets/flow-insights.png)
+
 ## Problemas identificados
 
 Em paralelo à pesquisa, uma auditoria de interface mapeou inconsistências visuais que afetavam a clareza do sistema: quatro tipos de ícone distintos em uso, pesos de texto diferentes entre botões, componentes muito próximos sem hierarquia clara, alertas ocupando espaço de ação desproporcional ao seu conteúdo, e uma tabela que dominava a tela principal mesmo sendo consultada com pouca frequência.
+
+![Auditoria de interface apontando sobrecarga visual, alertas grandes e uso ineficiente do espaço de tela](/assets/flow-problemas.png)
 
 Cruzando os achados da pesquisa com a auditoria, priorizamos as dores com maior impacto no uso diário para orientar o redesign, em vez de tentar resolver tudo de uma vez.
 
@@ -696,9 +700,13 @@ The interviews revealed recurring pain points: time corrections logged day by da
 
 > Much of the friction didn't come from missing features, but from how everyday tasks were spread across different modules.
 
+![Qualitative research insights showing the main friction points reported by users](/assets/flow-insights.png)
+
 ## Problems identified
 
 Alongside the research, an interface audit mapped visual inconsistencies affecting the system's clarity: four distinct icon types in use, different text weights across buttons, components placed too close together with no clear hierarchy, alerts taking up action space disproportionate to their content, and a table dominating the main screen despite being consulted infrequently.
+
+![Interface audit pointing out visual overload, oversized alerts and inefficient use of screen space](/assets/flow-problemas.png)
 
 Cross-referencing the research findings with the audit, we prioritized the pain points with the biggest impact on daily use to guide the redesign, instead of trying to fix everything at once.
 
