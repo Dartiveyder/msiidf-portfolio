@@ -674,7 +674,7 @@ Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispos
       summary:
         "TCC e artigo científico sobre como a publicidade emocional influencia a experiência do usuário em plataformas digitais.",
       description:
-        "Trabalho de Conclusão de Curso e artigo científico derivado (Intercom 2026) investigando, com pesquisa quali-quantitativa e 62 respondentes, como a publicidade emocional influencia a experiência do usuário em plataformas digitais — com recomendações práticas de UX/UI como entregável.",
+        "Trabalho de Conclusão de Curso e artigo científico derivado (Intercom 2026) investigando, com pesquisa quali-quantitativa e 62 respondentes, como a publicidade emocional influencia a experiência do usuário em plataformas digitais, com recomendações práticas de UX/UI como entregável.",
       tags: ["Pesquisa", "UX Research", "Acadêmico"],
       imageAlt: "Ilustração conceitual de um app bancário digital, tema central da pesquisa.",
       downloads: [
@@ -695,9 +695,9 @@ Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispos
           "Recomendações de UX/UI",
         ],
         problem:
-          "Em um mercado digital saturado de aplicativos e plataformas com funcionalidades semelhantes, a diferenciação entre marcas passa a depender cada vez menos de recursos técnicos e cada vez mais da qualidade da experiência oferecida ao usuário. Segundo o IBGE (2025), a internet já alcança 74,9 milhões de domicílios brasileiros, e o acesso a instituições financeiras foi o uso que mais cresceu no último ano, chegando a 71,2% da população — um cenário que torna a experiência em plataformas bancárias digitais um caso especialmente relevante para investigar.\n\nA pesquisa partiu da seguinte pergunta norteadora: como a publicidade emocional pode influenciar a experiência do usuário na interação com plataformas online?",
+          "Em um mercado digital saturado de aplicativos e plataformas com funcionalidades semelhantes, a diferenciação entre marcas passa a depender cada vez menos de recursos técnicos e cada vez mais da qualidade da experiência oferecida ao usuário. Segundo o IBGE (2025), a internet já alcança 74,9 milhões de domicílios brasileiros, e o acesso a instituições financeiras foi o uso que mais cresceu no último ano, chegando a 71,2% da população, um cenário que torna a experiência em plataformas bancárias digitais um caso especialmente relevante para investigar.\n\nA pesquisa partiu da seguinte pergunta norteadora: como a publicidade emocional pode influenciar a experiência do usuário na interação com plataformas online?",
         solution:
-          "Conduzi uma pesquisa quali-quantitativa combinando revisão bibliográfica (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, entre outros) com um questionário aplicado a 62 respondentes entre 4 e 18 de maio de 2026. Os dados foram cruzados com o referencial teórico para entender como fatores como usabilidade, confiança e identificação com a marca se relacionam com a permanência dos usuários em plataformas digitais.\n\nMais do que descrever o cenário, o trabalho traduziu os achados em recomendações práticas de design de UX/UI — sobre clareza de navegação, consistência visual e coerência entre o discurso emocional da marca e a experiência real de uso — pensadas para orientar decisões de design, não só discutir teoria.",
+          "Conduzi uma pesquisa quali-quantitativa combinando revisão bibliográfica (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, entre outros) com um questionário aplicado a 62 respondentes entre 4 e 18 de maio de 2026. Os dados foram cruzados com o referencial teórico para entender como fatores como usabilidade, confiança e identificação com a marca se relacionam com a permanência dos usuários em plataformas digitais.\n\nMais do que descrever o cenário, o trabalho traduziu os achados em recomendações práticas de design de UX/UI, sobre clareza de navegação, consistência visual e coerência entre o discurso emocional da marca e a experiência real de uso, pensadas para orientar decisões de design, não só discutir teoria.",
         impact: [
           {
             value: "93,3%",
@@ -732,7 +732,7 @@ O formulário ficou disponível entre 4 e 18 de maio de 2026, divulgado em redes
 
 ## Resultados da pesquisa de campo
 
-Na questão qualitativa sobre quais palavras os respondentes associavam às suas plataformas bancárias, os termos mais citados foram Nubank, crédito, praticidade, facilidade e taxas — evidenciando que a experiência bancária digital é percebida por um conjunto de fatores, não só pelo aplicativo isoladamente.
+Na questão qualitativa sobre quais palavras os respondentes associavam às suas plataformas bancárias, os termos mais citados foram Nubank, crédito, praticidade, facilidade e taxas, evidenciando que a experiência bancária digital é percebida por um conjunto de fatores, não só pelo aplicativo isoladamente.
 
 ![Nuvem de palavras com os termos mais citados pelos respondentes da pesquisa.](/assets/pesquisa-nuvem-palavras.png)
 
@@ -742,7 +742,7 @@ Já nas perguntas fechadas, os dados confirmaram a relação entre usabilidade e
 
 ## Recomendações de UX/UI
 
-A partir do cruzamento entre teoria e dados, organizei recomendações práticas de design, entre elas: priorizar clareza e simplicidade na navegação, com fluxos previsíveis e nomenclaturas compreensíveis; manter consistência visual e funcional entre telas, para não romper o modelo mental já construído pelo usuário; e considerar os aspectos emocionais da interação — linguagem mais humana, mensagens de erro menos frias — para que o discurso emocional da marca seja coerente com a experiência real de uso.
+A partir do cruzamento entre teoria e dados, organizei recomendações práticas de design, entre elas: priorizar clareza e simplicidade na navegação, com fluxos previsíveis e nomenclaturas compreensíveis; manter consistência visual e funcional entre telas, para não romper o modelo mental já construído pelo usuário; e considerar os aspectos emocionais da interação, com uma linguagem mais humana e mensagens de erro menos frias, para que o discurso emocional da marca seja coerente com a experiência real de uso.
 
 ## Próximos passos
 
@@ -1301,7 +1301,7 @@ It would also be worth adapting every screen for different device sizes and docu
       summary:
         "Undergraduate thesis and scientific paper on how emotional advertising shapes user experience on digital platforms.",
       description:
-        "Undergraduate thesis and derived scientific paper (Intercom 2026) investigating, through mixed-methods research with 62 respondents, how emotional advertising influences user experience on digital platforms — with practical UX/UI recommendations as the deliverable.",
+        "Undergraduate thesis and derived scientific paper (Intercom 2026) investigating, through mixed-methods research with 62 respondents, how emotional advertising influences user experience on digital platforms, with practical UX/UI recommendations as the deliverable.",
       tags: ["Research", "UX Research", "Academic"],
       imageAlt: "Conceptual illustration of a digital banking app, the research's central theme.",
       downloads: [
@@ -1321,9 +1321,9 @@ It would also be worth adapting every screen for different device sizes and docu
           "UX/UI recommendations",
         ],
         problem:
-          "In a digital market saturated with apps and platforms offering similar features, brand differentiation depends less and less on technical capabilities and more on the quality of the experience offered to the user. According to IBGE (2025), the internet already reaches 74.9 million Brazilian households, and access to financial institutions was the fastest-growing internet use in the past year, reaching 71.2% of the population — a scenario that makes the experience on digital banking platforms a particularly relevant case to investigate.\n\nThe research was guided by the following question: how can emotional advertising influence user experience when interacting with online platforms?",
+          "In a digital market saturated with apps and platforms offering similar features, brand differentiation depends less and less on technical capabilities and more on the quality of the experience offered to the user. According to IBGE (2025), the internet already reaches 74.9 million Brazilian households, and access to financial institutions was the fastest-growing internet use in the past year, reaching 71.2% of the population, a scenario that makes the experience on digital banking platforms a particularly relevant case to investigate.\n\nThe research was guided by the following question: how can emotional advertising influence user experience when interacting with online platforms?",
         solution:
-          "I conducted mixed-methods research combining a literature review (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, among others) with a questionnaire answered by 62 respondents between May 4 and 18, 2026. The data was cross-referenced with the theoretical framework to understand how factors like usability, trust and brand identification relate to users staying on digital platforms.\n\nRather than just describing the scenario, the work translated the findings into practical UX/UI design recommendations — on navigation clarity, visual consistency and coherence between a brand's emotional discourse and the actual experience of use — meant to guide design decisions, not just discuss theory.",
+          "I conducted mixed-methods research combining a literature review (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, among others) with a questionnaire answered by 62 respondents between May 4 and 18, 2026. The data was cross-referenced with the theoretical framework to understand how factors like usability, trust and brand identification relate to users staying on digital platforms.\n\nRather than just describing the scenario, the work translated the findings into practical UX/UI design recommendations, on navigation clarity, visual consistency and coherence between a brand's emotional discourse and the actual experience of use, meant to guide design decisions, not just discuss theory.",
         impact: [
           {
             value: "93.3%",
@@ -1358,7 +1358,7 @@ The form was open between May 4 and 18, 2026, shared across social media and onl
 
 ## Field research results
 
-In the qualitative question about which words respondents associated with their banking platforms, the most cited terms were Nubank, credit, practicality, ease and fees — showing that the digital banking experience is perceived through a combination of factors, not the app in isolation.
+In the qualitative question about which words respondents associated with their banking platforms, the most cited terms were Nubank, credit, practicality, ease and fees, showing that the digital banking experience is perceived through a combination of factors, not the app in isolation.
 
 ![Word cloud with the terms most cited by the research respondents.](/assets/pesquisa-nuvem-palavras.png)
 
@@ -1368,7 +1368,7 @@ In the closed-ended questions, the data confirmed the relationship between usabi
 
 ## UX/UI recommendations
 
-Cross-referencing theory and data, I organized practical design recommendations, including: prioritizing clarity and simplicity in navigation, with predictable flows and understandable naming; maintaining visual and functional consistency across screens, so as not to break the mental model users already built; and factoring in the emotional side of the interaction — more human language, warmer error messages — so a brand's emotional discourse stays coherent with the actual experience of use.
+Cross-referencing theory and data, I organized practical design recommendations, including: prioritizing clarity and simplicity in navigation, with predictable flows and understandable naming; maintaining visual and functional consistency across screens, so as not to break the mental model users already built; and factoring in the emotional side of the interaction, with more human language and warmer error messages, so a brand's emotional discourse stays coherent with the actual experience of use.
 
 ## Next steps
 
