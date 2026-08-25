@@ -186,7 +186,7 @@ export function ProjetoDetalheClient({ slug }: { slug: string }) {
           </p>
         )}
 
-        {project.requestAccess || project.externalUrl ? (
+        {project.requestAccess || project.externalUrl || (project.downloads && project.downloads.length > 0) ? (
           <div className={caseStudy ? "mb-4 flex flex-wrap gap-4" : "mb-16 flex flex-wrap gap-4"}>
             {project.requestAccess ? (
               project.requestAccessPassword ? (
@@ -226,6 +226,16 @@ export function ProjetoDetalheClient({ slug }: { slug: string }) {
                 {project.externalUrlLabel ?? projetoDetalhe.visitSite}
               </a>
             ) : null}
+            {project.downloads?.map((d) => (
+              <a
+                key={d.href}
+                href={d.href}
+                download
+                className="inline-block rounded-lg border border-border-strong px-6 py-3 font-mono text-sm font-bold tracking-[0.04em] text-text no-underline transition-colors hover:border-primary hover:text-primary"
+              >
+                {d.label}
+              </a>
+            ))}
           </div>
         ) : null}
       </section>

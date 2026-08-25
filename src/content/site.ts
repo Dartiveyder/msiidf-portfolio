@@ -45,6 +45,8 @@ export type Project = {
   requestAccessLabel?: string;
   /** If true, entering the correct password downloads requestAccessHref instead of opening it in a new tab. */
   requestAccessDownload?: boolean;
+  /** Extra plain-download buttons on the detail page (no password gate), e.g. multiple source documents. */
+  downloads?: { label: string; href: string }[];
   name: string;
   title: string;
   summary: string;
@@ -53,8 +55,8 @@ export type Project = {
   caseStudy?: CaseStudy;
 };
 
-type ProjectMeta = Omit<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt" | "requestAccessLabel">;
-type ProjectText = Pick<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt" | "requestAccessLabel">;
+type ProjectMeta = Omit<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt" | "requestAccessLabel" | "downloads">;
+type ProjectText = Pick<Project, "name" | "title" | "summary" | "description" | "tags" | "caseStudy" | "externalUrlLabel" | "imageAlt" | "requestAccessLabel" | "downloads">;
 
 const projectsMeta: ProjectMeta[] = [
   {
@@ -110,6 +112,12 @@ const projectsMeta: ProjectMeta[] = [
     image: "/assets/universal-screenshot.png",
     tools: ["Figma", "Framer"],
     externalUrl: "https://universalport.framer.website/",
+  },
+  {
+    slug: "pesquisa-ux-publicidade-emocional",
+    icon: "🎓",
+    image: "/assets/pesquisa-nuvem-palavras.png",
+    tools: ["Google Forms"],
   },
 ];
 
@@ -660,6 +668,87 @@ Como evolução do projeto, seria importante validar a comparação de planos co
 Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispositivo e documentar o sistema visual como especificação para desenvolvimento.`,
       },
     },
+    "pesquisa-ux-publicidade-emocional": {
+      name: "Pesquisa Acadêmica",
+      title: "Publicidade Emocional e UX",
+      summary:
+        "TCC e artigo científico sobre como a publicidade emocional influencia a experiência do usuário em plataformas digitais.",
+      description:
+        "Trabalho de Conclusão de Curso e artigo científico derivado (Intercom 2026) investigando, com pesquisa quali-quantitativa e 62 respondentes, como a publicidade emocional influencia a experiência do usuário em plataformas digitais — com recomendações práticas de UX/UI como entregável.",
+      tags: ["Pesquisa", "UX Research", "Acadêmico"],
+      imageAlt: "Nuvem de palavras com os termos mais citados pelos respondentes da pesquisa.",
+      downloads: [
+        { label: "BAIXAR ARTIGO (INTERCOM)", href: "/assets/pesquisa-artigo-intercom.pdf" },
+        { label: "BAIXAR TCC COMPLETO", href: "/assets/pesquisa-tcc.pdf" },
+      ],
+      caseStudy: {
+        heroSubtitle:
+          "Pesquisa sobre como a publicidade emocional influencia a experiência do usuário em plataformas digitais",
+        note: "Este projeto reúne meu Trabalho de Conclusão de Curso (TCC) e o artigo científico derivado, apresentado no 49º Congresso Brasileiro de Ciências da Comunicação (Intercom, 2026).",
+        role: "Pesquisador e Autor",
+        type: "Pesquisa acadêmica · UX Research",
+        skills: [
+          "Pesquisa quali-quantitativa",
+          "Design de questionário",
+          "Análise de dados",
+          "Revisão bibliográfica",
+          "Recomendações de UX/UI",
+        ],
+        problem:
+          "Em um mercado digital saturado de aplicativos e plataformas com funcionalidades semelhantes, a diferenciação entre marcas passa a depender cada vez menos de recursos técnicos e cada vez mais da qualidade da experiência oferecida ao usuário. Segundo o IBGE (2025), a internet já alcança 74,9 milhões de domicílios brasileiros, e o acesso a instituições financeiras foi o uso que mais cresceu no último ano, chegando a 71,2% da população — um cenário que torna a experiência em plataformas bancárias digitais um caso especialmente relevante para investigar.\n\nA pesquisa partiu da seguinte pergunta norteadora: como a publicidade emocional pode influenciar a experiência do usuário na interação com plataformas online?",
+        solution:
+          "Conduzi uma pesquisa quali-quantitativa combinando revisão bibliográfica (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, entre outros) com um questionário aplicado a 62 respondentes entre 4 e 18 de maio de 2026. Os dados foram cruzados com o referencial teórico para entender como fatores como usabilidade, confiança e identificação com a marca se relacionam com a permanência dos usuários em plataformas digitais.\n\nMais do que descrever o cenário, o trabalho traduziu os achados em recomendações práticas de design de UX/UI — sobre clareza de navegação, consistência visual e coerência entre o discurso emocional da marca e a experiência real de uso — pensadas para orientar decisões de design, não só discutir teoria.",
+        impact: [
+          {
+            value: "93,3%",
+            label: "Percepção de marca ligada à UX",
+            description:
+              "Dos respondentes concordam (total ou parcialmente) que a experiência de uso de um app influencia sua percepção sobre a marca.",
+          },
+          {
+            value: "76,6%",
+            label: "Confusão reduz confiança",
+            description:
+              "Concordam que uma plataforma confusa diminui a confiança na marca, reforçando a usabilidade como base da credibilidade.",
+          },
+          {
+            value: "81,7%",
+            label: "Nubank como referência",
+            description:
+              "Dos respondentes citam o Nubank como a plataforma bancária mais usada, associada a atributos de praticidade e facilidade de uso.",
+          },
+        ],
+        body: `## Contexto e pergunta de pesquisa
+
+O ponto de partida foi observar que, em um cenário digital com cada vez mais aplicativos e plataformas oferecendo funcionalidades parecidas, a escolha e a permanência do usuário deixam de depender só de recursos técnicos. Escolhi o setor bancário digital como caso concreto para investigar isso, já que é um dos segmentos com maior crescimento de uso no Brasil nos últimos anos.
+
+A pesquisa foi guiada pela seguinte pergunta: como a publicidade emocional pode influenciar a experiência do usuário na interação com plataformas online?
+
+## Metodologia
+
+A investigação combinou abordagem qualitativa e quantitativa: revisão bibliográfica sobre publicidade emocional, comportamento do consumidor e UX (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, Keller, entre outros), além de um questionário semiestruturado aplicado via Google Forms.
+
+O formulário ficou disponível entre 4 e 18 de maio de 2026, divulgado em redes sociais e grupos online, reunindo 62 respondentes. As perguntas foram organizadas em blocos temáticos: perfil do participante, uso de plataformas bancárias digitais e percepção sobre experiência do usuário, publicidade emocional e relacionamento com marcas.
+
+## Resultados da pesquisa de campo
+
+Na questão qualitativa sobre quais palavras os respondentes associavam às suas plataformas bancárias, os termos mais citados foram Nubank, crédito, praticidade, facilidade e taxas — evidenciando que a experiência bancária digital é percebida por um conjunto de fatores, não só pelo aplicativo isoladamente.
+
+![Nuvem de palavras com os termos mais citados pelos respondentes da pesquisa.](/assets/pesquisa-nuvem-palavras.png)
+
+Já nas perguntas fechadas, os dados confirmaram a relação entre usabilidade e percepção de marca: 93,3% dos respondentes concordam (total ou parcialmente) que a experiência de uso de um app influencia sua percepção sobre a marca, e 76,6% concordam que uma plataforma confusa reduz a confiança na marca. Os fatores mais citados para a permanência em uma plataforma foram hábito (72,7%), experiência de uso (69,1%) e confiança (58,2%).
+
+![Gráfico da pesquisa mostrando que 93,3% dos respondentes associam a experiência de uso à percepção da marca.](/assets/pesquisa-grafico-percepcao-marca.png)
+
+## Recomendações de UX/UI
+
+A partir do cruzamento entre teoria e dados, organizei recomendações práticas de design, entre elas: priorizar clareza e simplicidade na navegação, com fluxos previsíveis e nomenclaturas compreensíveis; manter consistência visual e funcional entre telas, para não romper o modelo mental já construído pelo usuário; e considerar os aspectos emocionais da interação — linguagem mais humana, mensagens de erro menos frias — para que o discurso emocional da marca seja coerente com a experiência real de uso.
+
+## Próximos passos
+
+Como evolução da pesquisa, o ideal seria ampliar a amostragem para incluir participantes de diferentes faixas etárias e perfis de escolaridade, já que o público respondente foi majoritariamente jovem. Também valeria a pena aprofundar com uma etapa qualitativa de observação de usabilidade em diferentes plataformas bancárias, complementando os dados já coletados por questionário.`,
+      },
+    },
   },
   en: {
     flow: {
@@ -1204,6 +1293,86 @@ The palette and typography prioritize contrast and legibility on small screens, 
 As an evolution of the project, it would be important to validate the plan comparison with usability testing, test the end-to-end subscription flow and review the onboarding experience right after sign-up.
 
 It would also be worth adapting every screen for different device sizes and documenting the visual system as a development-ready specification.`,
+      },
+    },
+    "pesquisa-ux-publicidade-emocional": {
+      name: "Academic Research",
+      title: "Emotional Advertising & UX",
+      summary:
+        "Undergraduate thesis and scientific paper on how emotional advertising shapes user experience on digital platforms.",
+      description:
+        "Undergraduate thesis and derived scientific paper (Intercom 2026) investigating, through mixed-methods research with 62 respondents, how emotional advertising influences user experience on digital platforms — with practical UX/UI recommendations as the deliverable.",
+      tags: ["Research", "UX Research", "Academic"],
+      imageAlt: "Word cloud with the terms most cited by the research respondents.",
+      downloads: [
+        { label: "DOWNLOAD PAPER (INTERCOM)", href: "/assets/pesquisa-artigo-intercom.pdf" },
+        { label: "DOWNLOAD FULL THESIS", href: "/assets/pesquisa-tcc.pdf" },
+      ],
+      caseStudy: {
+        heroSubtitle: "Research on how emotional advertising influences user experience on digital platforms",
+        note: "This project brings together my undergraduate thesis and the scientific paper derived from it, presented at the 49th Brazilian Congress of Communication Sciences (Intercom, 2026).",
+        role: "Researcher and Author",
+        type: "Academic research · UX Research",
+        skills: [
+          "Mixed-methods research",
+          "Survey design",
+          "Data analysis",
+          "Literature review",
+          "UX/UI recommendations",
+        ],
+        problem:
+          "In a digital market saturated with apps and platforms offering similar features, brand differentiation depends less and less on technical capabilities and more on the quality of the experience offered to the user. According to IBGE (2025), the internet already reaches 74.9 million Brazilian households, and access to financial institutions was the fastest-growing internet use in the past year, reaching 71.2% of the population — a scenario that makes the experience on digital banking platforms a particularly relevant case to investigate.\n\nThe research was guided by the following question: how can emotional advertising influence user experience when interacting with online platforms?",
+        solution:
+          "I conducted mixed-methods research combining a literature review (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, among others) with a questionnaire answered by 62 respondents between May 4 and 18, 2026. The data was cross-referenced with the theoretical framework to understand how factors like usability, trust and brand identification relate to users staying on digital platforms.\n\nRather than just describing the scenario, the work translated the findings into practical UX/UI design recommendations — on navigation clarity, visual consistency and coherence between a brand's emotional discourse and the actual experience of use — meant to guide design decisions, not just discuss theory.",
+        impact: [
+          {
+            value: "93.3%",
+            label: "Brand perception tied to UX",
+            description:
+              "Of respondents agree (fully or partially) that an app's usage experience influences their perception of the brand.",
+          },
+          {
+            value: "76.6%",
+            label: "Confusion reduces trust",
+            description:
+              "Agree that a confusing platform lowers their trust in the brand, reinforcing usability as the basis of credibility.",
+          },
+          {
+            value: "81.7%",
+            label: "Nubank as a reference",
+            description:
+              "Of respondents cite Nubank as their most-used banking platform, associated with attributes of practicality and ease of use.",
+          },
+        ],
+        body: `## Context and research question
+
+The starting point was noticing that, in a digital landscape with more and more apps and platforms offering similar features, user choice and retention stop depending solely on technical capabilities. I chose the digital banking sector as a concrete case to investigate this, since it's one of the fastest-growing usage segments in Brazil in recent years.
+
+The research was guided by the following question: how can emotional advertising influence user experience when interacting with online platforms?
+
+## Methodology
+
+The investigation combined qualitative and quantitative approaches: a literature review on emotional advertising, consumer behavior and UX (Kotler, Cialdini, Norman, Krug, Fessenden, Fogg, Keller, among others), plus a semi-structured questionnaire administered through Google Forms.
+
+The form was open between May 4 and 18, 2026, shared across social media and online groups, gathering 62 respondents. Questions were organized into thematic blocks: participant profile, use of digital banking platforms, and perception of user experience, emotional advertising and brand relationships.
+
+## Field research results
+
+In the qualitative question about which words respondents associated with their banking platforms, the most cited terms were Nubank, credit, practicality, ease and fees — showing that the digital banking experience is perceived through a combination of factors, not the app in isolation.
+
+![Word cloud with the terms most cited by the research respondents.](/assets/pesquisa-nuvem-palavras.png)
+
+In the closed-ended questions, the data confirmed the relationship between usability and brand perception: 93.3% of respondents agree (fully or partially) that an app's usage experience influences their perception of the brand, and 76.6% agree that a confusing platform lowers trust in the brand. The most cited factors for staying on a platform were habit (72.7%), usage experience (69.1%) and trust (58.2%).
+
+![Research chart showing 93.3% of respondents link usage experience to brand perception.](/assets/pesquisa-grafico-percepcao-marca.png)
+
+## UX/UI recommendations
+
+Cross-referencing theory and data, I organized practical design recommendations, including: prioritizing clarity and simplicity in navigation, with predictable flows and understandable naming; maintaining visual and functional consistency across screens, so as not to break the mental model users already built; and factoring in the emotional side of the interaction — more human language, warmer error messages — so a brand's emotional discourse stays coherent with the actual experience of use.
+
+## Next steps
+
+As an evolution of the research, it would be worth expanding the sample to include participants from different age groups and education levels, since respondents were mostly young. It would also be worth adding a qualitative usability-observation stage across different banking platforms, complementing the data already collected through the questionnaire.`,
       },
     },
   },
