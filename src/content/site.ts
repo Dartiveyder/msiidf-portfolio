@@ -60,6 +60,12 @@ type ProjectText = Pick<Project, "name" | "title" | "summary" | "description" | 
 
 const projectsMeta: ProjectMeta[] = [
   {
+    slug: "pesquisa-ux-publicidade-emocional",
+    icon: "🎓",
+    image: "/assets/pesquisa-nuvem-palavras.png",
+    tools: ["Google Forms"],
+  },
+  {
     slug: "flow",
     icon: "/assets/flow-icon.png",
     image: "/assets/flow-screenshot.png",
@@ -112,12 +118,6 @@ const projectsMeta: ProjectMeta[] = [
     image: "/assets/universal-screenshot.png",
     tools: ["Figma", "Framer"],
     externalUrl: "https://universalport.framer.website/",
-  },
-  {
-    slug: "pesquisa-ux-publicidade-emocional",
-    icon: "🎓",
-    image: "/assets/pesquisa-nuvem-palavras.png",
-    tools: ["Google Forms"],
   },
 ];
 
