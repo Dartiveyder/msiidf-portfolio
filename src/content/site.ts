@@ -62,7 +62,7 @@ const projectsMeta: ProjectMeta[] = [
   {
     slug: "pesquisa-ux-publicidade-emocional",
     icon: "🎓",
-    image: "/assets/pesquisa-nuvem-palavras.png",
+    image: "/assets/pesquisa-cover.png",
     tools: ["Google Forms"],
   },
   {
@@ -676,7 +676,7 @@ Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispos
       description:
         "Trabalho de Conclusão de Curso e artigo científico derivado (Intercom 2026) investigando, com pesquisa quali-quantitativa e 62 respondentes, como a publicidade emocional influencia a experiência do usuário em plataformas digitais — com recomendações práticas de UX/UI como entregável.",
       tags: ["Pesquisa", "UX Research", "Acadêmico"],
-      imageAlt: "Nuvem de palavras com os termos mais citados pelos respondentes da pesquisa.",
+      imageAlt: "Ilustração conceitual de um app bancário digital, tema central da pesquisa.",
       downloads: [
         { label: "BAIXAR ARTIGO (INTERCOM)", href: "/assets/pesquisa-artigo-intercom.pdf" },
         { label: "BAIXAR TCC COMPLETO", href: "/assets/pesquisa-tcc.pdf" },
@@ -1303,7 +1303,7 @@ It would also be worth adapting every screen for different device sizes and docu
       description:
         "Undergraduate thesis and derived scientific paper (Intercom 2026) investigating, through mixed-methods research with 62 respondents, how emotional advertising influences user experience on digital platforms — with practical UX/UI recommendations as the deliverable.",
       tags: ["Research", "UX Research", "Academic"],
-      imageAlt: "Word cloud with the terms most cited by the research respondents.",
+      imageAlt: "Conceptual illustration of a digital banking app, the research's central theme.",
       downloads: [
         { label: "DOWNLOAD PAPER (INTERCOM)", href: "/assets/pesquisa-artigo-intercom.pdf" },
         { label: "DOWNLOAD FULL THESIS", href: "/assets/pesquisa-tcc.pdf" },
