@@ -670,7 +670,7 @@ Também valeria a pena adaptar todas as telas para diferentes tamanhos de dispos
     },
     "pesquisa-ux-publicidade-emocional": {
       name: "Pesquisa Acadêmica",
-      title: "Publicidade Emocional e UX",
+      title: "Publicidade Emocional e UX em bancos",
       summary:
         "TCC e artigo científico sobre como a publicidade emocional influencia a experiência do usuário em plataformas digitais.",
       description:
@@ -1297,7 +1297,7 @@ It would also be worth adapting every screen for different device sizes and docu
     },
     "pesquisa-ux-publicidade-emocional": {
       name: "Academic Research",
-      title: "Emotional Advertising & UX",
+      title: "Emotional Advertising & UX in Banking",
       summary:
         "Undergraduate thesis and scientific paper on how emotional advertising shapes user experience on digital platforms.",
       description:
