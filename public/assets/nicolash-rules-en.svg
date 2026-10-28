@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgRulesEn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bgRulesEn)"/>
+
+  <g font-family="Arial, sans-serif">
+    <!-- card 1 -->
+    <rect x="20" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="130" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="130" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">1</text>
+    <text x="130" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Instant</text>
+    <text x="130" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">confirmation</text>
+    <text x="130" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">No manual approval, the</text>
+    <text x="130" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">booking is confirmed right away.</text>
+
+    <!-- card 2 -->
+    <rect x="255" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="365" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="365" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">2</text>
+    <text x="365" y="159" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">No buffer time</text>
+    <text x="365" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Back-to-back schedule,</text>
+    <text x="365" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">appointments run one after another.</text>
+
+    <!-- card 3 -->
+    <rect x="490" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="600" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="600" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">3</text>
+    <text x="600" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Cancel via</text>
+    <text x="600" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">WhatsApp</text>
+    <text x="600" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Never through the site,</text>
+    <text x="600" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">always directly with the pro.</text>
+
+    <!-- card 4 -->
+    <rect x="725" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="835" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="835" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">4</text>
+    <text x="835" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">No limit</text>
+    <text x="835" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">per client</text>
+    <text x="835" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Anyone can book as many</text>
+    <text x="835" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">time slots as they want.</text>
+
+    <!-- card 5 -->
+    <rect x="960" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#e5a24b" stroke-opacity="0.5"/>
+    <circle cx="1070" cy="80" r="24" fill="#1a1a1a" stroke="#e5a24b" stroke-width="2"/>
+    <text x="1070" y="86" text-anchor="middle" fill="#e5a24b" font-size="18" font-weight="700">5</text>
+    <text x="1070" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">30% cancellation</text>
+    <text x="1070" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">fee</text>
+    <text x="1070" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">For cancellations with</text>
+    <text x="1070" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">less than 24 hours' notice.</text>
+  </g>
+</svg>

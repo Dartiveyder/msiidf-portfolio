@@ -474,28 +474,30 @@ O ponto de partida foi um pedido comum entre pequenos negócios locais: uma prof
 
 O objetivo inicial era simples: construir um site institucional bonito, responsivo, com os serviços e os preços. Esse objetivo mudou bastante ao longo do projeto, o que é, na prática, o retrato mais honesto de como um projeto real evolui.
 
-## Do Cloud Design ao Claude Code
+## Do Figma ao Claude Code
 
-O projeto começou fora do Claude Code, em uma etapa de design feita no Cloud Design, reunindo referências de estilo, estrutura de seções e identidade visual. Esse material foi exportado como um handoff e entregue ao Claude Code como ponto de partida.
+O projeto começou no Figma, reunindo referências de estilo, estrutura de seções e identidade visual. Esse material foi levado ao Claude Design, onde a interface foi refinada e preparada como handoff, e então entregue ao Claude Code como ponto de partida para a implementação.
+
+![Fluxo de handoff do projeto Nicolash: do Figma ao Claude Design e do Claude Design ao Claude Code](/assets/nicolash-handoff-pt.svg)
 
 A partir daí, o processo foi:
 
-1. Reconstrução do handoff como um projeto Next.js real, usando os ativos de imagem fornecidos: fotos de serviços, logotipo, Instagram da cliente.
-2. Definição de pilha tecnológica. "Quero que seja feito na melhor linguagem, no melhor framework, publicado de forma gratuita" foi, literalmente, o pedido inicial. A resposta foi Next.js hospedado na Vercel, pela combinação de custo zero para validar o produto, deploy automático a cada push e boa experiência de desenvolvimento.
-3. Iteração orientada por feedback visual. Boa parte dos ajustes no início não veio de especificações técnicas, veio de prints de tela e frases como "o botão de agendar ficou com tamanho diferente do botão ver procedimentos, eles devem ficar iguais e centralizados". Esse tipo de feedback, comum em projetos com cliente não técnico, foi tratado como requisito de design sistemático, e não como ajuste pontual, criando um padrão de componentes reaproveitável em vez de corrigir botão por botão.
-4. Responsividade mobile como requisito, não detalhe. Como a maior parte do público de um estúdio de beleza local acessa pelo celular, mobile-first foi tratado como critério de aceite desde a primeira entrega: texto mínimo de 14px em parágrafos, cards sem overflow, botões do mesmo tamanho, modal de imagens em tela cheia com avançar, retroceder e fechar.
+1. Reconstrução do handoff como um projeto Next.js real, usando os ativos de imagem fornecidos.
+2. Definição da pilha tecnológica: a melhor linguagem, o melhor framework, publicado de forma gratuita. A resposta foi Next.js hospedado na Vercel, pela combinação de custo zero para validar o produto, deploy automático a cada push e boa experiência de desenvolvimento.
+3. Iteração orientada por feedback visual, a partir de prints de tela e observações sobre a interface, tratadas como padrão de design reaproveitável, e não como ajuste pontual.
+4. Responsividade mobile como requisito desde a primeira entrega, já que a maior parte do público de um estúdio de beleza local acessa pelo celular.
+
+![Os quatro passos do processo com Claude Code: reconstrução do handoff, definição da pilha tecnológica, iteração visual e responsividade mobile-first](/assets/nicolash-process-steps-pt.svg)
 
 ## A virada: de vitrine para sistema de agendamento
 
 Com o site publicado, veio o pedido que mudou o escopo do projeto. A cliente queria que as próprias clientes pudessem escolher um serviço, ver um calendário com os horários livres, escolher dia e horário, preencher nome e telefone, e ter a reserva confirmada na hora, sem depender de mensagem.
 
+![Comparação entre o site antes, uma vitrine com agendamento só por WhatsApp, e depois, com sistema de agendamento online próprio](/assets/nicolash-turning-point-pt.svg)
+
 As regras de negócio vieram todas em linguagem natural, no mesmo estilo de conversa:
 
-- confirmação instantânea, sem aprovação manual;
-- sem intervalo entre atendimentos, porque a agenda é corrida;
-- cancelamento só pelo WhatsApp, nunca pelo site;
-- sem limite de quantos agendamentos uma pessoa pode marcar;
-- caso a cliente cancele com menos de 24 horas de antecedência, existe uma multa de 30% do valor combinado, cobrada na hora do atendimento.
+![Cinco cards com as regras de negócio do agendamento: confirmação instantânea, sem intervalo entre atendimentos, cancelamento só por WhatsApp, sem limite por cliente e multa de 30% para cancelamento com menos de 24 horas de antecedência](/assets/nicolash-rules-pt.svg)
 
 Essas regras viraram lógica de disponibilidade no código: grade de horários de 30 em 30 minutos, ocupação do primeiro horário livre de cada intervalo, antecedência mínima de reserva e horizonte máximo de 90 dias à frente, tudo calculado no fuso horário correto, para evitar o clássico bug de horário errado em sistemas de agenda.
 
@@ -1259,28 +1261,30 @@ The starting point was a request common among small local businesses: a beauty p
 
 The initial goal was simple: build a beautiful, responsive business website with the services and prices. That goal changed quite a bit over the course of the project, which is, in practice, the most honest picture of how a real project evolves.
 
-## From Cloud Design to Claude Code
+## From Figma to Claude Code
 
-The project started outside Claude Code, in a design stage done in Cloud Design, gathering style references, section structure and visual identity. That material was exported as a handoff and given to Claude Code as a starting point.
+The project started in Figma, gathering style references, section structure and visual identity. That material was taken into Claude Design, where the interface was refined and prepared as a handoff, and then given to Claude Code as a starting point for implementation.
+
+![Nicolash project's handoff flow: from Figma to Claude Design, and from Claude Design to Claude Code](/assets/nicolash-handoff-en.svg)
 
 From there, the process was:
 
-1. Rebuilding the handoff as a real Next.js project, using the image assets provided: service photos, logo, the client's Instagram.
-2. Choosing the stack. "I want this built in the best language, in the best framework, published for free" was, literally, the first request. The answer was Next.js hosted on Vercel, for the combination of zero cost to validate the product, automatic deploys on every push, and a good development experience.
-3. Iterating from visual feedback. Most early adjustments didn't come from technical specs, they came from screenshots and sentences like "the booking button ended up a different size than the view procedures button, they should match and be centered." That kind of feedback, common on projects with a non-technical client, was treated as a systematic design requirement rather than a one-off tweak, creating a reusable component pattern instead of fixing one button at a time.
-4. Mobile responsiveness as a requirement, not a detail. Since most of a local beauty studio's audience browses from a phone, mobile-first was treated as an acceptance criterion from the first delivery: a 14px minimum for paragraph text, cards with no overflow, same-size buttons, a full-screen image modal with next, previous and close controls.
+1. Rebuilding the handoff as a real Next.js project, using the image assets provided.
+2. Choosing the stack: the best language, the best framework, published for free. The answer was Next.js hosted on Vercel, for the combination of zero cost to validate the product, automatic deploys on every push, and a good development experience.
+3. Iterating from visual feedback, based on screenshots and notes about the interface, treated as a reusable design pattern rather than a one-off tweak.
+4. Mobile responsiveness as a requirement from the first delivery, since most of a local beauty studio's audience browses from a phone.
+
+![The four steps of the process with Claude Code: rebuilding the handoff, choosing the stack, visual iteration, and mobile-first responsiveness](/assets/nicolash-process-steps-en.svg)
 
 ## The turning point: from storefront to booking system
 
 With the site live, the request that changed the project's scope arrived. The client wanted her own clients to be able to pick a service, see a calendar with open slots, choose a day and time, fill in name and phone, and have the booking confirmed instantly, without depending on a message.
 
+![Comparison between the site before, a storefront with booking only via WhatsApp, and after, with its own online booking system](/assets/nicolash-turning-point-en.svg)
+
 The business rules all came in plain, conversational language:
 
-- instant confirmation, no manual approval;
-- no gap between appointments, because the schedule runs back-to-back;
-- cancellation only through WhatsApp, never through the site;
-- no limit on how many appointments one person can book;
-- if a client cancels with less than 24 hours' notice, a 30% fee on the agreed price applies, charged at the time of the appointment.
+![Five cards with the booking system's business rules: instant confirmation, no buffer time between appointments, cancellation only via WhatsApp, no limit per client, and a 30% fee for cancellations with less than 24 hours' notice](/assets/nicolash-rules-en.svg)
 
 Those rules became availability logic in the code: a 30-minute time grid, filling the first open slot in each window, a minimum lead time before a booking, a maximum horizon of 90 days ahead, all computed in the correct time zone, to avoid the classic wrong-midnight bug in scheduling systems.
 

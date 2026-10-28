@@ -1,0 +1,73 @@
+<svg viewBox="0 0 1200 660" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgTurnEn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="660" fill="url(#bgTurnEn)"/>
+
+  <!-- Panel A: Before -->
+  <rect x="60" y="40" width="500" height="480" rx="20" fill="#151515" stroke="#2a2a2a" stroke-width="2"/>
+  <rect x="90" y="70" width="100" height="26" rx="13" fill="#1a1a1a" stroke="#3a3a3a"/>
+  <text x="140" y="88" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="12" font-weight="700">BEFORE</text>
+  <text x="90" y="140" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Nicolash</text>
+  <text x="90" y="164" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13">Services and prices</text>
+
+  <g font-family="Arial, sans-serif" font-size="13" fill="#cfcfcf">
+    <rect x="90" y="190" width="440" height="56" rx="10" fill="#1a1a1a" stroke="#2a2a2a"/>
+    <text x="110" y="214">Egyptian Volume</text>
+    <text x="490" y="214" text-anchor="end" fill="#9a9a9a">$40</text>
+    <rect x="90" y="254" width="440" height="56" rx="10" fill="#1a1a1a" stroke="#2a2a2a"/>
+    <text x="110" y="278">Classic Lash Extensions</text>
+    <text x="490" y="278" text-anchor="end" fill="#9a9a9a">$30</text>
+    <rect x="90" y="318" width="440" height="56" rx="10" fill="#1a1a1a" stroke="#2a2a2a"/>
+    <text x="110" y="342">Eyebrow Design</text>
+    <text x="490" y="342" text-anchor="end" fill="#9a9a9a">$12</text>
+  </g>
+
+  <rect x="90" y="400" width="440" height="48" rx="24" fill="none" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="310" y="429" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13">Book via WhatsApp</text>
+  <text x="90" y="478" fill="#777777" font-family="Arial, sans-serif" font-size="11">No real schedule, no conflict control</text>
+
+  <!-- Panel B: After -->
+  <rect x="640" y="40" width="500" height="480" rx="20" fill="#151515" stroke="#3ddc6a" stroke-width="2"/>
+  <rect x="670" y="70" width="90" height="26" rx="13" fill="#1a1a1a" stroke="#3ddc6a"/>
+  <text x="715" y="88" text-anchor="middle" fill="#3ddc6a" font-family="Arial, sans-serif" font-size="12" font-weight="700">AFTER</text>
+  <text x="670" y="140" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Nicolash</text>
+  <text x="670" y="164" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13">Online booking</text>
+
+  <rect x="670" y="190" width="440" height="180" rx="14" fill="#1a1a1a" stroke="#2a2a2a"/>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#777777">
+    <text x="692" y="216">S</text><text x="730" y="216">M</text><text x="768" y="216">T</text>
+    <text x="806" y="216">W</text><text x="844" y="216">T</text><text x="882" y="216">F</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#cfcfcf">
+    <text x="692" y="246">3</text><text x="730" y="246">4</text><text x="768" y="246">5</text>
+    <circle cx="815" cy="241" r="15" fill="#3ddc6a"/>
+    <text x="810" y="246" fill="#0d0d0d" font-weight="700">6</text>
+    <text x="844" y="246">7</text><text x="882" y="246">8</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12">
+    <rect x="692" y="270" width="78" height="32" rx="8" fill="#151515" stroke="#333333"/>
+    <text x="706" y="291" fill="#cfcfcf">09:00</text>
+    <rect x="782" y="270" width="78" height="32" rx="8" fill="#3ddc6a"/>
+    <text x="796" y="291" fill="#0d0d0d" font-weight="700">11:00</text>
+    <rect x="872" y="270" width="78" height="32" rx="8" fill="#151515" stroke="#333333"/>
+    <text x="886" y="291" fill="#cfcfcf">14:30</text>
+  </g>
+  <text x="692" y="340" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="11">Name and phone filled in by the client</text>
+
+  <rect x="670" y="400" width="440" height="48" rx="24" fill="#3ddc6a"/>
+  <text x="890" y="429" text-anchor="middle" fill="#0d0d0d" font-family="Arial, sans-serif" font-size="13" font-weight="700">Confirm booking</text>
+  <text x="670" y="478" fill="#3ddc6a" font-family="Arial, sans-serif" font-size="11">Instant confirmation, no message needed</text>
+
+  <!-- arrow between panels -->
+  <path d="M568 280 L628 280" stroke="#3a3a3a" stroke-width="3" fill="none"/>
+  <path d="M614 268 L630 280 L614 292" fill="none" stroke="#3a3a3a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- bottom banner -->
+  <rect x="220" y="548" width="760" height="80" rx="16" fill="#101010" stroke="#2a2a2a" stroke-dasharray="4 4"/>
+  <text x="600" y="584" text-anchor="middle" fill="#e5e5e5" font-family="Arial, sans-serif" font-size="13" font-weight="700">The request that changed the scope</text>
+  <text x="600" y="606" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="12">Clients start booking for themselves, with no message needed</text>
+</svg>

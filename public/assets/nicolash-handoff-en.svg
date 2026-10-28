@@ -1,0 +1,42 @@
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgHandoffEn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <marker id="arrowEn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3a3a3a"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bgHandoffEn)"/>
+
+  <line x1="80" y1="160" x2="372" y2="160" stroke="#3a3a3a" stroke-width="2" marker-end="url(#arrowEn)"/>
+  <line x1="480" y1="160" x2="772" y2="160" stroke="#3a3a3a" stroke-width="2" marker-end="url(#arrowEn)"/>
+  <line x1="880" y1="160" x2="1120" y2="160" stroke="#3a3a3a" stroke-width="2" marker-end="url(#arrowEn)"/>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(200,160)">
+      <circle r="12" fill="#3ddc6a"/>
+      <text y="-30" text-anchor="middle" fill="#f5f5f5" font-size="17" font-weight="700">Figma</text>
+      <text y="-10" text-anchor="middle" fill="#777777" font-size="12">Original design</text>
+      <text y="36" text-anchor="middle" fill="#9a9a9a" font-size="12">Style references,</text>
+      <text y="54" text-anchor="middle" fill="#9a9a9a" font-size="12">structure and identity</text>
+    </g>
+
+    <g transform="translate(600,160)">
+      <circle r="12" fill="#3ddc6a"/>
+      <text y="-30" text-anchor="middle" fill="#f5f5f5" font-size="17" font-weight="700">Claude Design</text>
+      <text y="-10" text-anchor="middle" fill="#777777" font-size="12">Interface refinement</text>
+      <text y="36" text-anchor="middle" fill="#9a9a9a" font-size="12">Handoff prepared</text>
+      <text y="54" text-anchor="middle" fill="#9a9a9a" font-size="12">for implementation</text>
+    </g>
+
+    <g transform="translate(1000,160)">
+      <circle r="13" fill="#3ddc6a"/>
+      <text y="-30" text-anchor="middle" fill="#f5f5f5" font-size="17" font-weight="700">Claude Code</text>
+      <text y="-10" text-anchor="middle" fill="#777777" font-size="12">Implementation</text>
+      <text y="36" text-anchor="middle" fill="#9a9a9a" font-size="12">Real Next.js project,</text>
+      <text y="54" text-anchor="middle" fill="#9a9a9a" font-size="12">ready for production</text>
+    </g>
+  </g>
+</svg>
