@@ -99,6 +99,12 @@ const projectsMeta: ProjectMeta[] = [
     externalUrl: "https://www.behance.net/gallery/198699925/Redesign-NFG-Nota-Fiscal-Gaucha",
   },
   {
+    slug: "nicolash",
+    icon: "💅",
+    image: "/assets/nicolash-cover.png",
+    tools: ["Claude Code", "Vercel", "HostGator", "cPanel"],
+  },
+  {
     slug: "msiidf",
     icon: "/assets/msiidf-icon.png",
     image: "/assets/msiidf-cover.png",
@@ -413,6 +419,160 @@ Os botões de ação, como "Entrar" e "Cadastrar", ganharam uma área de toque d
 ## Resultados e aprendizados
 
 O redesign resultou em telas mais legíveis, com áreas de toque adequadas e um sistema visual consistente entre páginas que antes seguiam padrões diferentes. Ficou claro que boa parte dos problemas de usabilidade do aplicativo não vinha de funcionalidades ausentes, mas da falta de padronização entre telas construídas em momentos diferentes, reforçando a importância de um sistema visual documentado desde o início de um produto.`,
+      },
+    },
+    nicolash: {
+      name: "Nicolash",
+      title: "Site com agendamento online",
+      summary:
+        "Site institucional que evoluiu para um sistema completo de agendamento online, com painel administrativo e dados criptografados, do design à publicação com Claude Code.",
+      description:
+        "Construção de ponta a ponta com Claude Code: de um handoff de design a um site com agendamento online, painel administrativo mobile-first e criptografia de dados, migrado de Next.js/Vercel para PHP/MySQL na HostGator para reduzir o custo de hospedagem.",
+      tags: ["Desenvolvimento full-stack", "Claude Code", "Produto"],
+      imageAlt:
+        "Mockup de um aplicativo de agendamento online para um estúdio de beleza, com calendário, horários disponíveis e painel administrativo.",
+      caseStudy: {
+        heroSubtitle:
+          "Como um estúdio de beleza foi do zero a um site com agendamento online e painel administrativo, construído do início à publicação com Claude Code",
+        note: "Este case documenta, de forma didática, uma jornada real de desenvolvimento com Claude Code, do design à publicação. Nome do negócio, cidade e valores foram alterados para preservar a privacidade da cliente.",
+        role: "Desenvolvedor full-stack",
+        type: "Desenvolvimento web · Produto",
+        skills: [
+          "Prompt engineering para Claude Code",
+          "Arquitetura full-stack",
+          "Migração de hospedagem",
+          "Segurança e criptografia de dados",
+          "UX mobile-first",
+        ],
+        problem:
+          "Um negócio local de estética cresceu pelo Instagram, mas sem controle real de agenda: horários eram marcados por mensagem direta, sem visão de conflitos e sem histórico organizado para a profissional.\n\nO site institucional inicial resolveu a vitrine, mas não resolveu o problema real por trás do pedido, marcar e gerenciar horários de forma confiável, sem depender de troca manual de mensagens.",
+        solution:
+          "Construí, com Claude Code, o site institucional e, na sequência, um sistema completo de agendamento online com confirmação instantânea, regras de cancelamento e disponibilidade em tempo real, além de um painel administrativo mobile-first para a proprietária gerenciar a agenda, com nome e telefone das clientes protegidos por criptografia AES-256-GCM.\n\nQuando o custo mensal da hospedagem deixou de fazer sentido para o tamanho do negócio, todo o back-end foi reescrito de Next.js/Node para PHP/MySQL, mantendo exatamente o mesmo contrato de API e publicado via cPanel com Git Version Control, sem a cliente perceber qualquer diferença de uso.",
+        impact: [
+          {
+            value: "100%",
+            label: "Paridade de funcionalidades na migração",
+            description:
+              "Agendamento, painel administrativo e autenticação funcionando de forma idêntica depois de trocar toda a hospedagem e a linguagem do back-end.",
+          },
+          {
+            value: "0",
+            label: "Conflitos de horário",
+            description:
+              "Um lock de concorrência no banco de dados impede que dois agendamentos caiam no mesmo horário, mesmo com dois back-ends diferentes ao longo do projeto.",
+          },
+          {
+            value: "2",
+            label: "Arquiteturas completas",
+            description:
+              "O back-end foi escrito duas vezes com o mesmo contrato de API, uma em Node.js/Postgres (Vercel) e outra em PHP/MySQL (HostGator), sem diferença perceptível para quem usa o site.",
+          },
+        ],
+        body: `## Contexto: um negócio pequeno, uma necessidade real
+
+O ponto de partida foi um pedido comum entre pequenos negócios locais: uma profissional de estética, que neste case chamo de Nicolash, já tinha presença no Instagram, mas não tinha um site. As clientes marcavam horário por mensagem direta, sem visão real de agenda, sem histórico organizado e sem nenhuma forma de a profissional controlar conflitos de horário.
+
+O objetivo inicial era simples: construir um site institucional bonito, responsivo, com os serviços e os preços. Esse objetivo mudou bastante ao longo do projeto, o que é, na prática, o retrato mais honesto de como um projeto real evolui.
+
+## Do Cloud Design ao Claude Code
+
+O projeto começou fora do Claude Code, em uma etapa de design feita no Cloud Design, reunindo referências de estilo, estrutura de seções e identidade visual. Esse material foi exportado como um handoff e entregue ao Claude Code como ponto de partida.
+
+A partir daí, o processo foi:
+
+1. Reconstrução do handoff como um projeto Next.js real, usando os ativos de imagem fornecidos: fotos de serviços, logotipo, Instagram da cliente.
+2. Definição de pilha tecnológica. "Quero que seja feito na melhor linguagem, no melhor framework, publicado de forma gratuita" foi, literalmente, o pedido inicial. A resposta foi Next.js hospedado na Vercel, pela combinação de custo zero para validar o produto, deploy automático a cada push e boa experiência de desenvolvimento.
+3. Iteração orientada por feedback visual. Boa parte dos ajustes no início não veio de especificações técnicas, veio de prints de tela e frases como "o botão de agendar ficou com tamanho diferente do botão ver procedimentos, eles devem ficar iguais e centralizados". Esse tipo de feedback, comum em projetos com cliente não técnico, foi tratado como requisito de design sistemático, e não como ajuste pontual, criando um padrão de componentes reaproveitável em vez de corrigir botão por botão.
+4. Responsividade mobile como requisito, não detalhe. Como a maior parte do público de um estúdio de beleza local acessa pelo celular, mobile-first foi tratado como critério de aceite desde a primeira entrega: texto mínimo de 14px em parágrafos, cards sem overflow, botões do mesmo tamanho, modal de imagens em tela cheia com avançar, retroceder e fechar.
+
+## A virada: de vitrine para sistema de agendamento
+
+Com o site publicado, veio o pedido que mudou o escopo do projeto. A cliente queria que as próprias clientes pudessem escolher um serviço, ver um calendário com os horários livres, escolher dia e horário, preencher nome e telefone, e ter a reserva confirmada na hora, sem depender de mensagem.
+
+As regras de negócio vieram todas em linguagem natural, no mesmo estilo de conversa:
+
+- confirmação instantânea, sem aprovação manual;
+- sem intervalo entre atendimentos, porque a agenda é corrida;
+- cancelamento só pelo WhatsApp, nunca pelo site;
+- sem limite de quantos agendamentos uma pessoa pode marcar;
+- caso a cliente cancele com menos de 24 horas de antecedência, existe uma multa de 30% do valor combinado, cobrada na hora do atendimento.
+
+Essas regras viraram lógica de disponibilidade no código: grade de horários de 30 em 30 minutos, ocupação do primeiro horário livre de cada intervalo, antecedência mínima de reserva e horizonte máximo de 90 dias à frente, tudo calculado no fuso horário correto, para evitar o clássico bug de horário errado em sistemas de agenda.
+
+Junto com o agendamento veio o pedido de um painel administrativo, pensado mobile-first porque é assim que a proprietária do negócio ia usar no dia a dia: ver a agenda do dia, quantos horários livres, confirmados, concluídos e cancelados, bloquear horários manualmente e também inserir agendamentos feitos por telefone, caso em que o telefone passa a ser opcional, mas o nome continua obrigatório.
+
+## Segurança antes de ir ao ar
+
+Antes de publicar o agendamento em produção, surgiu uma pergunta simples e muito importante: como isso vai para a produção, e como garantir que, se alguém tiver acesso indevido ao banco de dados, os dados das clientes continuem protegidos.
+
+Essa pergunta foi a virada do projeto de "site bonito" para "sistema que guarda dado de cliente real", e mudou a arquitetura:
+
+- nome e telefone passaram a ser criptografados em repouso com AES-256-GCM, usando uma chave derivada por HKDF-SHA256 e um formato de envelope próprio, com versão, vetor de inicialização, tag de autenticação e dado cifrado, tudo em base64url;
+- o campo de Instagram da cliente final foi removido do formulário, porque menos dado sensível guardado é, por padrão, menos risco;
+- o login do painel administrativo passou a usar sessão assinada, um cookie com HMAC-SHA256, e a senha deixou de existir em texto puro em qualquer lugar, sendo armazenada com hash;
+- um limitador de tentativas de login, poucas tentativas por IP a cada 15 minutos, foi adicionado para dificultar ataques de força bruta.
+
+Esse tipo de decisão normalmente não aparece em um pedido de cliente, mas é exatamente o tipo de responsabilidade que entra quando um projeto de portfólio vira um sistema usado por pessoas reais.
+
+![Linha do tempo da evolução do projeto Nicolash: do site institucional ao agendamento online, do painel administrativo à criptografia de dados, até a migração de hospedagem](/assets/nicolash-timeline.svg)
+
+## O problema do custo, e por que migrar de hospedagem
+
+Com tudo funcionando, veio a pergunta que praticamente todo pequeno negócio faz, mais cedo ou mais tarde, sobre produto digital: esse custo mensal faz sentido para o tamanho do meu negócio?
+
+A Vercel é excelente para validar produto rápido, mas o plano adequado para manter banco de dados gerenciado e funções de servidor em produção, fora do nível gratuito, cobra por mês, em dólar. Para um site institucional de um negócio pequeno e local, esse custo recorrente, convertido para reais, deixa de fazer sentido rapidamente.
+
+A alternativa considerada foi hospedagem compartilhada tradicional, no caso HostGator, com cPanel, PHP e MySQL, por uma fração do custo mensal, já incluindo e-mail profissional e um painel de gestão conhecido por qualquer agência ou freelancer brasileiro.
+
+## Dois caminhos possíveis para publicar com Claude Code
+
+Esse projeto, na prática, virou dois caminhos possíveis para quem quer construir um site com Claude Code até a publicação. Vale comparar os dois diretamente.
+
+### Caminho 1: Next.js na Vercel
+
+- **Linguagem**: TypeScript/JavaScript de ponta a ponta, front-end e back-end no mesmo projeto.
+- **Deploy**: automático a cada push no GitHub, sem configuração manual de servidor.
+- **Banco de dados**: Postgres gerenciado (Neon, neste projeto), com variáveis de ambiente sincronizadas automaticamente.
+- **Segurança de infraestrutura**: certificado HTTPS automático, rede de borda, isolamento de funções, tudo gerenciado pela plataforma.
+- **Custo**: gratuito para validar, mas o plano pago, necessário em produção com banco gerenciado e mais execuções de função, soma rápido quando convertido para reais, especialmente para um negócio pequeno.
+- **Melhor para**: validar um produto rápido, projetos com orçamento para hospedagem gerenciada, ou produtos que vão escalar de verdade.
+
+### Caminho 2: PHP e MySQL na HostGator
+
+- **Linguagem**: PHP no servidor, reescrevendo cada endpoint da API mantendo exatamente o mesmo contrato, mesmas rotas, mesmos formatos de erro, para o front-end não perceber diferença.
+- **Deploy**: Git Version Control do próprio cPanel, puxando de um repositório privado no GitHub através de uma chave SSH somente leitura, sem precisar de CI/CD externo.
+- **Banco de dados**: MySQL via phpMyAdmin, com um script de migração dos dados que já existiam no Postgres.
+- **Segurança de infraestrutura**: certificado HTTPS configurado pelo próprio painel, AutoSSL do cPanel, com responsabilidade maior do desenvolvedor sobre o que é exposto publicamente. A criptografia de aplicação, AES-256-GCM, teve que ser reimplementada em PHP, compatível com a versão em Node, para continuar decifrando os dados já criptografados.
+- **Custo**: uma fração do plano pago da Vercel, cobrado em reais, já incluindo e-mail e domínio.
+- **Melhor para**: negócios pequenos e locais, orçamento apertado, clientes que já conhecem cPanel, ou quem precisa de hospedagem compartilhada tradicional por qualquer motivo.
+
+Nenhum dos dois caminhos é o certo de forma absoluta. O caminho 1 prioriza velocidade e infraestrutura gerenciada, o caminho 2 prioriza custo e um modelo de hospedagem mais familiar para quem já usa serviços brasileiros tradicionais. A decisão certa depende do estágio e do orçamento do negócio, aqui ela mudou no meio do projeto, porque o negócio real mudou de "vamos validar uma ideia" para "isso já é usado por clientes todos os dias, e precisa custar pouco para se manter".
+
+## Como foi feita a migração, na prática
+
+Para não arriscar o site que já estava em produção, a reescrita para PHP foi feita em paralelo, em um branch e uma worktree separados do projeto principal, sem tocar no que já estava publicado na Vercel. O front-end em Next.js foi configurado para exportação estática, saída puramente em HTML, CSS e JS, sem servidor Node por trás, e cada rota de API foi recriada em PHP, com os mesmos nomes de endpoint e os mesmos formatos de resposta.
+
+Antes de qualquer coisa ir para o servidor real, foi montado um ambiente local, com PHP e MySQL instalados na própria máquina, simulando a hospedagem de produção, para testar todos os fluxos: agendamento criado com sucesso, tentativa de agendar em cima de um horário já ocupado e corretamente bloqueada, login do painel, criação manual de agendamento pela administradora, bloqueio de horário. Tudo validado localmente antes de subir.
+
+### cPanel, Git Version Control e o primeiro deploy
+
+Na prática, o deploy em hospedagem compartilhada usando Git funciona de um jeito parecido com um pipeline de CI/CD simplificado:
+
+1. O projeto é preparado com um arquivo de configuração próprio do cPanel, que define exatamente quais arquivos vão para a pasta pública do site, e bloqueia explicitamente tudo que é interno: código-fonte, dependências, controle de versão.
+2. Um repositório privado é criado no GitHub, só com o que deve ir para produção.
+3. É gerada uma chave SSH de deploy, sem senha, cadastrada no GitHub como chave somente leitura. Isso evita usar a senha pessoal da conta e limita o acesso ao mínimo necessário.
+4. Dentro do cPanel, a função Git Version Control recebe a URL do repositório e a chave, clona o projeto e, a cada atualização, basta um "pull" para publicar a versão mais nova.
+5. O banco de dados é criado via cPanel/phpMyAdmin, o esquema SQL é importado e os dados que já existiam em produção são migrados com um script próprio.
+
+Esse foi um passo a passo guiado em tempo real, com a cliente enviando print de cada tela do cPanel, criação do banco, importação da chave, configuração do Git Version Control, permissões de arquivo, para confirmar, antes de cada clique, que o caminho era o correto. É o tipo de acompanhamento que normalmente falta em tutoriais escritos, porque hospedagem compartilhada tem nome diferente para a mesma coisa em cada provedor, e um clique no lugar errado pode derrubar o site.
+
+Um ponto que pega a maioria de quem passa por isso pela primeira vez: a URL temporária gerada pela hospedagem, antes de apontar um domínio próprio, não migra automaticamente quando o domínio definitivo é configurado. A melhor prática é registrar o domínio antes de configurar qualquer coisa em produção, e não depois.
+
+## Resultado
+
+Hoje, o fluxo da cliente final é escolher o serviço, ver o calendário com os horários realmente livres, escolher dia e horário, confirmar com nome e telefone, e receber a confirmação na hora, sem trocar mensagem com ninguém antes de garantir o horário. A proprietária acompanha tudo pelo celular, em um painel que mostra a agenda do dia, pode bloquear horários, inserir agendamentos feitos por telefone, e nunca vê o nome e o telefone das clientes em texto puro em lugar nenhum do banco de dados.
+
+E o site inteiro, agendamento, painel administrativo e autenticação inclusos, roda hoje em uma hospedagem compartilhada tradicional, com um custo mensal compatível com o tamanho real do negócio.`,
       },
     },
     msiidf: {
@@ -1040,6 +1200,158 @@ Action buttons, like "Sign in" and "Sign up," gained a 48px touch area, and the 
 ## Results and takeaways
 
 The redesign resulted in more readable screens, adequate touch areas, and a visual system that's now consistent across pages that used to follow different standards. It became clear that most of the app's usability problems didn't come from missing features, but from a lack of standardization across screens built at different times, reinforcing how important a documented visual system is from a product's very beginning.`,
+      },
+    },
+    nicolash: {
+      name: "Nicolash",
+      title: "Online booking website",
+      summary:
+        "A business website that grew into a full online booking system, with an admin panel and encrypted data, from design to launch with Claude Code.",
+      description:
+        "End-to-end build with Claude Code: from a design handoff to a website with online booking, a mobile-first admin panel and data encryption, migrated from Next.js/Vercel to PHP/MySQL on HostGator to cut hosting costs.",
+      tags: ["Full-stack development", "Claude Code", "Product"],
+      imageAlt:
+        "Mockup of an online booking app for a beauty studio, with a calendar, available time slots and an admin panel.",
+      caseStudy: {
+        heroSubtitle:
+          "How a beauty studio went from nothing to a website with online booking and an admin panel, built from start to launch with Claude Code",
+        note: "This case documents, in a hands-on way, a real development journey with Claude Code, from design to launch. The business name, city and figures were changed to protect the client's privacy.",
+        role: "Full-stack developer",
+        type: "Web development · Product",
+        skills: [
+          "Prompt engineering for Claude Code",
+          "Full-stack architecture",
+          "Hosting migration",
+          "Data security and encryption",
+          "Mobile-first UX",
+        ],
+        problem:
+          "A local beauty business had grown on Instagram but had no real control over its schedule: appointments were booked through direct messages, with no visibility into conflicts and no organized history for the professional.\n\nThe first business website solved the storefront problem, but not the real need behind the request, booking and managing appointments reliably, without relying on back-and-forth messages.",
+        solution:
+          "I built the business website with Claude Code, then a full online booking system with instant confirmation, cancellation rules and real-time availability, plus a mobile-first admin panel for the owner to manage the schedule, with clients' names and phone numbers protected by AES-256-GCM encryption.\n\nWhen the monthly hosting cost stopped making sense for the size of the business, the entire backend was rewritten from Next.js/Node to PHP/MySQL, keeping the exact same API contract and deployed through cPanel with Git Version Control, with no visible difference for the client.",
+        impact: [
+          {
+            value: "100%",
+            label: "Feature parity after the migration",
+            description:
+              "Booking, admin panel and authentication all work identically after swapping the entire hosting platform and backend language.",
+          },
+          {
+            value: "0",
+            label: "Double-booked slots",
+            description:
+              "A concurrency lock in the database prevents two bookings from landing on the same slot, even across two different backends over the project's lifetime.",
+          },
+          {
+            value: "2",
+            label: "Complete architectures",
+            description:
+              "The backend was written twice under the same API contract, once in Node.js/Postgres (Vercel) and once in PHP/MySQL (HostGator), with no noticeable difference for the end user.",
+          },
+        ],
+        body: `## Context: a small business, a real need
+
+The starting point was a request common among small local businesses: a beauty professional, who I'll call Nicolash in this case study, already had a presence on Instagram but no website. Clients booked appointments through direct messages, with no real view of the schedule, no organized history, and no way for the professional to control scheduling conflicts.
+
+The initial goal was simple: build a beautiful, responsive business website with the services and prices. That goal changed quite a bit over the course of the project, which is, in practice, the most honest picture of how a real project evolves.
+
+## From Cloud Design to Claude Code
+
+The project started outside Claude Code, in a design stage done in Cloud Design, gathering style references, section structure and visual identity. That material was exported as a handoff and given to Claude Code as a starting point.
+
+From there, the process was:
+
+1. Rebuilding the handoff as a real Next.js project, using the image assets provided: service photos, logo, the client's Instagram.
+2. Choosing the stack. "I want this built in the best language, in the best framework, published for free" was, literally, the first request. The answer was Next.js hosted on Vercel, for the combination of zero cost to validate the product, automatic deploys on every push, and a good development experience.
+3. Iterating from visual feedback. Most early adjustments didn't come from technical specs, they came from screenshots and sentences like "the booking button ended up a different size than the view procedures button, they should match and be centered." That kind of feedback, common on projects with a non-technical client, was treated as a systematic design requirement rather than a one-off tweak, creating a reusable component pattern instead of fixing one button at a time.
+4. Mobile responsiveness as a requirement, not a detail. Since most of a local beauty studio's audience browses from a phone, mobile-first was treated as an acceptance criterion from the first delivery: a 14px minimum for paragraph text, cards with no overflow, same-size buttons, a full-screen image modal with next, previous and close controls.
+
+## The turning point: from storefront to booking system
+
+With the site live, the request that changed the project's scope arrived. The client wanted her own clients to be able to pick a service, see a calendar with open slots, choose a day and time, fill in name and phone, and have the booking confirmed instantly, without depending on a message.
+
+The business rules all came in plain, conversational language:
+
+- instant confirmation, no manual approval;
+- no gap between appointments, because the schedule runs back-to-back;
+- cancellation only through WhatsApp, never through the site;
+- no limit on how many appointments one person can book;
+- if a client cancels with less than 24 hours' notice, a 30% fee on the agreed price applies, charged at the time of the appointment.
+
+Those rules became availability logic in the code: a 30-minute time grid, filling the first open slot in each window, a minimum lead time before a booking, a maximum horizon of 90 days ahead, all computed in the correct time zone, to avoid the classic wrong-midnight bug in scheduling systems.
+
+Alongside booking came the request for an admin panel, designed mobile-first because that's how the business owner would actually use it day to day: see the day's schedule, how many slots are open, confirmed, completed or canceled, manually block time slots, and also enter bookings taken over the phone, in which case the phone number becomes optional but the name is still required.
+
+## Security before going live
+
+Before putting booking into production, a simple and very important question came up: how does this get to production, and how do we make sure that if someone got unauthorized access to the database, clients' data would stay protected.
+
+That question was the turning point from "pretty website" to "a system that stores real client data," and it changed the architecture:
+
+- name and phone number became encrypted at rest with AES-256-GCM, using a key derived through HKDF-SHA256 and a custom envelope format, with version, initialization vector, authentication tag and ciphertext, all in base64url;
+- the end client's Instagram field was removed from the form, because less sensitive data stored is, by default, less risk;
+- admin panel login switched to a signed session, a cookie with HMAC-SHA256, and the password stopped existing in plain text anywhere, stored as a hash instead;
+- a login throttle, a handful of attempts per IP every 15 minutes, was added to make brute-forcing harder.
+
+This kind of decision doesn't usually show up in a client request, but it's exactly the responsibility that comes with turning a portfolio project into a system real people use.
+
+![Timeline of the Nicolash project's evolution: from business website to online booking, from admin panel to data encryption, to the hosting migration](/assets/nicolash-timeline.svg)
+
+## The cost problem, and why migrate hosting
+
+With everything working, the question practically every small business asks, sooner or later, about a digital product came up: does this monthly cost make sense for the size of my business?
+
+Vercel is excellent for validating a product quickly, but the plan suited to running a managed database and server functions in production, beyond the free tier, bills per month, in dollars. For a small, local business website, that recurring cost, converted to local currency, stops making sense fairly quickly.
+
+The alternative considered was traditional shared hosting, HostGator in this case, with cPanel, PHP and MySQL, for a fraction of the monthly cost, already including professional email and a management panel familiar to any Brazilian agency or freelancer.
+
+## Two possible paths to publish with Claude Code
+
+This project, in practice, turned into two possible paths for anyone who wants to build a website with Claude Code all the way to publishing. It's worth comparing them directly.
+
+### Path 1: Next.js on Vercel
+
+- **Language**: TypeScript/JavaScript end to end, frontend and backend in the same project.
+- **Deploy**: automatic on every push to GitHub, no manual server configuration.
+- **Database**: managed Postgres (Neon, in this project), with environment variables synced automatically.
+- **Infrastructure security**: automatic HTTPS certificates, an edge network, function isolation, all managed by the platform.
+- **Cost**: free to validate, but the paid plan, needed in production with a managed database and more function executions, adds up quickly once converted to local currency, especially for a small business.
+- **Best for**: validating a product quickly, projects with budget for managed hosting, or products that will genuinely scale.
+
+### Path 2: PHP and MySQL on HostGator
+
+- **Language**: server-side PHP, rewriting every API endpoint while keeping the exact same contract, same routes, same error formats, so the frontend sees no difference.
+- **Deploy**: cPanel's own Git Version Control, pulling from a private GitHub repository through a read-only SSH key, with no need for external CI/CD.
+- **Database**: MySQL via phpMyAdmin, with a migration script for the data that already existed in Postgres.
+- **Infrastructure security**: HTTPS configured through the panel itself, cPanel's AutoSSL, with more of the responsibility on the developer for what gets exposed publicly. The application-level encryption, AES-256-GCM, had to be reimplemented in PHP, compatible with the Node version, to keep decrypting data that was already encrypted.
+- **Cost**: a fraction of Vercel's paid plan, billed in local currency, already including email and domain.
+- **Best for**: small, local businesses, a tight budget, clients already familiar with cPanel, or anyone who needs traditional shared hosting for any reason.
+
+Neither path is the absolutely correct one. Path 1 prioritizes speed and managed infrastructure, path 2 prioritizes cost and a hosting model more familiar to anyone already using traditional local hosting providers. The right decision depends on the business's stage and budget, here it changed midway through the project, because the real business changed from "let's validate an idea" into "clients already use this every day, and it needs to cost little to keep running."
+
+## How the migration was actually done
+
+To avoid putting the live site at risk, the PHP rewrite was done in parallel, in a separate branch and worktree from the main project, without touching what was already published on Vercel. The Next.js frontend was configured for static export, plain HTML, CSS and JS output, with no Node server behind it, and every API route was rebuilt in PHP, with the same endpoint names and the same response formats.
+
+Before anything touched the real server, a local environment was set up, with PHP and MySQL installed on the machine itself, simulating the production host, to test every flow: a booking created successfully, an attempt to book on top of an already-taken slot correctly blocked, admin login, a booking manually created by the admin, blocking a time slot. Everything validated locally before deploying.
+
+### cPanel, Git Version Control and the first deploy
+
+In practice, deploying on shared hosting through Git works a lot like a simplified CI/CD pipeline:
+
+1. The project is prepared with cPanel's own configuration file, which defines exactly which files go into the site's public folder, and explicitly blocks everything internal: source code, dependencies, version control.
+2. A private repository is created on GitHub, containing only what should go to production.
+3. A passwordless deploy SSH key is generated and registered on GitHub as a read-only key. This avoids using the personal account password and limits access to the bare minimum.
+4. Inside cPanel, the Git Version Control feature takes the repository URL and the key, clones the project, and from then on a single "pull" publishes the newest version.
+5. The database is created through cPanel/phpMyAdmin, the SQL schema is imported, and the data already in production is migrated with a dedicated script.
+
+This was a real-time, guided walkthrough, with the client sending a screenshot of every cPanel screen, creating the database, importing the key, setting up Git Version Control, file permissions, to confirm, before every click, that the path was the right one. That kind of hand-holding is usually missing from written tutorials, because shared hosting providers name the same thing differently from one another, and one wrong click can take the site down. One thing that catches almost everyone the first time: the temporary URL a host generates before a real domain is pointed doesn't automatically carry over once the final domain is configured. The best practice is to register the domain before configuring anything in production, not after.
+
+## Result
+
+Today, the end client's flow is to pick the service, see a calendar with the slots that are actually open, choose a day and time, confirm with name and phone, and get the confirmation instantly, without exchanging a single message with anyone before the slot is secured. The owner tracks everything from her phone, in a panel that shows the day's schedule, can block time slots, enter bookings taken over the phone, and never sees a client's name or phone number in plain text anywhere in the database.
+
+And the whole site, booking, admin panel and authentication included, now runs on traditional shared hosting, at a monthly cost that actually matches the real size of the business.`,
       },
     },
     msiidf: {
