@@ -528,6 +528,8 @@ A alternativa considerada foi hospedagem compartilhada tradicional, no caso Host
 
 Esse projeto, na prática, virou dois caminhos possíveis para quem quer construir um site com Claude Code até a publicação. Vale comparar os dois diretamente.
 
+![Comparação entre os dois caminhos de publicação: Vercel com Next.js e HostGator com PHP, lado a lado por linguagem, deploy, banco de dados, segurança, custo mensal e para quem é melhor cada opção](/assets/nicolash-comparison-pt.svg)
+
 ### Caminho 1: Next.js na Vercel
 
 - **Linguagem**: TypeScript/JavaScript de ponta a ponta, front-end e back-end no mesmo projeto.
@@ -567,6 +569,8 @@ Na prática, o deploy em hospedagem compartilhada usando Git funciona de um jeit
 Esse foi um passo a passo guiado em tempo real, com a cliente enviando print de cada tela do cPanel, criação do banco, importação da chave, configuração do Git Version Control, permissões de arquivo, para confirmar, antes de cada clique, que o caminho era o correto. É o tipo de acompanhamento que normalmente falta em tutoriais escritos, porque hospedagem compartilhada tem nome diferente para a mesma coisa em cada provedor, e um clique no lugar errado pode derrubar o site.
 
 Um ponto que pega a maioria de quem passa por isso pela primeira vez: a URL temporária gerada pela hospedagem, antes de apontar um domínio próprio, não migra automaticamente quando o domínio definitivo é configurado. A melhor prática é registrar o domínio antes de configurar qualquer coisa em produção, e não depois.
+
+![Diagrama mostrando o problema identificado, as decisões tomadas com Claude Code e o impacto final do projeto Nicolash, em três etapas](/assets/nicolash-impact-pt.svg)
 
 ## Resultado
 
@@ -1309,6 +1313,8 @@ The alternative considered was traditional shared hosting, HostGator in this cas
 
 This project, in practice, turned into two possible paths for anyone who wants to build a website with Claude Code all the way to publishing. It's worth comparing them directly.
 
+![Comparison between the two publishing paths: Vercel with Next.js and HostGator with PHP, side by side across language, deploy, database, security, monthly cost and who each option is best for](/assets/nicolash-comparison-en.svg)
+
 ### Path 1: Next.js on Vercel
 
 - **Language**: TypeScript/JavaScript end to end, frontend and backend in the same project.
@@ -1346,6 +1352,8 @@ In practice, deploying on shared hosting through Git works a lot like a simplifi
 5. The database is created through cPanel/phpMyAdmin, the SQL schema is imported, and the data already in production is migrated with a dedicated script.
 
 This was a real-time, guided walkthrough, with the client sending a screenshot of every cPanel screen, creating the database, importing the key, setting up Git Version Control, file permissions, to confirm, before every click, that the path was the right one. That kind of hand-holding is usually missing from written tutorials, because shared hosting providers name the same thing differently from one another, and one wrong click can take the site down. One thing that catches almost everyone the first time: the temporary URL a host generates before a real domain is pointed doesn't automatically carry over once the final domain is configured. The best practice is to register the domain before configuring anything in production, not after.
+
+![Diagram showing the problem identified, the decisions made with Claude Code and the final impact of the Nicolash project, in three stages](/assets/nicolash-impact-en.svg)
 
 ## Result
 

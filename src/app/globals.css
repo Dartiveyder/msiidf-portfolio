@@ -114,3 +114,18 @@ html.custom-cursor-active * {
     animation: none;
   }
 }
+
+/* Lets case-study body images (screenshots, diagrams) break out of the
+   narrower 760px text column and grow toward the page's 1000px content
+   width once there's room, without ever overflowing the viewport. */
+.case-study-img {
+  width: 100%;
+}
+
+@media (min-width: 860px) {
+  .case-study-img {
+    width: min(1000px, calc(100vw - 96px));
+    margin-left: calc((760px - min(1000px, calc(100vw - 96px))) / 2);
+    margin-right: calc((760px - min(1000px, calc(100vw - 96px))) / 2);
+  }
+}

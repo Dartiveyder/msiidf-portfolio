@@ -32,7 +32,7 @@ const components: Components = {
   ),
   blockquote: ({ children }) => <QuoteBlock>{children}</QuoteBlock>,
   img: ({ src, alt }) => (
-    <span className="my-8 block overflow-hidden rounded-2xl border border-border">
+    <span className="case-study-img my-8 block overflow-hidden rounded-2xl border border-border">
       {/* eslint-disable-next-line @next/next/no-img-element -- arbitrary markdown-authored images with unknown dimensions */}
       <img src={typeof src === "string" ? src : undefined} alt={alt ?? ""} loading="lazy" className="block h-auto w-full" />
     </span>
