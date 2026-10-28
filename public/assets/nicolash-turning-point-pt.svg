@@ -1,73 +1,79 @@
-<svg viewBox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1300 760" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgTurnPt" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#121212"/>
-      <stop offset="100%" stop-color="#0a0a0a"/>
-    </linearGradient>
+    <filter id="paperNoiseTpPt" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0"/>
+    </filter>
   </defs>
-  <rect width="1200" height="680" fill="url(#bgTurnPt)"/>
+  <rect width="1300" height="760" fill="#f4efe0"/>
+  <rect width="1300" height="760" filter="url(#paperNoiseTpPt)"/>
 
   <!-- Panel A: Antes -->
-  <rect x="60" y="40" width="500" height="480" rx="20" fill="#151515" stroke="#2a2a2a" stroke-width="2"/>
-  <rect x="90" y="68" width="96" height="28" rx="14" fill="#1a1a1a" stroke="#3a3a3a"/>
-  <text x="138" y="87" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13" font-weight="700">ANTES</text>
-  <text x="90" y="142" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="22" font-weight="700">Nicolash</text>
-  <text x="90" y="166" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="15">Serviços e preços</text>
+  <g transform="rotate(-0.5 320 300)">
+    <rect x="40" y="40" width="560" height="520" rx="20" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
+  </g>
+  <rect x="68" y="70" width="110" height="34" rx="17" fill="#f4efe0" stroke="#30291f" stroke-width="2"/>
+  <text x="123" y="93" text-anchor="middle" fill="#6f6650" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="17" font-weight="700">ANTES</text>
+  <text x="68" y="166" fill="#30291f" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="30" font-weight="700">Nicolash</text>
+  <text x="68" y="196" fill="#6f6650" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="19">Serviços e preços</text>
 
-  <g font-family="Arial, sans-serif" font-size="15" fill="#cfcfcf">
-    <rect x="90" y="192" width="440" height="56" rx="10" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="110" y="226">Volume Egípcio</text>
-    <text x="490" y="226" text-anchor="end" fill="#9a9a9a">R$ 200</text>
-    <rect x="90" y="256" width="440" height="56" rx="10" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="110" y="290">Alongamento Fio a Fio</text>
-    <text x="490" y="290" text-anchor="end" fill="#9a9a9a">R$ 150</text>
-    <rect x="90" y="320" width="440" height="56" rx="10" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="110" y="354">Design de Sobrancelhas</text>
-    <text x="490" y="354" text-anchor="end" fill="#9a9a9a">R$ 60</text>
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="19" fill="#30291f">
+    <rect x="68" y="222" width="504" height="62" rx="10" fill="#f4efe0" stroke="#30291f" stroke-width="2"/>
+    <text x="90" y="260">Volume Russo</text>
+    <text x="548" y="260" text-anchor="end" fill="#6f6650">R$ 200</text>
+    <rect x="68" y="292" width="504" height="62" rx="10" fill="#f4efe0" stroke="#30291f" stroke-width="2"/>
+    <text x="90" y="330">Alongamento Fio a Fio</text>
+    <text x="548" y="330" text-anchor="end" fill="#6f6650">R$ 150</text>
+    <rect x="68" y="362" width="504" height="62" rx="10" fill="#f4efe0" stroke="#30291f" stroke-width="2"/>
+    <text x="90" y="400">Design de Sobrancelhas</text>
+    <text x="548" y="400" text-anchor="end" fill="#6f6650">R$ 60</text>
   </g>
 
-  <rect x="90" y="402" width="440" height="50" rx="25" fill="none" stroke="#3a3a3a" stroke-width="2"/>
-  <text x="310" y="432" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="15">Agendar pelo WhatsApp</text>
-  <text x="90" y="484" fill="#898989" font-family="Arial, sans-serif" font-size="13">Sem agenda real, sem controle de conflitos</text>
+  <rect x="68" y="452" width="504" height="56" rx="28" fill="none" stroke="#6f6650" stroke-width="2.5"/>
+  <text x="320" y="487" text-anchor="middle" fill="#6f6650" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="19">Agendar pelo WhatsApp</text>
+  <text x="68" y="542" fill="#8a8169" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="16">Sem agenda real, sem controle de conflitos</text>
 
   <!-- Panel B: Depois -->
-  <rect x="640" y="40" width="500" height="480" rx="20" fill="#151515" stroke="#3ddc6a" stroke-width="2"/>
-  <rect x="670" y="68" width="96" height="28" rx="14" fill="#1a1a1a" stroke="#3ddc6a"/>
-  <text x="718" y="87" text-anchor="middle" fill="#3ddc6a" font-family="Arial, sans-serif" font-size="13" font-weight="700">DEPOIS</text>
-  <text x="670" y="142" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="22" font-weight="700">Nicolash</text>
-  <text x="670" y="166" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="15">Agendamento online</text>
+  <g transform="rotate(0.5 980 300)">
+    <rect x="700" y="40" width="560" height="520" rx="20" fill="#ece3cd" stroke="#2f7d46" stroke-width="3"/>
+  </g>
+  <rect x="728" y="70" width="110" height="34" rx="17" fill="#f4efe0" stroke="#2f7d46" stroke-width="2.5"/>
+  <text x="783" y="93" text-anchor="middle" fill="#2f7d46" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="17" font-weight="700">DEPOIS</text>
+  <text x="728" y="166" fill="#30291f" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="30" font-weight="700">Nicolash</text>
+  <text x="728" y="196" fill="#6f6650" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="19">Agendamento online</text>
 
-  <rect x="670" y="192" width="440" height="180" rx="14" fill="#1a1a1a" stroke="#2a2a2a"/>
-  <g font-family="Arial, sans-serif" font-size="13" fill="#898989">
-    <text x="692" y="220">S</text><text x="730" y="220">T</text><text x="768" y="220">Q</text>
-    <text x="806" y="220">Q</text><text x="844" y="220">S</text><text x="882" y="220">S</text>
+  <rect x="728" y="222" width="504" height="200" rx="14" fill="#f4efe0" stroke="#30291f" stroke-width="2"/>
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="16" fill="#8a8169">
+    <text x="754" y="254">S</text><text x="798" y="254">T</text><text x="842" y="254">Q</text>
+    <text x="886" y="254">Q</text><text x="930" y="254">S</text><text x="974" y="254">S</text>
   </g>
-  <g font-family="Arial, sans-serif" font-size="14" fill="#cfcfcf">
-    <text x="692" y="252">3</text><text x="730" y="252">4</text><text x="768" y="252">5</text>
-    <circle cx="815" cy="247" r="16" fill="#3ddc6a"/>
-    <text x="810" y="252" fill="#0d0d0d" font-weight="700">6</text>
-    <text x="844" y="252">7</text><text x="882" y="252">8</text>
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="18" fill="#30291f">
+    <text x="754" y="292">3</text><text x="798" y="292">4</text><text x="842" y="292">5</text>
+    <circle cx="896" cy="286" r="18" fill="#2f7d46"/>
+    <text x="890" y="292" fill="#f4efe0" font-weight="700">6</text>
+    <text x="930" y="292">7</text><text x="974" y="292">8</text>
   </g>
-  <g font-family="Arial, sans-serif" font-size="14">
-    <rect x="692" y="278" width="78" height="34" rx="8" fill="#151515" stroke="#333333"/>
-    <text x="704" y="300" fill="#cfcfcf">09:00</text>
-    <rect x="782" y="278" width="78" height="34" rx="8" fill="#3ddc6a"/>
-    <text x="794" y="300" fill="#0d0d0d" font-weight="700">11:00</text>
-    <rect x="872" y="278" width="78" height="34" rx="8" fill="#151515" stroke="#333333"/>
-    <text x="884" y="300" fill="#cfcfcf">14:30</text>
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="17">
+    <rect x="754" y="320" width="92" height="40" rx="9" fill="#ece3cd" stroke="#30291f" stroke-width="1.5"/>
+    <text x="766" y="347" fill="#4a4336">09:00</text>
+    <rect x="858" y="320" width="92" height="40" rx="9" fill="#2f7d46"/>
+    <text x="870" y="347" fill="#f4efe0" font-weight="700">11:00</text>
+    <rect x="962" y="320" width="92" height="40" rx="9" fill="#ece3cd" stroke="#30291f" stroke-width="1.5"/>
+    <text x="974" y="347" fill="#4a4336">14:30</text>
   </g>
-  <text x="692" y="348" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13">Nome e telefone preenchidos pela cliente</text>
+  <text x="754" y="402" fill="#6f6650" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="16">Nome e telefone preenchidos pela cliente</text>
 
-  <rect x="670" y="402" width="440" height="50" rx="25" fill="#3ddc6a"/>
-  <text x="890" y="432" text-anchor="middle" fill="#0d0d0d" font-family="Arial, sans-serif" font-size="15" font-weight="700">Confirmar agendamento</text>
-  <text x="670" y="484" fill="#3ddc6a" font-family="Arial, sans-serif" font-size="13">Confirmação instantânea, sem trocar mensagem</text>
+  <rect x="728" y="452" width="504" height="56" rx="28" fill="#2f7d46"/>
+  <text x="980" y="487" text-anchor="middle" fill="#f4efe0" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="19" font-weight="700">Confirmar agendamento</text>
+  <text x="728" y="542" fill="#2f7d46" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="16">Confirmação instantânea, sem trocar mensagem</text>
 
   <!-- arrow between panels -->
-  <path d="M568 280 L628 280" stroke="#4a4a4a" stroke-width="3" fill="none"/>
-  <path d="M614 268 L630 280 L614 292" fill="none" stroke="#4a4a4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M608,300 Q650,292 690,300" stroke="#30291f" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M690,300 L672,290" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
+  <path d="M690,300 L674,312" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
 
   <!-- bottom banner -->
-  <rect x="200" y="556" width="800" height="90" rx="16" fill="#101010" stroke="#2a2a2a" stroke-dasharray="4 4"/>
-  <text x="600" y="594" text-anchor="middle" fill="#e5e5e5" font-family="Arial, sans-serif" font-size="16" font-weight="700">O pedido que mudou o escopo</text>
-  <text x="600" y="618" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="14">Clientes passam a agendar sozinhas, sem depender de mensagem</text>
+  <rect x="200" y="620" width="900" height="100" rx="18" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
+  <text x="650" y="662" text-anchor="middle" fill="#30291f" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="22" font-weight="700">O pedido que mudou o escopo</text>
+  <text x="650" y="692" text-anchor="middle" fill="#6f6650" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" font-size="18">Clientes passam a agendar sozinhas, sem depender de mensagem</text>
 </svg>

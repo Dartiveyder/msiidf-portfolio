@@ -1,41 +1,49 @@
-<svg viewBox="0 0 1400 360" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1400 420" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgHandoffEn" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#121212"/>
-      <stop offset="100%" stop-color="#0a0a0a"/>
-    </linearGradient>
-    <marker id="arrowEn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#4a4a4a"/>
-    </marker>
+    <filter id="paperNoiseEn" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0"/>
+    </filter>
   </defs>
-  <rect width="1400" height="360" fill="url(#bgHandoffEn)"/>
+  <rect width="1400" height="420" fill="#f4efe0"/>
+  <rect width="1400" height="420" filter="url(#paperNoiseEn)"/>
 
-  <line x1="213" y1="180" x2="684" y2="180" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#arrowEn)"/>
-  <line x1="713" y1="180" x2="1184" y2="180" stroke="#4a4a4a" stroke-width="2.5" marker-end="url(#arrowEn)"/>
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" fill="none">
+    <path d="M236,214 Q460,190 684,212" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M684,212 L665,201" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M684,212 L668,224" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
 
-  <g font-family="Arial, sans-serif">
-    <g transform="translate(200,180)">
-      <circle r="13" fill="#3ddc6a"/>
-      <text y="-38" text-anchor="middle" fill="#f5f5f5" font-size="21" font-weight="700">Figma</text>
-      <text y="-14" text-anchor="middle" fill="#9a9a9a" font-size="15">Original design</text>
-      <text y="42" text-anchor="middle" fill="#cfcfcf" font-size="15">Style references,</text>
-      <text y="64" text-anchor="middle" fill="#cfcfcf" font-size="15">structure and identity</text>
+    <path d="M716,212 Q940,188 1164,214" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1164,214 L1145,203" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1164,214 L1148,226" stroke="#30291f" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
+    <g transform="translate(220,210)">
+      <circle r="17" fill="#2f7d46" stroke="#30291f" stroke-width="2.5"/>
+      <text y="-62" text-anchor="middle" fill="#30291f" font-size="36" font-weight="700">Figma</text>
+      <path d="M-58,-48 Q-20,-44 58,-48" stroke="#2f7d46" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text y="-22" text-anchor="middle" fill="#6f6650" font-size="22">Original design</text>
+      <text y="52" text-anchor="middle" fill="#30291f" font-size="22">Style references,</text>
+      <text y="80" text-anchor="middle" fill="#30291f" font-size="22">structure and identity</text>
     </g>
 
-    <g transform="translate(700,180)">
-      <circle r="13" fill="#3ddc6a"/>
-      <text y="-38" text-anchor="middle" fill="#f5f5f5" font-size="21" font-weight="700">Claude Design</text>
-      <text y="-14" text-anchor="middle" fill="#9a9a9a" font-size="15">Interface refinement</text>
-      <text y="42" text-anchor="middle" fill="#cfcfcf" font-size="15">Handoff prepared</text>
-      <text y="64" text-anchor="middle" fill="#cfcfcf" font-size="15">for implementation</text>
+    <g transform="translate(700,210)">
+      <circle r="17" fill="#2f7d46" stroke="#30291f" stroke-width="2.5"/>
+      <text y="-62" text-anchor="middle" fill="#30291f" font-size="36" font-weight="700">Claude Design</text>
+      <path d="M-128,-48 Q0,-44 128,-48" stroke="#2f7d46" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text y="-22" text-anchor="middle" fill="#6f6650" font-size="22">Interface refinement</text>
+      <text y="52" text-anchor="middle" fill="#30291f" font-size="22">Handoff prepared</text>
+      <text y="80" text-anchor="middle" fill="#30291f" font-size="22">for implementation</text>
     </g>
 
-    <g transform="translate(1200,180)">
-      <circle r="14" fill="#3ddc6a"/>
-      <text y="-38" text-anchor="middle" fill="#f5f5f5" font-size="21" font-weight="700">Claude Code</text>
-      <text y="-14" text-anchor="middle" fill="#9a9a9a" font-size="15">Implementation</text>
-      <text y="42" text-anchor="middle" fill="#cfcfcf" font-size="15">Real Next.js project,</text>
-      <text y="64" text-anchor="middle" fill="#cfcfcf" font-size="15">ready for production</text>
+    <g transform="translate(1180,210)">
+      <circle r="18" fill="#2f7d46" stroke="#30291f" stroke-width="2.5"/>
+      <text y="-62" text-anchor="middle" fill="#30291f" font-size="36" font-weight="700">Claude Code</text>
+      <path d="M-98,-48 Q0,-44 98,-48" stroke="#2f7d46" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text y="-22" text-anchor="middle" fill="#6f6650" font-size="22">Implementation</text>
+      <text y="52" text-anchor="middle" fill="#30291f" font-size="22">Real Next.js project,</text>
+      <text y="80" text-anchor="middle" fill="#30291f" font-size="22">ready for production</text>
     </g>
   </g>
 </svg>
