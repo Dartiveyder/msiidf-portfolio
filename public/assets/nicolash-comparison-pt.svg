@@ -1,26 +1,22 @@
 <svg viewBox="0 0 1300 920" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="paperNoiseCmpPt" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0"/>
+    <filter id="chalkDustCmpPt" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
     </filter>
   </defs>
-  <rect width="1300" height="920" fill="#f4efe0"/>
-  <rect width="1300" height="920" filter="url(#paperNoiseCmpPt)"/>
+  <rect width="1300" height="920" fill="#1d3a2c"/>
+  <rect width="1300" height="920" filter="url(#chalkDustCmpPt)"/>
 
   <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
     <!-- Card A: Vercel -->
-    <g transform="rotate(-0.4 330 415)">
-      <rect x="40" y="40" width="580" height="750" rx="20" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
-    </g>
+    <rect x="40" y="40" width="580" height="750" rx="20" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.4 330 415)"/>
     <text x="330" y="88" text-anchor="middle" fill="#30291f" font-size="30" font-weight="700">Vercel · Next.js</text>
     <text x="330" y="116" text-anchor="middle" fill="#6f6650" font-size="19">Caminho inicial</text>
     <path d="M70,138 Q330,132 600,138" stroke="#30291f" stroke-width="2" fill="none"/>
 
     <!-- Card B: HostGator -->
-    <g transform="rotate(0.4 990 415)">
-      <rect x="680" y="40" width="580" height="750" rx="20" fill="#ece3cd" stroke="#2f7d46" stroke-width="3"/>
-    </g>
+    <rect x="680" y="40" width="580" height="750" rx="20" fill="#f7f1e1" stroke="#2f7d46" stroke-width="3" transform="rotate(0.4 990 415)"/>
     <text x="990" y="88" text-anchor="middle" fill="#30291f" font-size="30" font-weight="700">HostGator · PHP</text>
     <text x="990" y="116" text-anchor="middle" fill="#2f7d46" font-size="19" font-weight="700">Caminho escolhido ✓</text>
     <path d="M710,138 Q990,132 1260,138" stroke="#2f7d46" stroke-width="2" fill="none"/>
@@ -78,7 +74,7 @@
 
   <!-- bottom banner -->
   <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
-    <rect x="250" y="810" width="800" height="90" rx="18" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
+    <rect x="250" y="810" width="800" height="90" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5"/>
     <text x="300" y="852" fill="#30291f" font-size="19" font-weight="700">Vercel · Next.js</text>
     <text x="650" y="856" text-anchor="middle" fill="#2f7d46" font-size="24">→</text>
     <text x="1000" y="852" text-anchor="end" fill="#30291f" font-size="19" font-weight="700">HostGator · PHP</text>

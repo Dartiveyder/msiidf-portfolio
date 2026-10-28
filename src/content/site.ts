@@ -447,7 +447,7 @@ O redesign resultou em telas mais legíveis, com áreas de toque adequadas e um 
         problem:
           "Um negócio local de estética cresceu pelo Instagram, mas sem controle real de agenda: horários eram marcados por mensagem direta, sem visão de conflitos e sem histórico organizado para a profissional.\n\nO site institucional inicial resolveu a vitrine, mas não resolveu o problema real por trás do pedido, marcar e gerenciar horários de forma confiável, sem depender de troca manual de mensagens.",
         solution:
-          "Construí, com Claude Code, o site institucional e, na sequência, um sistema completo de agendamento online com confirmação instantânea, regras de cancelamento e disponibilidade em tempo real, além de um painel administrativo mobile-first para a proprietária gerenciar a agenda, com nome e telefone das clientes protegidos por criptografia AES-256-GCM.\n\nQuando o custo mensal da hospedagem deixou de fazer sentido para o tamanho do negócio, todo o back-end foi reescrito de Next.js/Node para PHP/MySQL, mantendo exatamente o mesmo contrato de API e publicado via cPanel com Git Version Control, sem a cliente perceber qualquer diferença de uso.",
+          "Construí, com Claude Code, o site institucional e, na sequência, um sistema completo de agendamento online com confirmação instantânea, regras de cancelamento e disponibilidade em tempo real, além de um painel administrativo mobile-first para a proprietária gerenciar a agenda, com nome e telefone das clientes protegidos por criptografia e as práticas de dados alinhadas à LGPD.\n\nQuando o custo mensal da hospedagem deixou de fazer sentido para o tamanho do negócio, todo o back-end foi reescrito de Next.js/Node para PHP/MySQL, mantendo exatamente o mesmo contrato de API e publicado via cPanel com Git Version Control, sem a cliente perceber qualquer diferença de uso.",
         impact: [
           {
             value: "100%",
@@ -476,14 +476,16 @@ O objetivo inicial era simples: construir um site institucional bonito, responsi
 
 ## Do Figma ao Claude Code
 
-O projeto começou no Figma, reunindo referências de estilo, estrutura de seções e identidade visual. Esse material foi levado ao Claude Design, onde a interface foi refinada e preparada como handoff, e então entregue ao Claude Code como ponto de partida para a implementação.
+Antes de qualquer tela ser desenhada, o briefing inicial foi coletado diretamente com a cliente: fotos dos procedimentos e do espaço para usar no site, a tabela de preços de cada serviço, e também as próprias regras que ela já usava informalmente no dia a dia, como política de manutenção de esmalte ou cílios e a política de retirada, ou seja, de cancelamento de horário. Esse material básico foi o que alimentou o design no Figma.
 
-![Fluxo de handoff do projeto Nicolash: do Figma ao Claude Design e do Claude Design ao Claude Code](/assets/nicolash-handoff-pt.svg)
+O projeto começou no Figma, reunindo referências de estilo, estrutura de seções e identidade visual a partir desse briefing. Esse material foi levado ao Claude Design, onde a interface foi refinada e preparada como handoff, e então entregue ao Claude Code como ponto de partida para a implementação.
+
+![Fluxo de handoff do projeto Nicolash: do briefing com a cliente ao Figma, do Figma ao Claude Design e do Claude Design ao Claude Code](/assets/nicolash-handoff-pt.svg)
 
 A partir daí, o processo foi:
 
 1. Reconstrução do handoff como um projeto Next.js real, usando os ativos de imagem fornecidos.
-2. Definição da pilha tecnológica: a melhor linguagem, o melhor framework, publicado de forma gratuita. A resposta foi Next.js hospedado na Vercel, pela combinação de custo zero para validar o produto, deploy automático a cada push e boa experiência de desenvolvimento.
+2. Definição da pilha tecnológica: a melhor linguagem, o melhor framework, publicado de forma gratuita. A resposta foi Next.js, justamente por poder ser hospedado na Vercel com deploy automático a cada commit, sem configuração manual de servidor, além do custo zero para validar o produto.
 3. Iteração orientada por feedback visual, a partir de prints de tela e observações sobre a interface, tratadas como padrão de design reaproveitável, e não como ajuste pontual.
 4. Responsividade mobile como requisito desde a primeira entrega, já que a maior parte do público de um estúdio de beleza local acessa pelo celular.
 
@@ -491,7 +493,7 @@ A partir daí, o processo foi:
 
 ## A virada: de vitrine para sistema de agendamento
 
-Com o site publicado, veio o pedido que mudou o escopo do projeto. A cliente queria que as próprias clientes pudessem escolher um serviço, ver um calendário com os horários livres, escolher dia e horário, preencher nome e telefone, e ter a reserva confirmada na hora, sem depender de mensagem.
+Com o site publicado, a virada não veio de um pedido da cliente, e sim de observar o processo que já existia por trás da vitrine: toda cliente final chamava no WhatsApp ou mandava mensagem no Instagram para marcar um horário, e cada marcação exigia conferir manualmente um Google Agenda antes de confirmar qualquer coisa. Acompanhando esse fluxo de perto, ficou claro que ali havia um diferencial em aberto: transformar aquela conferência manual em um sistema de agendamento próprio, onde a própria cliente final escolhe um serviço, vê um calendário com os horários livres, escolhe dia e horário, preenche nome e telefone, e tem a reserva confirmada na hora, sem depender de mensagem. A ideia partiu dessa observação, não de uma solicitação, e na prática resolveu exatamente a dor que já existia nos agendamentos.
 
 ![Comparação entre o site antes, uma vitrine com agendamento só por WhatsApp, e depois, com sistema de agendamento online próprio](/assets/nicolash-turning-point-pt.svg)
 
@@ -509,10 +511,11 @@ Antes de publicar o agendamento em produção, surgiu uma pergunta simples e mui
 
 Essa pergunta foi a virada do projeto de "site bonito" para "sistema que guarda dado de cliente real", e mudou a arquitetura:
 
-- nome e telefone passaram a ser criptografados em repouso com AES-256-GCM, usando uma chave derivada por HKDF-SHA256 e um formato de envelope próprio, com versão, vetor de inicialização, tag de autenticação e dado cifrado, tudo em base64url;
+- nome e telefone das clientes passaram a ser criptografados em repouso no banco de dados, para que, mesmo em caso de acesso indevido, esses dados não fiquem expostos em texto puro;
 - o campo de Instagram da cliente final foi removido do formulário, porque menos dado sensível guardado é, por padrão, menos risco;
-- o login do painel administrativo passou a usar sessão assinada, um cookie com HMAC-SHA256, e a senha deixou de existir em texto puro em qualquer lugar, sendo armazenada com hash;
-- um limitador de tentativas de login, poucas tentativas por IP a cada 15 minutos, foi adicionado para dificultar ataques de força bruta.
+- o login do painel administrativo passou a usar sessão segura e senha com hash, nunca armazenada em texto puro em lugar nenhum, com limite de tentativas por IP para dificultar ataques de força bruta;
+- a coleta de dados foi revisada para ficar alinhada à LGPD, guardando só o necessário para o agendamento funcionar, com uma finalidade clara para nome e telefone;
+- a interface seguiu diretrizes de acessibilidade próximas da WCAG, como contraste de cor adequado entre texto e fundo, área de toque mínima nos botões e texto alternativo nas imagens.
 
 Esse tipo de decisão normalmente não aparece em um pedido de cliente, mas é exatamente o tipo de responsabilidade que entra quando um projeto de portfólio vira um sistema usado por pessoas reais.
 
@@ -520,11 +523,11 @@ Esse tipo de decisão normalmente não aparece em um pedido de cliente, mas é e
 
 ## O problema do custo, e por que migrar de hospedagem
 
-Com tudo funcionando, veio a pergunta que praticamente todo pequeno negócio faz, mais cedo ou mais tarde, sobre produto digital: esse custo mensal faz sentido para o tamanho do meu negócio?
+Com tudo funcionando, veio a pergunta que praticamente todo pequeno negócio faz, mais cedo ou mais tarde, sobre produto digital: esse custo mensal faz sentido para o tamanho do meu negócio? Na versão em Next.js/Vercel, o custo mensal real passou a pesar mais do que fazia sentido para um negócio desse porte, e isso disparou uma busca ativa por outras possibilidades de hospedagem.
 
 A Vercel é excelente para validar produto rápido, mas o plano adequado para manter banco de dados gerenciado e funções de servidor em produção, fora do nível gratuito, cobra por mês, em dólar. Para um site institucional de um negócio pequeno e local, esse custo recorrente, convertido para reais, deixa de fazer sentido rapidamente.
 
-A alternativa considerada foi hospedagem compartilhada tradicional, no caso HostGator, com cPanel, PHP e MySQL, por uma fração do custo mensal, já incluindo e-mail profissional e um painel de gestão conhecido por qualquer agência ou freelancer brasileiro.
+Entre as alternativas avaliadas, a que fez mais sentido foi a hospedagem compartilhada tradicional, no caso HostGator, com cPanel, PHP e MySQL, por uma fração do custo mensal, já incluindo e-mail profissional e um painel de gestão conhecido por qualquer agência ou freelancer brasileiro. Essa escolha trouxe uma mudança real de arquitetura, não só de provedor: o back-end inteiro, que rodava em Node.js sobre a infraestrutura da Vercel, precisou ser reescrito em PHP, e o banco de dados, de Postgres gerenciado para MySQL via phpMyAdmin, mantendo o mesmo contrato de API para a cliente não perceber nenhuma diferença no uso do site.
 
 ## Dois caminhos possíveis para publicar com Claude Code
 
@@ -549,6 +552,8 @@ Esse projeto, na prática, virou dois caminhos possíveis para quem quer constru
 - **Segurança de infraestrutura**: certificado HTTPS configurado pelo próprio painel, AutoSSL do cPanel, com responsabilidade maior do desenvolvedor sobre o que é exposto publicamente. A criptografia de aplicação, AES-256-GCM, teve que ser reimplementada em PHP, compatível com a versão em Node, para continuar decifrando os dados já criptografados.
 - **Custo**: uma fração do plano pago da Vercel, cobrado em reais, já incluindo e-mail e domínio.
 - **Melhor para**: negócios pequenos e locais, orçamento apertado, clientes que já conhecem cPanel, ou quem precisa de hospedagem compartilhada tradicional por qualquer motivo.
+
+![Mecânica da migração técnica: repositório privado no GitHub, chave SSH somente leitura, Git Version Control do cPanel e banco de dados MySQL via phpMyAdmin](/assets/nicolash-migration-pt.svg)
 
 Nenhum dos dois caminhos é o certo de forma absoluta. O caminho 1 prioriza velocidade e infraestrutura gerenciada, o caminho 2 prioriza custo e um modelo de hospedagem mais familiar para quem já usa serviços brasileiros tradicionais. A decisão certa depende do estágio e do orçamento do negócio, aqui ela mudou no meio do projeto, porque o negócio real mudou de "vamos validar uma ideia" para "isso já é usado por clientes todos os dias, e precisa custar pouco para se manter".
 
@@ -1234,7 +1239,7 @@ The redesign resulted in more readable screens, adequate touch areas, and a visu
         problem:
           "A local beauty business had grown on Instagram but had no real control over its schedule: appointments were booked through direct messages, with no visibility into conflicts and no organized history for the professional.\n\nThe first business website solved the storefront problem, but not the real need behind the request, booking and managing appointments reliably, without relying on back-and-forth messages.",
         solution:
-          "I built the business website with Claude Code, then a full online booking system with instant confirmation, cancellation rules and real-time availability, plus a mobile-first admin panel for the owner to manage the schedule, with clients' names and phone numbers protected by AES-256-GCM encryption.\n\nWhen the monthly hosting cost stopped making sense for the size of the business, the entire backend was rewritten from Next.js/Node to PHP/MySQL, keeping the exact same API contract and deployed through cPanel with Git Version Control, with no visible difference for the client.",
+          "I built the business website with Claude Code, then a full online booking system with instant confirmation, cancellation rules and real-time availability, plus a mobile-first admin panel for the owner to manage the schedule, with clients' names and phone numbers protected by encryption and LGPD-aligned data practices.\n\nWhen the monthly hosting cost stopped making sense for the size of the business, the entire backend was rewritten from Next.js/Node to PHP/MySQL, keeping the exact same API contract and deployed through cPanel with Git Version Control, with no visible difference for the client.",
         impact: [
           {
             value: "100%",
@@ -1263,14 +1268,16 @@ The initial goal was simple: build a beautiful, responsive business website with
 
 ## From Figma to Claude Code
 
-The project started in Figma, gathering style references, section structure and visual identity. That material was taken into Claude Design, where the interface was refined and prepared as a handoff, and then given to Claude Code as a starting point for implementation.
+Before any screen was designed, the initial briefing was collected directly from the client: photos of the procedures and the space for the website, the price table for each service, and also the rules she already used informally day to day, like a maintenance policy for nails or lashes and a withdrawal policy, meaning how cancellations worked. That basic material was what fed the design in Figma.
 
-![Nicolash project's handoff flow: from Figma to Claude Design, and from Claude Design to Claude Code](/assets/nicolash-handoff-en.svg)
+The project started in Figma, gathering style references, section structure and visual identity from that briefing. That material was taken into Claude Design, where the interface was refined and prepared as a handoff, and then given to Claude Code as a starting point for implementation.
+
+![Nicolash project's handoff flow: from the client briefing to Figma, from Figma to Claude Design, and from Claude Design to Claude Code](/assets/nicolash-handoff-en.svg)
 
 From there, the process was:
 
 1. Rebuilding the handoff as a real Next.js project, using the image assets provided.
-2. Choosing the stack: the best language, the best framework, published for free. The answer was Next.js hosted on Vercel, for the combination of zero cost to validate the product, automatic deploys on every push, and a good development experience.
+2. Choosing the stack: the best language, the best framework, published for free. The answer was Next.js, specifically because it can be hosted on Vercel with automatic deploys on every commit, no manual server configuration, plus zero cost to validate the product.
 3. Iterating from visual feedback, based on screenshots and notes about the interface, treated as a reusable design pattern rather than a one-off tweak.
 4. Mobile responsiveness as a requirement from the first delivery, since most of a local beauty studio's audience browses from a phone.
 
@@ -1278,7 +1285,7 @@ From there, the process was:
 
 ## The turning point: from storefront to booking system
 
-With the site live, the request that changed the project's scope arrived. The client wanted her own clients to be able to pick a service, see a calendar with open slots, choose a day and time, fill in name and phone, and have the booking confirmed instantly, without depending on a message.
+With the site live, the turning point didn't come from a client request, but from watching the process that already existed behind the storefront: every end client called on WhatsApp or messaged on Instagram to book a time, and each booking required manually checking a Google Calendar before confirming anything. Watching that flow closely made it clear there was an open differentiator there: turning that manual checking into a booking system of its own, where the end client picks a service, sees a calendar with open slots, chooses a day and time, fills in name and phone, and gets the booking confirmed instantly, without depending on a message. The idea came from that observation, not from a request, and in practice it solved exactly the pain that already existed around booking.
 
 ![Comparison between the site before, a storefront with booking only via WhatsApp, and after, with its own online booking system](/assets/nicolash-turning-point-en.svg)
 
@@ -1296,10 +1303,11 @@ Before putting booking into production, a simple and very important question cam
 
 That question was the turning point from "pretty website" to "a system that stores real client data," and it changed the architecture:
 
-- name and phone number became encrypted at rest with AES-256-GCM, using a key derived through HKDF-SHA256 and a custom envelope format, with version, initialization vector, authentication tag and ciphertext, all in base64url;
+- clients' name and phone number became encrypted at rest in the database, so even unauthorized access wouldn't expose that data in plain text;
 - the end client's Instagram field was removed from the form, because less sensitive data stored is, by default, less risk;
-- admin panel login switched to a signed session, a cookie with HMAC-SHA256, and the password stopped existing in plain text anywhere, stored as a hash instead;
-- a login throttle, a handful of attempts per IP every 15 minutes, was added to make brute-forcing harder.
+- admin panel login switched to a secure session and a hashed password, never stored in plain text anywhere, with a per-IP attempt limit to make brute-forcing harder;
+- data collection was reviewed to align with LGPD, Brazil's data protection law, keeping only what's needed for booking to work, with a clear purpose for storing name and phone;
+- the interface followed accessibility guidelines close to WCAG, such as adequate color contrast between text and background, a minimum touch target size for buttons, and alt text on images.
 
 This kind of decision doesn't usually show up in a client request, but it's exactly the responsibility that comes with turning a portfolio project into a system real people use.
 
@@ -1307,11 +1315,11 @@ This kind of decision doesn't usually show up in a client request, but it's exac
 
 ## The cost problem, and why migrate hosting
 
-With everything working, the question practically every small business asks, sooner or later, about a digital product came up: does this monthly cost make sense for the size of my business?
+With everything working, the question practically every small business asks, sooner or later, about a digital product came up: does this monthly cost make sense for the size of my business? On the Next.js/Vercel version, the real monthly cost started weighing more than made sense for a business of this size, which triggered an active search for other hosting options.
 
 Vercel is excellent for validating a product quickly, but the plan suited to running a managed database and server functions in production, beyond the free tier, bills per month, in dollars. For a small, local business website, that recurring cost, converted to local currency, stops making sense fairly quickly.
 
-The alternative considered was traditional shared hosting, HostGator in this case, with cPanel, PHP and MySQL, for a fraction of the monthly cost, already including professional email and a management panel familiar to any Brazilian agency or freelancer.
+Among the alternatives evaluated, the one that made the most sense was traditional shared hosting, HostGator in this case, with cPanel, PHP and MySQL, for a fraction of the monthly cost, already including professional email and a management panel familiar to any Brazilian agency or freelancer. That choice brought a real architecture change, not just a new provider: the entire backend, which ran on Node.js over Vercel's infrastructure, had to be rewritten in PHP, and the database moved from managed Postgres to MySQL via phpMyAdmin, keeping the same API contract so the client would notice no difference at all in how the site worked.
 
 ## Two possible paths to publish with Claude Code
 
@@ -1336,6 +1344,8 @@ This project, in practice, turned into two possible paths for anyone who wants t
 - **Infrastructure security**: HTTPS configured through the panel itself, cPanel's AutoSSL, with more of the responsibility on the developer for what gets exposed publicly. The application-level encryption, AES-256-GCM, had to be reimplemented in PHP, compatible with the Node version, to keep decrypting data that was already encrypted.
 - **Cost**: a fraction of Vercel's paid plan, billed in local currency, already including email and domain.
 - **Best for**: small, local businesses, a tight budget, clients already familiar with cPanel, or anyone who needs traditional shared hosting for any reason.
+
+![The technical mechanics of the migration: a private GitHub repository, a read-only SSH key, cPanel's Git Version Control, and a MySQL database via phpMyAdmin](/assets/nicolash-migration-en.svg)
 
 Neither path is the absolutely correct one. Path 1 prioritizes speed and managed infrastructure, path 2 prioritizes cost and a hosting model more familiar to anyone already using traditional local hosting providers. The right decision depends on the business's stage and budget, here it changed midway through the project, because the real business changed from "let's validate an idea" into "clients already use this every day, and it needs to cost little to keep running."
 

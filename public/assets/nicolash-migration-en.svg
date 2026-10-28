@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1600 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="chalkDustMigEn" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="380" fill="#1d3a2c"/>
+  <rect width="1600" height="380" filter="url(#chalkDustMigEn)"/>
+
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" fill="none">
+    <path d="M186,200 Q370,176 554,198" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M554,198 L535,187" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M554,198 L538,210" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M586,198 Q770,174 954,198" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M954,198 L935,187" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M954,198 L938,210" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+
+    <path d="M986,198 Q1170,174 1354,198" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1354,198 L1335,187" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1354,198 L1338,210" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
+    <g transform="translate(170,198)">
+      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
+      <text y="-40" text-anchor="middle" fill="#f4efe0" font-size="24" font-weight="700">Private repository</text>
+      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="17">on GitHub</text>
+      <text y="48" text-anchor="middle" fill="#f4efe0" font-size="17">Only what goes</text>
+      <text y="72" text-anchor="middle" fill="#f4efe0" font-size="17">to production</text>
+    </g>
+
+    <g transform="translate(570,198)">
+      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
+      <text y="-40" text-anchor="middle" fill="#f4efe0" font-size="24" font-weight="700">SSH key</text>
+      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="17">read-only</text>
+      <text y="48" text-anchor="middle" fill="#f4efe0" font-size="17">No personal</text>
+      <text y="72" text-anchor="middle" fill="#f4efe0" font-size="17">account password</text>
+    </g>
+
+    <g transform="translate(970,198)">
+      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
+      <text y="-40" text-anchor="middle" fill="#f4efe0" font-size="24" font-weight="700">Git Version Control</text>
+      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="17">in cPanel</text>
+      <text y="48" text-anchor="middle" fill="#f4efe0" font-size="17">Clones the project,</text>
+      <text y="72" text-anchor="middle" fill="#f4efe0" font-size="17">"pull" publishes it</text>
+    </g>
+
+    <g transform="translate(1390,198)">
+      <circle r="17" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
+      <text y="-40" text-anchor="middle" fill="#f4efe0" font-size="24" font-weight="700">MySQL</text>
+      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="17">via phpMyAdmin</text>
+      <text y="48" text-anchor="middle" fill="#f4efe0" font-size="17">Schema + data</text>
+      <text y="72" text-anchor="middle" fill="#f4efe0" font-size="17">migrated from Postgres</text>
+    </g>
+  </g>
+</svg>

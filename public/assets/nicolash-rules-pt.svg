@@ -1,64 +1,54 @@
 <svg viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="paperNoiseRulesPt" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0"/>
+    <filter id="chalkDustRulesPt" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
     </filter>
   </defs>
-  <rect width="1300" height="680" fill="#f4efe0"/>
-  <rect width="1300" height="680" filter="url(#paperNoiseRulesPt)"/>
+  <rect width="1300" height="680" fill="#1d3a2c"/>
+  <rect width="1300" height="680" filter="url(#chalkDustRulesPt)"/>
 
   <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
     <!-- card 1 -->
-    <g transform="rotate(-0.5 230 180)">
-      <rect x="40" y="40" width="380" height="280" rx="18" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
-    </g>
-    <circle cx="90" cy="100" r="30" fill="#f4efe0" stroke="#2f7d46" stroke-width="3"/>
-    <text x="90" y="110" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">1</text>
-    <text x="140" y="110" fill="#30291f" font-size="26" font-weight="700">Confirmação instantânea</text>
-    <text x="80" y="160" fill="#4a4336" font-size="19">Sem aprovação manual,</text>
-    <text x="80" y="188" fill="#4a4336" font-size="19">a reserva nasce confirmada.</text>
+    <rect x="40" y="40" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.5 230 180)"/>
+    <circle cx="96" cy="96" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
+    <text x="96" y="104" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">1</text>
+    <text x="140" y="104" fill="#30291f" font-size="25" font-weight="700">Confirmação instantânea</text>
+    <text x="72" y="210" fill="#5c5444" font-size="18">Sem aprovação manual,</text>
+    <text x="72" y="238" fill="#5c5444" font-size="18">a reserva nasce confirmada.</text>
 
     <!-- card 2 -->
-    <g transform="rotate(0.4 660 180)">
-      <rect x="470" y="40" width="380" height="280" rx="18" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
-    </g>
-    <circle cx="520" cy="100" r="30" fill="#f4efe0" stroke="#2f7d46" stroke-width="3"/>
-    <text x="520" y="110" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">2</text>
-    <text x="570" y="110" fill="#30291f" font-size="26" font-weight="700">Sem intervalo</text>
-    <text x="510" y="160" fill="#4a4336" font-size="19">Agenda corrida, atendimentos</text>
-    <text x="510" y="188" fill="#4a4336" font-size="19">emendados um no outro.</text>
+    <rect x="470" y="40" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(0.4 660 180)"/>
+    <circle cx="526" cy="96" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
+    <text x="526" y="104" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">2</text>
+    <text x="570" y="104" fill="#30291f" font-size="25" font-weight="700">Sem intervalo</text>
+    <text x="502" y="210" fill="#5c5444" font-size="18">Agenda corrida, atendimentos</text>
+    <text x="502" y="238" fill="#5c5444" font-size="18">emendados um no outro.</text>
 
     <!-- card 3 -->
-    <g transform="rotate(-0.4 1090 180)">
-      <rect x="900" y="40" width="380" height="280" rx="18" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
-    </g>
-    <circle cx="950" cy="100" r="30" fill="#f4efe0" stroke="#2f7d46" stroke-width="3"/>
-    <text x="950" y="110" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">3</text>
-    <text x="1000" y="110" fill="#30291f" font-size="26" font-weight="700">Cancelamento</text>
-    <text x="940" y="150" fill="#30291f" font-size="26" font-weight="700">por WhatsApp</text>
-    <text x="940" y="190" fill="#4a4336" font-size="19">Nunca pelo site, sempre</text>
-    <text x="940" y="218" fill="#4a4336" font-size="19">direto com a profissional.</text>
+    <rect x="900" y="40" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.4 1090 180)"/>
+    <circle cx="956" cy="96" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
+    <text x="956" y="104" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">3</text>
+    <text x="1000" y="90" fill="#30291f" font-size="25" font-weight="700">Cancelamento</text>
+    <text x="1000" y="122" fill="#30291f" font-size="25" font-weight="700">por WhatsApp</text>
+    <text x="932" y="210" fill="#5c5444" font-size="18">Nunca pelo site, sempre</text>
+    <text x="932" y="238" fill="#5c5444" font-size="18">direto com a profissional.</text>
 
     <!-- card 4 -->
-    <g transform="rotate(0.5 435 500)">
-      <rect x="245" y="360" width="380" height="280" rx="18" fill="#ece3cd" stroke="#30291f" stroke-width="2.5"/>
-    </g>
-    <circle cx="295" cy="420" r="30" fill="#f4efe0" stroke="#2f7d46" stroke-width="3"/>
-    <text x="295" y="430" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">4</text>
-    <text x="345" y="430" fill="#30291f" font-size="26" font-weight="700">Sem limite</text>
-    <text x="285" y="470" fill="#30291f" font-size="26" font-weight="700">por cliente</text>
-    <text x="285" y="510" fill="#4a4336" font-size="19">Qualquer pessoa marca</text>
-    <text x="285" y="538" fill="#4a4336" font-size="19">quantos horários quiser.</text>
+    <rect x="245" y="360" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(0.5 435 500)"/>
+    <circle cx="301" cy="416" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
+    <text x="301" y="424" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">4</text>
+    <text x="345" y="410" fill="#30291f" font-size="25" font-weight="700">Sem limite</text>
+    <text x="345" y="442" fill="#30291f" font-size="25" font-weight="700">por cliente</text>
+    <text x="277" y="530" fill="#5c5444" font-size="18">Qualquer pessoa marca</text>
+    <text x="277" y="558" fill="#5c5444" font-size="18">quantos horários quiser.</text>
 
     <!-- card 5 -->
-    <g transform="rotate(-0.5 865 500)">
-      <rect x="675" y="360" width="380" height="280" rx="18" fill="#ece3cd" stroke="#b07a24" stroke-width="3"/>
-    </g>
-    <circle cx="725" cy="420" r="30" fill="#f4efe0" stroke="#b07a24" stroke-width="3"/>
-    <text x="725" y="430" text-anchor="middle" fill="#b07a24" font-size="26" font-weight="700">5</text>
-    <text x="775" y="430" fill="#30291f" font-size="26" font-weight="700">Multa de 30%</text>
-    <text x="715" y="480" fill="#4a4336" font-size="19">Para cancelar com menos</text>
-    <text x="715" y="508" fill="#4a4336" font-size="19">de 24h de antecedência.</text>
+    <rect x="675" y="360" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#b1452f" stroke-width="3" transform="rotate(-0.5 865 500)"/>
+    <circle cx="731" cy="416" r="28" fill="#efe6d1" stroke="#b1452f" stroke-width="3"/>
+    <text x="731" y="424" text-anchor="middle" fill="#b1452f" font-size="24" font-weight="700">5</text>
+    <text x="775" y="424" fill="#30291f" font-size="25" font-weight="700">Multa de 30%</text>
+    <text x="707" y="530" fill="#5c5444" font-size="18">Para cancelar com menos</text>
+    <text x="707" y="558" fill="#5c5444" font-size="18">de 24h de antecedência.</text>
   </g>
 </svg>
