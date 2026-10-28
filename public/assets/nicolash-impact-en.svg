@@ -9,8 +9,8 @@
 
   <!-- Box 1: Problem -->
   <rect x="50" y="40" width="900" height="200" rx="18" fill="#151515" stroke="#e04b4b" stroke-opacity="0.55" stroke-width="2"/>
-  <text x="80" y="76" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="17" font-weight="700">Problem identified</text>
-  <g font-family="Arial, sans-serif" font-size="14" fill="#cfcfcf">
+  <text x="80" y="76" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Problem identified</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#cfcfcf">
     <circle cx="90" cy="112" r="5" fill="#e04b4b"/>
     <text x="108" y="117">Booking only through WhatsApp, slow to confirm a time slot</text>
     <circle cx="90" cy="144" r="5" fill="#e04b4b"/>
@@ -24,8 +24,8 @@
 
   <!-- Box 2: Decisions -->
   <rect x="50" y="280" width="900" height="200" rx="18" fill="#151515" stroke="#3ddc6a" stroke-opacity="0.6" stroke-width="2"/>
-  <text x="80" y="316" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="17" font-weight="700">Decisions made with Claude Code</text>
-  <g font-family="Arial, sans-serif" font-size="14" fill="#cfcfcf">
+  <text x="80" y="316" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Decisions made with Claude Code</text>
+  <g font-family="Arial, sans-serif" font-size="16" fill="#cfcfcf">
     <circle cx="90" cy="352" r="5" fill="#3ddc6a"/>
     <text x="108" y="357">Booking system with a concurrency lock in the database</text>
     <circle cx="90" cy="384" r="5" fill="#3ddc6a"/>
@@ -39,22 +39,22 @@
 
   <!-- Box 3: Impact -->
   <rect x="50" y="520" width="900" height="260" rx="18" fill="#101010" stroke="#2a2a2a" stroke-width="2"/>
-  <text x="80" y="558" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="17" font-weight="700">Impact</text>
+  <text x="80" y="558" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Impact</text>
 
   <g font-family="Arial, sans-serif">
     <rect x="80" y="590" width="260" height="150" rx="14" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="210" y="645" text-anchor="middle" fill="#3ddc6a" font-size="40" font-weight="700">100%</text>
-    <text x="210" y="675" text-anchor="middle" fill="#cfcfcf" font-size="13">Feature parity</text>
-    <text x="210" y="694" text-anchor="middle" fill="#cfcfcf" font-size="13">after migration</text>
+    <text x="210" y="645" text-anchor="middle" fill="#3ddc6a" font-size="44" font-weight="700">100%</text>
+    <text x="210" y="675" text-anchor="middle" fill="#cfcfcf" font-size="15">Feature parity</text>
+    <text x="210" y="694" text-anchor="middle" fill="#cfcfcf" font-size="15">after migration</text>
 
     <rect x="370" y="590" width="260" height="150" rx="14" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="500" y="645" text-anchor="middle" fill="#3ddc6a" font-size="40" font-weight="700">0</text>
-    <text x="500" y="675" text-anchor="middle" fill="#cfcfcf" font-size="13">Double-booked</text>
-    <text x="500" y="694" text-anchor="middle" fill="#cfcfcf" font-size="13">time slots</text>
+    <text x="500" y="645" text-anchor="middle" fill="#3ddc6a" font-size="44" font-weight="700">0</text>
+    <text x="500" y="675" text-anchor="middle" fill="#cfcfcf" font-size="15">Double-booked</text>
+    <text x="500" y="694" text-anchor="middle" fill="#cfcfcf" font-size="15">time slots</text>
 
     <rect x="660" y="590" width="260" height="150" rx="14" fill="#1a1a1a" stroke="#2a2a2a"/>
-    <text x="790" y="645" text-anchor="middle" fill="#3ddc6a" font-size="40" font-weight="700">2</text>
-    <text x="790" y="675" text-anchor="middle" fill="#cfcfcf" font-size="13">Complete backend</text>
-    <text x="790" y="694" text-anchor="middle" fill="#cfcfcf" font-size="13">architectures</text>
+    <text x="790" y="645" text-anchor="middle" fill="#3ddc6a" font-size="44" font-weight="700">2</text>
+    <text x="790" y="675" text-anchor="middle" fill="#cfcfcf" font-size="15">Complete backend</text>
+    <text x="790" y="694" text-anchor="middle" fill="#cfcfcf" font-size="15">architectures</text>
   </g>
 </svg>

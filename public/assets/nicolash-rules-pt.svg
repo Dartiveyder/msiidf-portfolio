@@ -1,54 +1,54 @@
-<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1400 320" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgRulesPt" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#121212"/>
       <stop offset="100%" stop-color="#0a0a0a"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="320" fill="url(#bgRulesPt)"/>
+  <rect width="1400" height="320" fill="url(#bgRulesPt)"/>
 
   <g font-family="Arial, sans-serif">
     <!-- card 1 -->
-    <rect x="20" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
-    <circle cx="130" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
-    <text x="130" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">1</text>
-    <text x="130" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Confirmação</text>
-    <text x="130" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">instantânea</text>
-    <text x="130" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Sem aprovação manual, a</text>
-    <text x="130" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">reserva já nasce confirmada.</text>
+    <rect x="20" y="30" width="250" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="145" cy="86" r="26" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="145" y="94" text-anchor="middle" fill="#3ddc6a" font-size="20" font-weight="700">1</text>
+    <text x="145" y="150" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">Confirmação</text>
+    <text x="145" y="172" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">instantânea</text>
+    <text x="145" y="202" text-anchor="middle" fill="#cfcfcf" font-size="13">Sem aprovação manual,</text>
+    <text x="145" y="224" text-anchor="middle" fill="#cfcfcf" font-size="13">a reserva nasce confirmada.</text>
 
     <!-- card 2 -->
-    <rect x="255" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
-    <circle cx="365" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
-    <text x="365" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">2</text>
-    <text x="365" y="159" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Sem intervalo</text>
-    <text x="365" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Agenda corrida, atendimentos</text>
-    <text x="365" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">emendados um no outro.</text>
+    <rect x="297" y="30" width="250" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="422" cy="86" r="26" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="422" y="94" text-anchor="middle" fill="#3ddc6a" font-size="20" font-weight="700">2</text>
+    <text x="422" y="161" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">Sem intervalo</text>
+    <text x="422" y="198" text-anchor="middle" fill="#cfcfcf" font-size="13">Agenda corrida, atendimentos</text>
+    <text x="422" y="220" text-anchor="middle" fill="#cfcfcf" font-size="13">emendados um no outro.</text>
 
     <!-- card 3 -->
-    <rect x="490" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
-    <circle cx="600" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
-    <text x="600" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">3</text>
-    <text x="600" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Cancelamento</text>
-    <text x="600" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">por WhatsApp</text>
-    <text x="600" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Nunca pelo site, sempre</text>
-    <text x="600" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">direto com a profissional.</text>
+    <rect x="575" y="30" width="250" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="700" cy="86" r="26" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="700" y="94" text-anchor="middle" fill="#3ddc6a" font-size="20" font-weight="700">3</text>
+    <text x="700" y="150" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">Cancelamento</text>
+    <text x="700" y="172" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">por WhatsApp</text>
+    <text x="700" y="202" text-anchor="middle" fill="#cfcfcf" font-size="13">Nunca pelo site, sempre</text>
+    <text x="700" y="224" text-anchor="middle" fill="#cfcfcf" font-size="13">direto com a profissional.</text>
 
     <!-- card 4 -->
-    <rect x="725" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
-    <circle cx="835" cy="80" r="24" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
-    <text x="835" y="86" text-anchor="middle" fill="#3ddc6a" font-size="18" font-weight="700">4</text>
-    <text x="835" y="150" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Sem limite</text>
-    <text x="835" y="168" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">por cliente</text>
-    <text x="835" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Qualquer pessoa marca</text>
-    <text x="835" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">quantos horários quiser.</text>
+    <rect x="852" y="30" width="250" height="260" rx="16" fill="#151515" stroke="#2a2a2a"/>
+    <circle cx="977" cy="86" r="26" fill="#1a1a1a" stroke="#3ddc6a" stroke-width="2"/>
+    <text x="977" y="94" text-anchor="middle" fill="#3ddc6a" font-size="20" font-weight="700">4</text>
+    <text x="977" y="150" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">Sem limite</text>
+    <text x="977" y="172" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">por cliente</text>
+    <text x="977" y="202" text-anchor="middle" fill="#cfcfcf" font-size="13">Qualquer pessoa marca</text>
+    <text x="977" y="224" text-anchor="middle" fill="#cfcfcf" font-size="13">quantos horários quiser.</text>
 
     <!-- card 5 -->
-    <rect x="960" y="30" width="220" height="260" rx="16" fill="#151515" stroke="#e5a24b" stroke-opacity="0.5"/>
-    <circle cx="1070" cy="80" r="24" fill="#1a1a1a" stroke="#e5a24b" stroke-width="2"/>
-    <text x="1070" y="86" text-anchor="middle" fill="#e5a24b" font-size="18" font-weight="700">5</text>
-    <text x="1070" y="159" text-anchor="middle" fill="#f5f5f5" font-size="13.5" font-weight="700">Multa de 30%</text>
-    <text x="1070" y="194" text-anchor="middle" fill="#9a9a9a" font-size="11.5">Para cancelamento com</text>
-    <text x="1070" y="212" text-anchor="middle" fill="#9a9a9a" font-size="11.5">menos de 24h de antecedência.</text>
+    <rect x="1130" y="30" width="250" height="260" rx="16" fill="#151515" stroke="#e5a24b" stroke-opacity="0.5"/>
+    <circle cx="1255" cy="86" r="26" fill="#1a1a1a" stroke="#e5a24b" stroke-width="2"/>
+    <text x="1255" y="94" text-anchor="middle" fill="#e5a24b" font-size="20" font-weight="700">5</text>
+    <text x="1255" y="161" text-anchor="middle" fill="#f5f5f5" font-size="15" font-weight="700">Multa de 30%</text>
+    <text x="1255" y="198" text-anchor="middle" fill="#cfcfcf" font-size="13">Para cancelar com menos</text>
+    <text x="1255" y="220" text-anchor="middle" fill="#cfcfcf" font-size="13">de 24h de antecedência.</text>
   </g>
 </svg>

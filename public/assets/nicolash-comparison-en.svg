@@ -9,74 +9,74 @@
 
   <!-- Card A: Vercel -->
   <rect x="60" y="40" width="520" height="610" rx="20" fill="#151515" stroke="#2a2a2a" stroke-width="2"/>
-  <text x="320" y="80" text-anchor="middle" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">Vercel · Next.js</text>
-  <text x="320" y="104" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="13">Initial path</text>
+  <text x="320" y="80" text-anchor="middle" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="22" font-weight="700">Vercel · Next.js</text>
+  <text x="320" y="104" text-anchor="middle" fill="#9a9a9a" font-family="Arial, sans-serif" font-size="15">Initial path</text>
   <line x1="84" y1="120" x2="556" y2="120" stroke="#2a2a2a"/>
 
   <!-- Card B: HostGator -->
   <rect x="620" y="40" width="520" height="610" rx="20" fill="#151515" stroke="#3ddc6a" stroke-width="2"/>
-  <text x="880" y="80" text-anchor="middle" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="20" font-weight="700">HostGator · PHP</text>
-  <text x="880" y="104" text-anchor="middle" fill="#3ddc6a" font-family="Arial, sans-serif" font-size="13" font-weight="700">Chosen path</text>
+  <text x="880" y="80" text-anchor="middle" fill="#f5f5f5" font-family="Arial, sans-serif" font-size="22" font-weight="700">HostGator · PHP</text>
+  <text x="880" y="104" text-anchor="middle" fill="#3ddc6a" font-family="Arial, sans-serif" font-size="15" font-weight="700">Chosen path</text>
   <circle cx="1100" cy="72" r="16" fill="#3ddc6a"/>
   <path d="M1092 72 l6 6 l12 -14" fill="none" stroke="#0d0d0d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
   <line x1="644" y1="120" x2="1116" y2="120" stroke="#3ddc6a" stroke-opacity="0.4"/>
 
   <g font-family="Arial, sans-serif">
     <!-- row 0: Language -->
-    <text x="92" y="158" fill="#777777" font-size="10" letter-spacing="1.5">LANGUAGE</text>
-    <text x="92" y="182" fill="#e5e5e5" font-size="13">TypeScript/JavaScript end to end</text>
+    <text x="92" y="158" fill="#777777" font-size="12" letter-spacing="1.5">LANGUAGE</text>
+    <text x="92" y="182" fill="#e5e5e5" font-size="15">TypeScript/JavaScript end to end</text>
     <line x1="84" y1="220" x2="556" y2="220" stroke="#2a2a2a"/>
-    <text x="652" y="158" fill="#777777" font-size="10" letter-spacing="1.5">LANGUAGE</text>
-    <text x="652" y="182" fill="#e5e5e5" font-size="13">Server-side PHP, same API contract</text>
+    <text x="652" y="158" fill="#777777" font-size="12" letter-spacing="1.5">LANGUAGE</text>
+    <text x="652" y="182" fill="#e5e5e5" font-size="15">Server-side PHP, same API contract</text>
     <line x1="644" y1="220" x2="1116" y2="220" stroke="#2a2a2a"/>
 
     <!-- row 1: Deploy -->
-    <text x="92" y="246" fill="#777777" font-size="10" letter-spacing="1.5">DEPLOY</text>
-    <text x="92" y="270" fill="#e5e5e5" font-size="13">Push to GitHub = automatic deploy</text>
+    <text x="92" y="246" fill="#777777" font-size="12" letter-spacing="1.5">DEPLOY</text>
+    <text x="92" y="270" fill="#e5e5e5" font-size="15">Push to GitHub = automatic deploy</text>
     <line x1="84" y1="308" x2="556" y2="308" stroke="#2a2a2a"/>
-    <text x="652" y="246" fill="#777777" font-size="10" letter-spacing="1.5">DEPLOY</text>
-    <text x="652" y="270" fill="#e5e5e5" font-size="13">cPanel Git Version Control + SSH key</text>
+    <text x="652" y="246" fill="#777777" font-size="12" letter-spacing="1.5">DEPLOY</text>
+    <text x="652" y="270" fill="#e5e5e5" font-size="15">cPanel Git Version Control + SSH key</text>
     <line x1="644" y1="308" x2="1116" y2="308" stroke="#2a2a2a"/>
 
     <!-- row 2: Database -->
-    <text x="92" y="334" fill="#777777" font-size="10" letter-spacing="1.5">DATABASE</text>
-    <text x="92" y="358" fill="#e5e5e5" font-size="13">Managed Postgres (Neon)</text>
+    <text x="92" y="334" fill="#777777" font-size="12" letter-spacing="1.5">DATABASE</text>
+    <text x="92" y="358" fill="#e5e5e5" font-size="15">Managed Postgres (Neon)</text>
     <line x1="84" y1="396" x2="556" y2="396" stroke="#2a2a2a"/>
-    <text x="652" y="334" fill="#777777" font-size="10" letter-spacing="1.5">DATABASE</text>
-    <text x="652" y="358" fill="#e5e5e5" font-size="13">MySQL via phpMyAdmin</text>
+    <text x="652" y="334" fill="#777777" font-size="12" letter-spacing="1.5">DATABASE</text>
+    <text x="652" y="358" fill="#e5e5e5" font-size="15">MySQL via phpMyAdmin</text>
     <line x1="644" y1="396" x2="1116" y2="396" stroke="#2a2a2a"/>
 
     <!-- row 3: Security -->
-    <text x="92" y="422" fill="#777777" font-size="10" letter-spacing="1.5">INFRASTRUCTURE SECURITY</text>
-    <text x="92" y="446" fill="#e5e5e5" font-size="13">HTTPS and isolation managed by the platform</text>
+    <text x="92" y="422" fill="#777777" font-size="12" letter-spacing="1.5">INFRASTRUCTURE SECURITY</text>
+    <text x="92" y="446" fill="#e5e5e5" font-size="15">HTTPS and isolation managed by the platform</text>
     <line x1="84" y1="484" x2="556" y2="484" stroke="#2a2a2a"/>
-    <text x="652" y="422" fill="#777777" font-size="10" letter-spacing="1.5">INFRASTRUCTURE SECURITY</text>
-    <text x="652" y="446" fill="#e5e5e5" font-size="13">cPanel AutoSSL + encryption rebuilt in PHP</text>
+    <text x="652" y="422" fill="#777777" font-size="12" letter-spacing="1.5">INFRASTRUCTURE SECURITY</text>
+    <text x="652" y="446" fill="#e5e5e5" font-size="15">cPanel AutoSSL + encryption rebuilt in PHP</text>
     <line x1="644" y1="484" x2="1116" y2="484" stroke="#2a2a2a"/>
 
     <!-- row 4: Cost -->
-    <text x="92" y="510" fill="#777777" font-size="10" letter-spacing="1.5">MONTHLY COST</text>
+    <text x="92" y="510" fill="#777777" font-size="12" letter-spacing="1.5">MONTHLY COST</text>
     <circle cx="518" cy="505" r="6" fill="#e04b4b"/>
-    <text x="92" y="534" fill="#e5a24b" font-size="13" font-weight="700">Paid plan billed in dollars, adds up fast</text>
+    <text x="92" y="534" fill="#e5a24b" font-size="15" font-weight="700">Paid plan billed in dollars, adds up fast</text>
     <line x1="84" y1="572" x2="556" y2="572" stroke="#2a2a2a"/>
-    <text x="652" y="510" fill="#777777" font-size="10" letter-spacing="1.5">MONTHLY COST</text>
+    <text x="652" y="510" fill="#777777" font-size="12" letter-spacing="1.5">MONTHLY COST</text>
     <circle cx="1078" cy="505" r="6" fill="#3ddc6a"/>
-    <text x="652" y="534" fill="#3ddc6a" font-size="13" font-weight="700">A fraction of the cost, billed locally</text>
+    <text x="652" y="534" fill="#3ddc6a" font-size="15" font-weight="700">A fraction of the cost, billed locally</text>
     <line x1="644" y1="572" x2="1116" y2="572" stroke="#2a2a2a"/>
 
     <!-- row 5: Best for -->
-    <text x="92" y="598" fill="#777777" font-size="10" letter-spacing="1.5">BEST FOR</text>
-    <text x="92" y="622" fill="#e5e5e5" font-size="13">Fast validation, budget for managed hosting</text>
-    <text x="652" y="598" fill="#777777" font-size="10" letter-spacing="1.5">BEST FOR</text>
-    <text x="652" y="622" fill="#e5e5e5" font-size="13">Small local business, tight budget</text>
+    <text x="92" y="598" fill="#777777" font-size="12" letter-spacing="1.5">BEST FOR</text>
+    <text x="92" y="622" fill="#e5e5e5" font-size="15">Fast validation, budget for managed hosting</text>
+    <text x="652" y="598" fill="#777777" font-size="12" letter-spacing="1.5">BEST FOR</text>
+    <text x="652" y="622" fill="#e5e5e5" font-size="15">Small local business, tight budget</text>
   </g>
 
   <!-- bottom banner -->
   <g font-family="Arial, sans-serif">
     <rect x="220" y="690" width="760" height="100" rx="16" fill="#101010" stroke="#2a2a2a" stroke-dasharray="4 4"/>
-    <text x="260" y="730" fill="#e5e5e5" font-size="14" font-weight="700">Vercel · Next.js</text>
-    <text x="600" y="733" text-anchor="middle" fill="#3ddc6a" font-size="18">→</text>
-    <text x="940" y="730" text-anchor="end" fill="#e5e5e5" font-size="14" font-weight="700">HostGator · PHP</text>
+    <text x="260" y="730" fill="#e5e5e5" font-size="16" font-weight="700">Vercel · Next.js</text>
+    <text x="600" y="733" text-anchor="middle" fill="#3ddc6a" font-size="20">→</text>
+    <text x="940" y="730" text-anchor="end" fill="#e5e5e5" font-size="16" font-weight="700">HostGator · PHP</text>
     <text x="600" y="762" text-anchor="middle" fill="#9a9a9a" font-size="12">A full stack migration, driven by the monthly hosting cost</text>
   </g>
 </svg>
