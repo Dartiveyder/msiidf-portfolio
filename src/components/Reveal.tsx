@@ -32,7 +32,7 @@ export function Reveal({ children, className = "", as = "div", delay = 0 }: Reve
           observer.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0, rootMargin: "0px 0px -60px 0px" },
     );
     observer.observe(el);
     return () => observer.disconnect();
