@@ -11,6 +11,13 @@ import { CaseStudyMarkdown } from "@/components/CaseStudyMarkdown";
 import { PathSwitcher } from "@/components/nicolash/PathSwitcher";
 import { PricingComparison } from "@/components/nicolash/PricingComparison";
 import { DeploySteps } from "@/components/nicolash/DeploySteps";
+import { HandoffFlow } from "@/components/nicolash/HandoffFlow";
+import { ProcessSteps } from "@/components/nicolash/ProcessSteps";
+import { TurningPoint } from "@/components/nicolash/TurningPoint";
+import { RulesGrid } from "@/components/nicolash/RulesGrid";
+import { Timeline } from "@/components/nicolash/Timeline";
+import { MigrationDiagram } from "@/components/nicolash/MigrationDiagram";
+import { ImpactDiagram } from "@/components/nicolash/ImpactDiagram";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getNextProject, getProject, getProjects, getSiteText } from "@/content/site";
 
@@ -30,6 +37,13 @@ const bodyEmbeds: Record<string, (lang: "pt" | "en") => ReactNode> = {
   "pricing-comparison": (lang) => <PricingComparison lang={lang} />,
   "path-switcher": (lang) => <PathSwitcher lang={lang} />,
   "deploy-steps": (lang) => <DeploySteps lang={lang} />,
+  "handoff-flow": (lang) => <HandoffFlow lang={lang} />,
+  "process-steps": (lang) => <ProcessSteps lang={lang} />,
+  "turning-point": (lang) => <TurningPoint lang={lang} />,
+  "rules-grid": (lang) => <RulesGrid lang={lang} />,
+  timeline: (lang) => <Timeline lang={lang} />,
+  "migration-diagram": (lang) => <MigrationDiagram lang={lang} />,
+  "impact-diagram": (lang) => <ImpactDiagram lang={lang} />,
 };
 
 function CaseStudyBody({ body, lang }: { body: string; lang: "pt" | "en" }) {

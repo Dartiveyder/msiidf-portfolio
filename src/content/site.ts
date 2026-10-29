@@ -480,7 +480,7 @@ Antes de qualquer tela ser desenhada, o briefing inicial foi coletado diretament
 
 O projeto começou no Figma, reunindo referências de estilo, estrutura de seções e identidade visual a partir desse briefing. Esse material foi levado ao Claude Design, onde a interface foi refinada e preparada como handoff, e então entregue ao Claude Code como ponto de partida para a implementação.
 
-![Fluxo de handoff do projeto Nicolash: do briefing com a cliente ao Figma, do Figma ao Claude Design e do Claude Design ao Claude Code](/assets/nicolash-handoff-pt.svg)
+[[EMBED:handoff-flow]]
 
 A partir daí, o processo foi:
 
@@ -489,17 +489,17 @@ A partir daí, o processo foi:
 3. Iteração orientada por feedback visual, a partir de prints de tela e observações sobre a interface, tratadas como padrão de design reaproveitável, e não como ajuste pontual.
 4. Responsividade mobile como requisito desde a primeira entrega, já que a maior parte do público de um estúdio de beleza local acessa pelo celular.
 
-![Os quatro passos do processo com Claude Code: reconstrução do handoff, definição da pilha tecnológica, iteração visual e responsividade mobile-first](/assets/nicolash-process-steps-pt.svg)
+[[EMBED:process-steps]]
 
 ## A virada: de vitrine para sistema de agendamento
 
 Com o site publicado, a virada não veio de um pedido da cliente, e sim de observar o processo que já existia por trás da vitrine: toda cliente final chamava no WhatsApp ou mandava mensagem no Instagram para marcar um horário, e cada marcação exigia conferir manualmente um Google Agenda antes de confirmar qualquer coisa. Acompanhando esse fluxo de perto, ficou claro que ali havia um diferencial em aberto: transformar aquela conferência manual em um sistema de agendamento próprio, onde a própria cliente final escolhe um serviço, vê um calendário com os horários livres, escolhe dia e horário, preenche nome e telefone, e tem a reserva confirmada na hora, sem depender de mensagem. A ideia partiu dessa observação, não de uma solicitação, e na prática resolveu exatamente a dor que já existia nos agendamentos.
 
-![Comparação entre o site antes, uma vitrine com agendamento só por WhatsApp, e depois, com sistema de agendamento online próprio](/assets/nicolash-turning-point-pt.svg)
+[[EMBED:turning-point]]
 
 As regras de negócio vieram todas em linguagem natural, no mesmo estilo de conversa:
 
-![Cinco cards com as regras de negócio do agendamento: confirmação instantânea, sem intervalo entre atendimentos, cancelamento só por WhatsApp, sem limite por cliente e multa de 30% para cancelamento com menos de 24 horas de antecedência](/assets/nicolash-rules-pt.svg)
+[[EMBED:rules-grid]]
 
 Essas regras viraram lógica de disponibilidade no código: grade de horários de 30 em 30 minutos, ocupação do primeiro horário livre de cada intervalo, antecedência mínima de reserva e horizonte máximo de 90 dias à frente, tudo calculado no fuso horário correto, para evitar o clássico bug de horário errado em sistemas de agenda.
 
@@ -519,7 +519,7 @@ Essa pergunta foi a virada do projeto de "site bonito" para "sistema que guarda 
 
 Esse tipo de decisão normalmente não aparece em um pedido de cliente, mas é exatamente o tipo de responsabilidade que entra quando um projeto de portfólio vira um sistema usado por pessoas reais.
 
-![Linha do tempo da evolução do projeto Nicolash: do site institucional ao agendamento online, do painel administrativo à criptografia de dados, até a migração de hospedagem](/assets/nicolash-timeline.svg)
+[[EMBED:timeline]]
 
 ## O problema do custo, e por que migrar de hospedagem
 
@@ -539,7 +539,7 @@ Esse projeto, na prática, virou dois caminhos possíveis para quem quer constru
 
 [[EMBED:path-switcher]]
 
-![Mecânica da migração técnica: repositório privado no GitHub, chave SSH somente leitura, Git Version Control do cPanel e banco de dados MySQL via phpMyAdmin](/assets/nicolash-migration-pt.svg)
+[[EMBED:migration-diagram]]
 
 Nenhum dos dois caminhos é o certo de forma absoluta. O caminho 1 prioriza velocidade e infraestrutura gerenciada, o caminho 2 prioriza custo e um modelo de hospedagem mais familiar para quem já usa serviços brasileiros tradicionais. A decisão certa depende do estágio e do orçamento do negócio, aqui ela mudou no meio do projeto, porque o negócio real mudou de "vamos validar uma ideia" para "isso já é usado por clientes todos os dias, e precisa custar pouco para se manter".
 
@@ -559,7 +559,7 @@ Esse foi um passo a passo guiado em tempo real, com a cliente enviando print de 
 
 Um ponto que pega a maioria de quem passa por isso pela primeira vez: a URL temporária gerada pela hospedagem, antes de apontar um domínio próprio, não migra automaticamente quando o domínio definitivo é configurado. A melhor prática é registrar o domínio antes de configurar qualquer coisa em produção, e não depois.
 
-![Diagrama mostrando o problema identificado, as decisões tomadas com Claude Code e o impacto final do projeto Nicolash, em três etapas](/assets/nicolash-impact-pt.svg)
+[[EMBED:impact-diagram]]
 
 ## Resultado
 
@@ -1254,7 +1254,7 @@ Before any screen was designed, the initial briefing was collected directly from
 
 The project started in Figma, gathering style references, section structure and visual identity from that briefing. That material was taken into Claude Design, where the interface was refined and prepared as a handoff, and then given to Claude Code as a starting point for implementation.
 
-![Nicolash project's handoff flow: from the client briefing to Figma, from Figma to Claude Design, and from Claude Design to Claude Code](/assets/nicolash-handoff-en.svg)
+[[EMBED:handoff-flow]]
 
 From there, the process was:
 
@@ -1263,17 +1263,17 @@ From there, the process was:
 3. Iterating from visual feedback, based on screenshots and notes about the interface, treated as a reusable design pattern rather than a one-off tweak.
 4. Mobile responsiveness as a requirement from the first delivery, since most of a local beauty studio's audience browses from a phone.
 
-![The four steps of the process with Claude Code: rebuilding the handoff, choosing the stack, visual iteration, and mobile-first responsiveness](/assets/nicolash-process-steps-en.svg)
+[[EMBED:process-steps]]
 
 ## The turning point: from storefront to booking system
 
 With the site live, the turning point didn't come from a client request, but from watching the process that already existed behind the storefront: every end client called on WhatsApp or messaged on Instagram to book a time, and each booking required manually checking a Google Calendar before confirming anything. Watching that flow closely made it clear there was an open differentiator there: turning that manual checking into a booking system of its own, where the end client picks a service, sees a calendar with open slots, chooses a day and time, fills in name and phone, and gets the booking confirmed instantly, without depending on a message. The idea came from that observation, not from a request, and in practice it solved exactly the pain that already existed around booking.
 
-![Comparison between the site before, a storefront with booking only via WhatsApp, and after, with its own online booking system](/assets/nicolash-turning-point-en.svg)
+[[EMBED:turning-point]]
 
 The business rules all came in plain, conversational language:
 
-![Five cards with the booking system's business rules: instant confirmation, no buffer time between appointments, cancellation only via WhatsApp, no limit per client, and a 30% fee for cancellations with less than 24 hours' notice](/assets/nicolash-rules-en.svg)
+[[EMBED:rules-grid]]
 
 Those rules became availability logic in the code: a 30-minute time grid, filling the first open slot in each window, a minimum lead time before a booking, a maximum horizon of 90 days ahead, all computed in the correct time zone, to avoid the classic wrong-midnight bug in scheduling systems.
 
@@ -1293,7 +1293,7 @@ That question was the turning point from "pretty website" to "a system that stor
 
 This kind of decision doesn't usually show up in a client request, but it's exactly the responsibility that comes with turning a portfolio project into a system real people use.
 
-![Timeline of the Nicolash project's evolution: from business website to online booking, from admin panel to data encryption, to the hosting migration](/assets/nicolash-timeline.svg)
+[[EMBED:timeline]]
 
 ## The cost problem, and why migrate hosting
 
@@ -1313,7 +1313,7 @@ This project, in practice, turned into two possible paths for anyone who wants t
 
 [[EMBED:path-switcher]]
 
-![The technical mechanics of the migration: a private GitHub repository, a read-only SSH key, cPanel's Git Version Control, and a MySQL database via phpMyAdmin](/assets/nicolash-migration-en.svg)
+[[EMBED:migration-diagram]]
 
 Neither path is the absolutely correct one. Path 1 prioritizes speed and managed infrastructure, path 2 prioritizes cost and a hosting model more familiar to anyone already using traditional local hosting providers. The right decision depends on the business's stage and budget, here it changed midway through the project, because the real business changed from "let's validate an idea" into "clients already use this every day, and it needs to cost little to keep running."
 
@@ -1331,7 +1331,7 @@ In practice, deploying on shared hosting through Git works a lot like a simplifi
 
 This was a real-time, guided walkthrough, with the client sending a screenshot of every cPanel screen, creating the database, importing the key, setting up Git Version Control, file permissions, to confirm, before every click, that the path was the right one. That kind of hand-holding is usually missing from written tutorials, because shared hosting providers name the same thing differently from one another, and one wrong click can take the site down. One thing that catches almost everyone the first time: the temporary URL a host generates before a real domain is pointed doesn't automatically carry over once the final domain is configured. The best practice is to register the domain before configuring anything in production, not after.
 
-![Diagram showing the problem identified, the decisions made with Claude Code and the final impact of the Nicolash project, in three stages](/assets/nicolash-impact-en.svg)
+[[EMBED:impact-diagram]]
 
 ## Result
 
