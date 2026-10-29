@@ -130,6 +130,20 @@ html.custom-cursor-active * {
   }
 }
 
+/* Same breakout as .case-study-img, for the interactive diagram/comparison
+   components embedded in case-study bodies, so they match the images' width. */
+.case-study-embed {
+  width: 100%;
+}
+
+@media (min-width: 860px) {
+  .case-study-embed {
+    width: min(1000px, calc(100vw - 96px));
+    margin-left: calc((760px - min(1000px, calc(100vw - 96px))) / 2);
+    margin-right: calc((760px - min(1000px, calc(100vw - 96px))) / 2);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

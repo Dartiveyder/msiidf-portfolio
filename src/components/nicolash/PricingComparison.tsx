@@ -45,7 +45,7 @@ export function PricingComparison({ lang }: { lang: "pt" | "en" }) {
   const t = copy[lang];
 
   return (
-    <div className="my-8 rounded-2xl border border-border bg-surface p-6 content:p-8">
+    <div className="case-study-embed my-8 rounded-2xl border border-border bg-surface p-6 content:p-8">
       <span className="mb-3 inline-block rounded-full border border-border-muted px-[14px] py-1.5 font-mono text-[11px] text-text-secondary">
         {t.eyebrow}
       </span>

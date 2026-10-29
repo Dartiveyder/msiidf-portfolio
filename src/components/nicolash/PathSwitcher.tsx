@@ -87,7 +87,7 @@ export function PathSwitcher({ lang }: { lang: "pt" | "en" }) {
   const data = active === "vercel" ? t.vercel : t.hostgator;
 
   return (
-    <div className="my-8 rounded-2xl border border-border bg-surface p-6 content:p-8">
+    <div className="case-study-embed my-8 rounded-2xl border border-border bg-surface p-6 content:p-8">
       <div className="mb-6 flex gap-2">
         <button
           type="button"

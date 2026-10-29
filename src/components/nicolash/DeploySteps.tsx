@@ -56,7 +56,7 @@ export function DeploySteps({ lang }: { lang: "pt" | "en" }) {
   const steps = copy[lang];
 
   return (
-    <div className="my-8 flex flex-col gap-2.5 rounded-2xl border border-border bg-surface p-6 content:p-8">
+    <div className="case-study-embed my-8 flex flex-col gap-2.5 rounded-2xl border border-border bg-surface p-6 content:p-8">
       {steps.map((step, i) => {
         const isActive = i === active;
         return (
