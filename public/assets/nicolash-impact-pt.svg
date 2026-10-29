@@ -1,65 +1,56 @@
 <svg viewBox="0 0 1100 940" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="chalkDustImpPt" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
-    </filter>
-  </defs>
-  <rect width="1100" height="940" fill="#1d3a2c"/>
-  <rect width="1100" height="940" filter="url(#chalkDustImpPt)"/>
+  <rect width="1100" height="940" fill="#ffffff"/>
 
-  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
+  <g font-family="Arial, Helvetica, sans-serif">
     <!-- Box 1: Problema -->
-    <rect x="40" y="40" width="1020" height="220" rx="20" fill="#f7f1e1" stroke="#b1452f" stroke-width="2.5" transform="rotate(-0.3 550 150)"/>
-    <text x="76" y="90" fill="#30291f" font-size="28" font-weight="700">Problema identificado</text>
-    <g font-size="20" fill="#30291f">
-      <circle cx="90" cy="128" r="7" fill="#b1452f"/>
-      <text x="112" y="135">Agendamento só por WhatsApp, demora para confirmar</text>
-      <circle cx="90" cy="166" r="7" fill="#b1452f"/>
-      <text x="112" y="173">Risco de duas pessoas marcarem o mesmo horário</text>
-      <circle cx="90" cy="204" r="7" fill="#b1452f"/>
-      <text x="112" y="211">Custo de hospedagem alto para o tamanho do negócio</text>
+    <rect x="40" y="40" width="1020" height="220" rx="16" fill="#faf6ea" stroke="#b1452f" stroke-width="2"/>
+    <text x="76" y="88" fill="#201d16" font-size="24" font-weight="700">Problema identificado</text>
+    <g font-size="18" fill="#201d16">
+      <circle cx="90" cy="126" r="6" fill="#b1452f"/>
+      <text x="112" y="132">Agendamento só por WhatsApp, demora para confirmar</text>
+      <circle cx="90" cy="164" r="6" fill="#b1452f"/>
+      <text x="112" y="170">Risco de duas pessoas marcarem o mesmo horário</text>
+      <circle cx="90" cy="202" r="6" fill="#b1452f"/>
+      <text x="112" y="208">Custo de hospedagem alto para o tamanho do negócio</text>
     </g>
 
-    <path d="M550,262 Q540,290 550,312" stroke="#e8e3d0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M550,312 L538,296" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M550,312 L564,298" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M550,260 L550,312" stroke="#9a937a" stroke-width="2.5" fill="none"/>
+    <path d="M536,296 L550,314 L564,296" fill="none" stroke="#9a937a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
     <!-- Box 2: Decisões -->
-    <rect x="40" y="320" width="1020" height="220" rx="20" fill="#f7f1e1" stroke="#2f7d46" stroke-width="3" transform="rotate(0.3 550 430)"/>
-    <text x="76" y="370" fill="#30291f" font-size="28" font-weight="700">Decisões tomadas com Claude Code</text>
-    <g font-size="20" fill="#30291f">
-      <circle cx="90" cy="408" r="7" fill="#2f7d46"/>
-      <text x="112" y="415">Sistema de agendamento com trava de concorrência</text>
-      <circle cx="90" cy="446" r="7" fill="#2f7d46"/>
-      <text x="112" y="453">Criptografia de dados + conformidade com a LGPD</text>
-      <circle cx="90" cy="484" r="7" fill="#2f7d46"/>
-      <text x="112" y="491">Migração de Next.js/Vercel para PHP e MySQL</text>
+    <rect x="40" y="320" width="1020" height="220" rx="16" fill="#faf6ea" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="76" y="368" fill="#201d16" font-size="24" font-weight="700">Decisões tomadas com Claude Code</text>
+    <g font-size="18" fill="#201d16">
+      <circle cx="90" cy="406" r="6" fill="#2f7d46"/>
+      <text x="112" y="412">Sistema de agendamento com trava de concorrência</text>
+      <circle cx="90" cy="444" r="6" fill="#2f7d46"/>
+      <text x="112" y="450">Criptografia de dados + conformidade com a LGPD</text>
+      <circle cx="90" cy="482" r="6" fill="#2f7d46"/>
+      <text x="112" y="488">Migração de Next.js/Vercel para PHP e MySQL</text>
     </g>
 
-    <path d="M550,542 Q540,570 550,592" stroke="#e8e3d0" stroke-width="3" fill="none" stroke-linecap="round"/>
-    <path d="M550,592 L538,576" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M550,592 L564,578" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M550,540 L550,592" stroke="#9a937a" stroke-width="2.5" fill="none"/>
+    <path d="M536,576 L550,594 L564,576" fill="none" stroke="#9a937a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 
     <!-- Box 3: Impacto -->
-    <rect x="40" y="600" width="1020" height="300" rx="20" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5"/>
-    <text x="76" y="652" fill="#30291f" font-size="28" font-weight="700">Impacto</text>
+    <rect x="40" y="600" width="1020" height="300" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <text x="76" y="650" fill="#201d16" font-size="24" font-weight="700">Impacto</text>
 
     <g>
-      <rect x="76" y="684" width="296" height="180" rx="16" fill="#efe6d1" stroke="#30291f" stroke-width="2"/>
-      <text x="224" y="770" text-anchor="middle" fill="#2f7d46" font-size="56" font-weight="700">100%</text>
-      <text x="224" y="806" text-anchor="middle" fill="#4a4336" font-size="19">Paridade de funcionalidades</text>
-      <text x="224" y="830" text-anchor="middle" fill="#4a4336" font-size="19">na migração</text>
+      <rect x="76" y="682" width="296" height="182" rx="14" fill="#ffffff" stroke="#ddd4b8" stroke-width="2"/>
+      <text x="224" y="768" text-anchor="middle" fill="#2f7d46" font-size="52" font-weight="700">100%</text>
+      <text x="224" y="802" text-anchor="middle" fill="#55503f" font-size="18">Paridade de funcionalidades</text>
+      <text x="224" y="826" text-anchor="middle" fill="#55503f" font-size="18">na migração</text>
 
-      <rect x="402" y="684" width="296" height="180" rx="16" fill="#efe6d1" stroke="#30291f" stroke-width="2"/>
-      <text x="550" y="770" text-anchor="middle" fill="#2f7d46" font-size="56" font-weight="700">0</text>
-      <text x="550" y="806" text-anchor="middle" fill="#4a4336" font-size="19">Conflitos de</text>
-      <text x="550" y="830" text-anchor="middle" fill="#4a4336" font-size="19">horário</text>
+      <rect x="402" y="682" width="296" height="182" rx="14" fill="#ffffff" stroke="#ddd4b8" stroke-width="2"/>
+      <text x="550" y="768" text-anchor="middle" fill="#2f7d46" font-size="52" font-weight="700">0</text>
+      <text x="550" y="802" text-anchor="middle" fill="#55503f" font-size="18">Conflitos de</text>
+      <text x="550" y="826" text-anchor="middle" fill="#55503f" font-size="18">horário</text>
 
-      <rect x="728" y="684" width="296" height="180" rx="16" fill="#efe6d1" stroke="#30291f" stroke-width="2"/>
-      <text x="876" y="770" text-anchor="middle" fill="#2f7d46" font-size="56" font-weight="700">2</text>
-      <text x="876" y="806" text-anchor="middle" fill="#4a4336" font-size="19">Arquiteturas</text>
-      <text x="876" y="830" text-anchor="middle" fill="#4a4336" font-size="19">completas</text>
+      <rect x="728" y="682" width="296" height="182" rx="14" fill="#ffffff" stroke="#ddd4b8" stroke-width="2"/>
+      <text x="876" y="768" text-anchor="middle" fill="#2f7d46" font-size="52" font-weight="700">2</text>
+      <text x="876" y="802" text-anchor="middle" fill="#55503f" font-size="18">Arquiteturas</text>
+      <text x="876" y="826" text-anchor="middle" fill="#55503f" font-size="18">completas</text>
     </g>
   </g>
 </svg>

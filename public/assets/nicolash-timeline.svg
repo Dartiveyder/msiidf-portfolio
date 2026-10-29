@@ -1,63 +1,67 @@
-<svg viewBox="0 0 1500 850" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="chalkDustTl" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
-    </filter>
-  </defs>
-  <rect width="1500" height="850" fill="#1d3a2c"/>
-  <rect width="1500" height="850" filter="url(#chalkDustTl)"/>
+<svg viewBox="0 0 1500 910" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1500" height="910" fill="#ffffff"/>
 
-  <path d="M250,220 Q400,450 500,560 Q625,420 750,220 Q875,420 1000,560 Q1125,420 1250,220"
-        fill="none" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-  <path d="M1250,220 L1226,232" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-  <path d="M1250,220 L1238,244" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-
-  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
-    <g transform="translate(250,220)">
-      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-42" text-anchor="middle" fill="#f4efe0" font-size="28" font-weight="700">Site institucional</text>
-      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="18">Design → Next.js → Vercel</text>
-      <text y="54" text-anchor="middle" fill="#f4efe0" font-size="19">Serviços, fotos, preços,</text>
-      <text y="80" text-anchor="middle" fill="#f4efe0" font-size="19">responsivo mobile</text>
-    </g>
-
-    <g transform="translate(500,560)">
-      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-42" text-anchor="middle" fill="#f4efe0" font-size="28" font-weight="700">Agendamento online</text>
-      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="18">Calendário + confirmação</text>
-      <text y="54" text-anchor="middle" fill="#f4efe0" font-size="19">Sem horários sobrepostos,</text>
-      <text y="80" text-anchor="middle" fill="#f4efe0" font-size="19">cancelamento via WhatsApp</text>
-    </g>
-
-    <g transform="translate(750,220)">
-      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-42" text-anchor="middle" fill="#f4efe0" font-size="28" font-weight="700">Painel administrativo</text>
-      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="18">Mobile-first · /admin</text>
-      <text y="54" text-anchor="middle" fill="#f4efe0" font-size="19">Agenda, bloqueios,</text>
-      <text y="80" text-anchor="middle" fill="#f4efe0" font-size="19">status dos horários</text>
-    </g>
-
-    <g transform="translate(1000,560)">
-      <circle r="16" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-42" text-anchor="middle" fill="#f4efe0" font-size="28" font-weight="700">Segurança dos dados</text>
-      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="18">Criptografia + conformidade</text>
-      <text y="54" text-anchor="middle" fill="#f4efe0" font-size="19">LGPD, sessão assinada,</text>
-      <text y="80" text-anchor="middle" fill="#f4efe0" font-size="19">senha com hash</text>
-    </g>
-
-    <g transform="translate(1250,220)">
-      <circle r="18" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-42" text-anchor="middle" fill="#f4efe0" font-size="28" font-weight="700">Migração de hospedagem</text>
-      <text y="-16" text-anchor="middle" fill="#bcd4c2" font-size="18">Vercel → PHP/MySQL</text>
-      <text y="54" text-anchor="middle" fill="#f4efe0" font-size="19">cPanel + Git Version</text>
-      <text y="80" text-anchor="middle" fill="#f4efe0" font-size="19">Control, custo menor</text>
-    </g>
+  <g stroke="#9a937a" stroke-width="2.5" fill="none">
+    <path d="M480,210 L528,210"/>
+    <path d="M514,198 L530,210 L514,222"/>
+    <path d="M970,210 L1018,210"/>
+    <path d="M1004,198 L1020,210 L1004,222"/>
+    <path d="M1240,362 L1240,400 L505,400 L505,438"/>
+    <path d="M493,424 L507,440 L521,424"/>
+    <path d="M725,590 L773,590"/>
+    <path d="M759,578 L775,590 L759,602"/>
   </g>
 
-  <g transform="translate(750,750)" font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
-    <rect x="-380" y="-40" width="760" height="86" rx="16" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5"/>
-    <text text-anchor="middle" y="-6" fill="#30291f" font-size="23" font-weight="700">O gatilho da migração: custo</text>
-    <text text-anchor="middle" y="24" fill="#5c5444" font-size="18">Hospedagem mensal na Vercel ficou alta para um negócio pequeno</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- card 1 -->
+    <rect x="40" y="60" width="440" height="300" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="260" cy="116" r="28" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="260" y="125" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">1</text>
+    <text x="260" y="186" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Site institucional</text>
+    <text x="260" y="214" text-anchor="middle" fill="#716b54" font-size="19">Design → Next.js → Vercel</text>
+    <text x="260" y="266" text-anchor="middle" fill="#55503f" font-size="22">Serviços, fotos, preços,</text>
+    <text x="260" y="292" text-anchor="middle" fill="#55503f" font-size="22">responsivo mobile</text>
+
+    <!-- card 2 -->
+    <rect x="530" y="60" width="440" height="300" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="750" cy="116" r="28" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="750" y="125" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">2</text>
+    <text x="750" y="186" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Agendamento online</text>
+    <text x="750" y="214" text-anchor="middle" fill="#716b54" font-size="19">Calendário + confirmação</text>
+    <text x="750" y="266" text-anchor="middle" fill="#55503f" font-size="22">Sem horários sobrepostos,</text>
+    <text x="750" y="292" text-anchor="middle" fill="#55503f" font-size="22">cancelamento via WhatsApp</text>
+
+    <!-- card 3 -->
+    <rect x="1020" y="60" width="440" height="300" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="1240" cy="116" r="28" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="1240" y="125" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">3</text>
+    <text x="1240" y="186" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Painel administrativo</text>
+    <text x="1240" y="214" text-anchor="middle" fill="#716b54" font-size="19">Mobile-first · /admin</text>
+    <text x="1240" y="266" text-anchor="middle" fill="#55503f" font-size="22">Agenda, bloqueios,</text>
+    <text x="1240" y="292" text-anchor="middle" fill="#55503f" font-size="22">status dos horários</text>
+
+    <!-- card 4 -->
+    <rect x="285" y="440" width="440" height="300" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="505" cy="496" r="28" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="505" y="505" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">4</text>
+    <text x="505" y="566" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Segurança dos dados</text>
+    <text x="505" y="594" text-anchor="middle" fill="#716b54" font-size="19">Criptografia + conformidade</text>
+    <text x="505" y="646" text-anchor="middle" fill="#55503f" font-size="22">LGPD, sessão segura,</text>
+    <text x="505" y="672" text-anchor="middle" fill="#55503f" font-size="22">senha com hash</text>
+
+    <!-- card 5 -->
+    <rect x="775" y="440" width="440" height="300" rx="16" fill="#faf6ea" stroke="#2f7d46" stroke-width="2.5"/>
+    <circle cx="995" cy="496" r="28" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="995" y="505" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">5</text>
+    <text x="995" y="566" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Migração de hospedagem</text>
+    <text x="995" y="594" text-anchor="middle" fill="#716b54" font-size="19">Vercel → PHP/MySQL</text>
+    <text x="995" y="646" text-anchor="middle" fill="#55503f" font-size="22">cPanel + Git Version</text>
+    <text x="995" y="672" text-anchor="middle" fill="#55503f" font-size="22">Control, custo menor</text>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="300" y="780" width="900" height="100" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <text x="750" y="824" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">O gatilho da migração: custo</text>
+    <text x="750" y="856" text-anchor="middle" fill="#716b54" font-size="20">Hospedagem mensal na Vercel ficou alta para um negócio pequeno</text>
   </g>
 </svg>

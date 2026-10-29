@@ -1,47 +1,40 @@
-<svg viewBox="0 0 1400 540" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="chalkDustPs" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
-    </filter>
-  </defs>
-  <rect width="1400" height="540" fill="#1d3a2c"/>
-  <rect width="1400" height="540" filter="url(#chalkDustPs)"/>
+<svg viewBox="0 0 1400 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="480" fill="#ffffff"/>
 
-  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
+  <g font-family="Arial, Helvetica, sans-serif">
     <!-- card 1 -->
-    <rect x="40" y="40" width="300" height="440" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.6 190 260)"/>
-    <circle cx="190" cy="118" r="34" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="190" y="130" text-anchor="middle" fill="#2f7d46" font-size="30" font-weight="700">1</text>
-    <text x="190" y="198" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">Reconstrução</text>
-    <text x="190" y="226" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">do handoff</text>
-    <text x="190" y="270" text-anchor="middle" fill="#4a4336" font-size="18">Handoff reconstruído</text>
-    <text x="190" y="296" text-anchor="middle" fill="#4a4336" font-size="18">como projeto Next.js real.</text>
+    <rect x="40" y="40" width="300" height="400" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="190" cy="104" r="32" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="190" y="115" text-anchor="middle" fill="#2f7d46" font-size="28" font-weight="700">1</text>
+    <text x="190" y="184" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Reconstrução</text>
+    <text x="190" y="214" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">do handoff</text>
+    <text x="190" y="254" text-anchor="middle" fill="#55503f" font-size="22">Handoff reconstruído</text>
+    <text x="190" y="280" text-anchor="middle" fill="#55503f" font-size="22">como projeto Next.js real.</text>
 
     <!-- card 2 -->
-    <rect x="380" y="40" width="300" height="440" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(0.5 530 260)"/>
-    <circle cx="530" cy="118" r="34" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="530" y="130" text-anchor="middle" fill="#2f7d46" font-size="30" font-weight="700">2</text>
-    <text x="530" y="198" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">Pilha</text>
-    <text x="530" y="226" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">tecnológica</text>
-    <text x="530" y="266" text-anchor="middle" fill="#4a4336" font-size="18">Melhor linguagem,</text>
-    <text x="530" y="292" text-anchor="middle" fill="#4a4336" font-size="18">grátis: Next.js na Vercel.</text>
+    <rect x="327" y="40" width="300" height="400" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="477" cy="104" r="32" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="477" y="115" text-anchor="middle" fill="#2f7d46" font-size="28" font-weight="700">2</text>
+    <text x="477" y="184" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Pilha</text>
+    <text x="477" y="214" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">tecnológica</text>
+    <text x="477" y="254" text-anchor="middle" fill="#55503f" font-size="22">Melhor linguagem,</text>
+    <text x="477" y="280" text-anchor="middle" fill="#55503f" font-size="22">grátis: Next.js na Vercel.</text>
 
     <!-- card 3 -->
-    <rect x="720" y="40" width="300" height="440" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.5 870 260)"/>
-    <circle cx="870" cy="118" r="34" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="870" y="130" text-anchor="middle" fill="#2f7d46" font-size="30" font-weight="700">3</text>
-    <text x="870" y="198" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">Iteração</text>
-    <text x="870" y="226" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">visual</text>
-    <text x="870" y="266" text-anchor="middle" fill="#4a4336" font-size="18">Prints de tela viram</text>
-    <text x="870" y="292" text-anchor="middle" fill="#4a4336" font-size="18">padrão reaproveitável.</text>
+    <rect x="614" y="40" width="300" height="400" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="764" cy="104" r="32" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="764" y="115" text-anchor="middle" fill="#2f7d46" font-size="28" font-weight="700">3</text>
+    <text x="764" y="184" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Iteração</text>
+    <text x="764" y="214" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">visual</text>
+    <text x="764" y="254" text-anchor="middle" fill="#55503f" font-size="22">Prints de tela viram</text>
+    <text x="764" y="280" text-anchor="middle" fill="#55503f" font-size="22">padrão reaproveitável.</text>
 
     <!-- card 4 -->
-    <rect x="1060" y="40" width="300" height="440" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(0.6 1210 260)"/>
-    <circle cx="1210" cy="118" r="34" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="1210" y="130" text-anchor="middle" fill="#2f7d46" font-size="30" font-weight="700">4</text>
-    <text x="1210" y="212" text-anchor="middle" fill="#30291f" font-size="24" font-weight="700">Mobile-first</text>
-    <text x="1210" y="266" text-anchor="middle" fill="#4a4336" font-size="18">Critério de aceite</text>
-    <text x="1210" y="292" text-anchor="middle" fill="#4a4336" font-size="18">desde a 1ª entrega.</text>
+    <rect x="900" y="40" width="300" height="400" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="1050" cy="104" r="32" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="1050" y="115" text-anchor="middle" fill="#2f7d46" font-size="28" font-weight="700">4</text>
+    <text x="1050" y="199" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Mobile-first</text>
+    <text x="1050" y="254" text-anchor="middle" fill="#55503f" font-size="22">Critério de aceite</text>
+    <text x="1050" y="280" text-anchor="middle" fill="#55503f" font-size="22">desde a 1ª entrega.</text>
   </g>
 </svg>

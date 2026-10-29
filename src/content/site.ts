@@ -529,29 +529,15 @@ A Vercel é excelente para validar produto rápido, mas o plano adequado para ma
 
 Entre as alternativas avaliadas, a que fez mais sentido foi a hospedagem compartilhada tradicional, no caso HostGator, com cPanel, PHP e MySQL, por uma fração do custo mensal, já incluindo e-mail profissional e um painel de gestão conhecido por qualquer agência ou freelancer brasileiro. Essa escolha trouxe uma mudança real de arquitetura, não só de provedor: o back-end inteiro, que rodava em Node.js sobre a infraestrutura da Vercel, precisou ser reescrito em PHP, e o banco de dados, de Postgres gerenciado para MySQL via phpMyAdmin, mantendo o mesmo contrato de API para a cliente não perceber nenhuma diferença no uso do site.
 
+Comparando os números oficiais de cada plano de entrada:
+
+[[EMBED:pricing-comparison]]
+
 ## Dois caminhos possíveis para publicar com Claude Code
 
-Esse projeto, na prática, virou dois caminhos possíveis para quem quer construir um site com Claude Code até a publicação. Vale comparar os dois diretamente.
+Esse projeto, na prática, virou dois caminhos possíveis para quem quer construir um site com Claude Code até a publicação. Vale comparar os dois diretamente, clicando em cada um:
 
-![Comparação entre os dois caminhos de publicação: Vercel com Next.js e HostGator com PHP, lado a lado por linguagem, deploy, banco de dados, segurança, custo mensal e para quem é melhor cada opção](/assets/nicolash-comparison-pt.svg)
-
-### Caminho 1: Next.js na Vercel
-
-- **Linguagem**: TypeScript/JavaScript de ponta a ponta, front-end e back-end no mesmo projeto.
-- **Deploy**: automático a cada push no GitHub, sem configuração manual de servidor.
-- **Banco de dados**: Postgres gerenciado (Neon, neste projeto), com variáveis de ambiente sincronizadas automaticamente.
-- **Segurança de infraestrutura**: certificado HTTPS automático, rede de borda, isolamento de funções, tudo gerenciado pela plataforma.
-- **Custo**: gratuito para validar, mas o plano pago, necessário em produção com banco gerenciado e mais execuções de função, soma rápido quando convertido para reais, especialmente para um negócio pequeno.
-- **Melhor para**: validar um produto rápido, projetos com orçamento para hospedagem gerenciada, ou produtos que vão escalar de verdade.
-
-### Caminho 2: PHP e MySQL na HostGator
-
-- **Linguagem**: PHP no servidor, reescrevendo cada endpoint da API mantendo exatamente o mesmo contrato, mesmas rotas, mesmos formatos de erro, para o front-end não perceber diferença.
-- **Deploy**: Git Version Control do próprio cPanel, puxando de um repositório privado no GitHub através de uma chave SSH somente leitura, sem precisar de CI/CD externo.
-- **Banco de dados**: MySQL via phpMyAdmin, com um script de migração dos dados que já existiam no Postgres.
-- **Segurança de infraestrutura**: certificado HTTPS configurado pelo próprio painel, AutoSSL do cPanel, com responsabilidade maior do desenvolvedor sobre o que é exposto publicamente. A criptografia de aplicação, AES-256-GCM, teve que ser reimplementada em PHP, compatível com a versão em Node, para continuar decifrando os dados já criptografados.
-- **Custo**: uma fração do plano pago da Vercel, cobrado em reais, já incluindo e-mail e domínio.
-- **Melhor para**: negócios pequenos e locais, orçamento apertado, clientes que já conhecem cPanel, ou quem precisa de hospedagem compartilhada tradicional por qualquer motivo.
+[[EMBED:path-switcher]]
 
 ![Mecânica da migração técnica: repositório privado no GitHub, chave SSH somente leitura, Git Version Control do cPanel e banco de dados MySQL via phpMyAdmin](/assets/nicolash-migration-pt.svg)
 
@@ -565,13 +551,9 @@ Antes de qualquer coisa ir para o servidor real, foi montado um ambiente local, 
 
 ### cPanel, Git Version Control e o primeiro deploy
 
-Na prática, o deploy em hospedagem compartilhada usando Git funciona de um jeito parecido com um pipeline de CI/CD simplificado:
+Na prática, o deploy em hospedagem compartilhada usando Git funciona de um jeito parecido com um pipeline de CI/CD simplificado. Passe o mouse ou clique em cada etapa:
 
-1. O projeto é preparado com um arquivo de configuração próprio do cPanel, que define exatamente quais arquivos vão para a pasta pública do site, e bloqueia explicitamente tudo que é interno: código-fonte, dependências, controle de versão.
-2. Um repositório privado é criado no GitHub, só com o que deve ir para produção.
-3. É gerada uma chave SSH de deploy, sem senha, cadastrada no GitHub como chave somente leitura. Isso evita usar a senha pessoal da conta e limita o acesso ao mínimo necessário.
-4. Dentro do cPanel, a função Git Version Control recebe a URL do repositório e a chave, clona o projeto e, a cada atualização, basta um "pull" para publicar a versão mais nova.
-5. O banco de dados é criado via cPanel/phpMyAdmin, o esquema SQL é importado e os dados que já existiam em produção são migrados com um script próprio.
+[[EMBED:deploy-steps]]
 
 Esse foi um passo a passo guiado em tempo real, com a cliente enviando print de cada tela do cPanel, criação do banco, importação da chave, configuração do Git Version Control, permissões de arquivo, para confirmar, antes de cada clique, que o caminho era o correto. É o tipo de acompanhamento que normalmente falta em tutoriais escritos, porque hospedagem compartilhada tem nome diferente para a mesma coisa em cada provedor, e um clique no lugar errado pode derrubar o site.
 
@@ -1321,29 +1303,15 @@ Vercel is excellent for validating a product quickly, but the plan suited to run
 
 Among the alternatives evaluated, the one that made the most sense was traditional shared hosting, HostGator in this case, with cPanel, PHP and MySQL, for a fraction of the monthly cost, already including professional email and a management panel familiar to any Brazilian agency or freelancer. That choice brought a real architecture change, not just a new provider: the entire backend, which ran on Node.js over Vercel's infrastructure, had to be rewritten in PHP, and the database moved from managed Postgres to MySQL via phpMyAdmin, keeping the same API contract so the client would notice no difference at all in how the site worked.
 
+Comparing the official numbers for each plan's entry tier:
+
+[[EMBED:pricing-comparison]]
+
 ## Two possible paths to publish with Claude Code
 
-This project, in practice, turned into two possible paths for anyone who wants to build a website with Claude Code all the way to publishing. It's worth comparing them directly.
+This project, in practice, turned into two possible paths for anyone who wants to build a website with Claude Code all the way to publishing. It's worth comparing them directly, by clicking on each one:
 
-![Comparison between the two publishing paths: Vercel with Next.js and HostGator with PHP, side by side across language, deploy, database, security, monthly cost and who each option is best for](/assets/nicolash-comparison-en.svg)
-
-### Path 1: Next.js on Vercel
-
-- **Language**: TypeScript/JavaScript end to end, frontend and backend in the same project.
-- **Deploy**: automatic on every push to GitHub, no manual server configuration.
-- **Database**: managed Postgres (Neon, in this project), with environment variables synced automatically.
-- **Infrastructure security**: automatic HTTPS certificates, an edge network, function isolation, all managed by the platform.
-- **Cost**: free to validate, but the paid plan, needed in production with a managed database and more function executions, adds up quickly once converted to local currency, especially for a small business.
-- **Best for**: validating a product quickly, projects with budget for managed hosting, or products that will genuinely scale.
-
-### Path 2: PHP and MySQL on HostGator
-
-- **Language**: server-side PHP, rewriting every API endpoint while keeping the exact same contract, same routes, same error formats, so the frontend sees no difference.
-- **Deploy**: cPanel's own Git Version Control, pulling from a private GitHub repository through a read-only SSH key, with no need for external CI/CD.
-- **Database**: MySQL via phpMyAdmin, with a migration script for the data that already existed in Postgres.
-- **Infrastructure security**: HTTPS configured through the panel itself, cPanel's AutoSSL, with more of the responsibility on the developer for what gets exposed publicly. The application-level encryption, AES-256-GCM, had to be reimplemented in PHP, compatible with the Node version, to keep decrypting data that was already encrypted.
-- **Cost**: a fraction of Vercel's paid plan, billed in local currency, already including email and domain.
-- **Best for**: small, local businesses, a tight budget, clients already familiar with cPanel, or anyone who needs traditional shared hosting for any reason.
+[[EMBED:path-switcher]]
 
 ![The technical mechanics of the migration: a private GitHub repository, a read-only SSH key, cPanel's Git Version Control, and a MySQL database via phpMyAdmin](/assets/nicolash-migration-en.svg)
 
@@ -1357,13 +1325,9 @@ Before anything touched the real server, a local environment was set up, with PH
 
 ### cPanel, Git Version Control and the first deploy
 
-In practice, deploying on shared hosting through Git works a lot like a simplified CI/CD pipeline:
+In practice, deploying on shared hosting through Git works a lot like a simplified CI/CD pipeline. Hover or click each step:
 
-1. The project is prepared with cPanel's own configuration file, which defines exactly which files go into the site's public folder, and explicitly blocks everything internal: source code, dependencies, version control.
-2. A private repository is created on GitHub, containing only what should go to production.
-3. A passwordless deploy SSH key is generated and registered on GitHub as a read-only key. This avoids using the personal account password and limits access to the bare minimum.
-4. Inside cPanel, the Git Version Control feature takes the repository URL and the key, clones the project, and from then on a single "pull" publishes the newest version.
-5. The database is created through cPanel/phpMyAdmin, the SQL schema is imported, and the data already in production is migrated with a dedicated script.
+[[EMBED:deploy-steps]]
 
 This was a real-time, guided walkthrough, with the client sending a screenshot of every cPanel screen, creating the database, importing the key, setting up Git Version Control, file permissions, to confirm, before every click, that the path was the right one. That kind of hand-holding is usually missing from written tutorials, because shared hosting providers name the same thing differently from one another, and one wrong click can take the site down. One thing that catches almost everyone the first time: the temporary URL a host generates before a real domain is pointed doesn't automatically carry over once the final domain is configured. The best practice is to register the domain before configuring anything in production, not after.
 

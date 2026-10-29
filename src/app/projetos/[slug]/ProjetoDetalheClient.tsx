@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -7,6 +8,9 @@ import { PasswordGateButton } from "@/components/PasswordGateButton";
 import { Reveal } from "@/components/Reveal";
 import { ImpactMetrics } from "@/components/ImpactMetrics";
 import { CaseStudyMarkdown } from "@/components/CaseStudyMarkdown";
+import { PathSwitcher } from "@/components/nicolash/PathSwitcher";
+import { PricingComparison } from "@/components/nicolash/PricingComparison";
+import { DeploySteps } from "@/components/nicolash/DeploySteps";
 import { useLanguage } from "@/components/LanguageProvider";
 import { getNextProject, getProject, getProjects, getSiteText } from "@/content/site";
 
@@ -20,6 +24,27 @@ const toolIcons: Record<string, string> = {
 
 function isImagePath(icon: string) {
   return /^(\/|https?:)/.test(icon) || /\.(png|jpe?g|svg|webp)$/i.test(icon);
+}
+
+const bodyEmbeds: Record<string, (lang: "pt" | "en") => ReactNode> = {
+  "pricing-comparison": (lang) => <PricingComparison lang={lang} />,
+  "path-switcher": (lang) => <PathSwitcher lang={lang} />,
+  "deploy-steps": (lang) => <DeploySteps lang={lang} />,
+};
+
+function CaseStudyBody({ body, lang }: { body: string; lang: "pt" | "en" }) {
+  const parts = body.split(/\[\[EMBED:([a-z-]+)\]\]/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        if (i % 2 === 1) {
+          const render = bodyEmbeds[part];
+          return render ? <div key={i}>{render(lang)}</div> : null;
+        }
+        return part.trim() ? <CaseStudyMarkdown key={i}>{part}</CaseStudyMarkdown> : null;
+      })}
+    </>
+  );
 }
 
 function ProjectIconBadge({ icon, size }: { icon: string; size: string }) {
@@ -297,7 +322,7 @@ export function ProjetoDetalheClient({ slug }: { slug: string }) {
               {projetoDetalhe.processHeading.title}{" "}
               <span className="text-primary">{projetoDetalhe.processHeading.highlight}</span>
             </h2>
-            <CaseStudyMarkdown>{caseStudy.body}</CaseStudyMarkdown>
+            <CaseStudyBody body={caseStudy.body} lang={lang} />
           </Reveal>
 
           {nextProject ? (

@@ -1,54 +1,49 @@
 <svg viewBox="0 0 1300 680" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="chalkDustRulesEn" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
-    </filter>
-  </defs>
-  <rect width="1300" height="680" fill="#1d3a2c"/>
-  <rect width="1300" height="680" filter="url(#chalkDustRulesEn)"/>
+  <rect width="1300" height="680" fill="#ffffff"/>
 
-  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
+  <g font-family="Arial, Helvetica, sans-serif">
     <!-- card 1 -->
-    <rect x="40" y="40" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.5 230 180)"/>
-    <circle cx="96" cy="96" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="96" y="104" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">1</text>
-    <text x="140" y="104" fill="#30291f" font-size="25" font-weight="700">Instant confirmation</text>
-    <text x="72" y="210" fill="#5c5444" font-size="18">No manual approval, the</text>
-    <text x="72" y="238" fill="#5c5444" font-size="18">booking confirms right away.</text>
+    <rect x="40" y="40" width="380" height="280" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="230" cy="96" r="26" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="230" y="104" text-anchor="middle" fill="#2f7d46" font-size="22" font-weight="700">1</text>
+    <text x="230" y="150" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Instant</text>
+    <text x="230" y="178" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">confirmation</text>
+    <text x="230" y="220" text-anchor="middle" fill="#55503f" font-size="21">No manual approval, the</text>
+    <text x="230" y="246" text-anchor="middle" fill="#55503f" font-size="21">booking confirms right away.</text>
 
     <!-- card 2 -->
-    <rect x="470" y="40" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(0.4 660 180)"/>
-    <circle cx="526" cy="96" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="526" y="104" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">2</text>
-    <text x="570" y="104" fill="#30291f" font-size="25" font-weight="700">No buffer time</text>
-    <text x="502" y="210" fill="#5c5444" font-size="18">Back-to-back schedule,</text>
-    <text x="502" y="238" fill="#5c5444" font-size="18">no gap between appointments.</text>
+    <rect x="470" y="40" width="380" height="280" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="660" cy="96" r="26" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="660" y="104" text-anchor="middle" fill="#2f7d46" font-size="22" font-weight="700">2</text>
+    <text x="660" y="164" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">No buffer time</text>
+    <text x="660" y="220" text-anchor="middle" fill="#55503f" font-size="21">Back-to-back schedule,</text>
+    <text x="660" y="246" text-anchor="middle" fill="#55503f" font-size="21">no gap between appointments.</text>
 
     <!-- card 3 -->
-    <rect x="900" y="40" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(-0.4 1090 180)"/>
-    <circle cx="956" cy="96" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="956" y="104" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">3</text>
-    <text x="1000" y="90" fill="#30291f" font-size="25" font-weight="700">Cancel via</text>
-    <text x="1000" y="122" fill="#30291f" font-size="25" font-weight="700">WhatsApp</text>
-    <text x="932" y="210" fill="#5c5444" font-size="18">Never through the site,</text>
-    <text x="932" y="238" fill="#5c5444" font-size="18">always with the pro directly.</text>
+    <rect x="900" y="40" width="380" height="280" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="1090" cy="96" r="26" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="1090" y="104" text-anchor="middle" fill="#2f7d46" font-size="22" font-weight="700">3</text>
+    <text x="1090" y="150" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">Cancel via</text>
+    <text x="1090" y="178" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">WhatsApp</text>
+    <text x="1090" y="220" text-anchor="middle" fill="#55503f" font-size="21">Never through the site,</text>
+    <text x="1090" y="246" text-anchor="middle" fill="#55503f" font-size="21">always with the pro directly.</text>
 
     <!-- card 4 -->
-    <rect x="245" y="360" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#30291f" stroke-width="2.5" transform="rotate(0.5 435 500)"/>
-    <circle cx="301" cy="416" r="28" fill="#efe6d1" stroke="#2f7d46" stroke-width="3"/>
-    <text x="301" y="424" text-anchor="middle" fill="#2f7d46" font-size="24" font-weight="700">4</text>
-    <text x="345" y="410" fill="#30291f" font-size="25" font-weight="700">No limit</text>
-    <text x="345" y="442" fill="#30291f" font-size="25" font-weight="700">per client</text>
-    <text x="277" y="530" fill="#5c5444" font-size="18">Anyone can book as many</text>
-    <text x="277" y="558" fill="#5c5444" font-size="18">time slots as they want.</text>
+    <rect x="245" y="360" width="380" height="280" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="435" cy="416" r="26" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="435" y="424" text-anchor="middle" fill="#2f7d46" font-size="22" font-weight="700">4</text>
+    <text x="435" y="470" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">No limit</text>
+    <text x="435" y="498" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">per client</text>
+    <text x="435" y="540" text-anchor="middle" fill="#55503f" font-size="21">Anyone can book as many</text>
+    <text x="435" y="566" text-anchor="middle" fill="#55503f" font-size="21">time slots as they want.</text>
 
     <!-- card 5 -->
-    <rect x="675" y="360" width="380" height="280" rx="18" fill="#f7f1e1" stroke="#b1452f" stroke-width="3" transform="rotate(-0.5 865 500)"/>
-    <circle cx="731" cy="416" r="28" fill="#efe6d1" stroke="#b1452f" stroke-width="3"/>
-    <text x="731" y="424" text-anchor="middle" fill="#b1452f" font-size="24" font-weight="700">5</text>
-    <text x="775" y="424" fill="#30291f" font-size="25" font-weight="700">30% cancellation fee</text>
-    <text x="707" y="530" fill="#5c5444" font-size="18">For cancellations with</text>
-    <text x="707" y="558" fill="#5c5444" font-size="18">less than 24 hours' notice.</text>
+    <rect x="675" y="360" width="380" height="280" rx="16" fill="#faf6ea" stroke="#b1452f" stroke-width="2.5"/>
+    <circle cx="865" cy="416" r="26" fill="#ffffff" stroke="#b1452f" stroke-width="2.5"/>
+    <text x="865" y="424" text-anchor="middle" fill="#b1452f" font-size="22" font-weight="700">5</text>
+    <text x="865" y="470" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">30% cancellation</text>
+    <text x="865" y="498" text-anchor="middle" fill="#201d16" font-size="26" font-weight="700">fee</text>
+    <text x="865" y="540" text-anchor="middle" fill="#55503f" font-size="21">For cancellations with</text>
+    <text x="865" y="566" text-anchor="middle" fill="#55503f" font-size="21">less than 24 hours' notice.</text>
   </g>
 </svg>

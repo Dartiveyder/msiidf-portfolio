@@ -1,62 +1,51 @@
-<svg viewBox="0 0 1700 420" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="chalkDustHoEn" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" result="noise"/>
-      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.025 0"/>
-    </filter>
-  </defs>
-  <rect width="1700" height="420" fill="#1d3a2c"/>
-  <rect width="1700" height="420" filter="url(#chalkDustHoEn)"/>
+<svg viewBox="0 0 1400 460" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="460" fill="#ffffff"/>
 
-  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive" fill="none">
-    <path d="M186,214 Q395,190 604,212" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M604,212 L585,201" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M604,212 L588,224" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-
-    <path d="M636,212 Q845,188 1054,214" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M1054,214 L1035,203" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M1054,214 L1038,226" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-
-    <path d="M1087,212 Q1300,188 1512,214" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M1512,214 L1493,203" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
-    <path d="M1512,214 L1496,226" stroke="#e8e3d0" stroke-width="3" stroke-linecap="round"/>
+  <g stroke="#9a937a" stroke-width="2.5" fill="none">
+    <path d="M340,230 L380,230"/>
+    <path d="M366,218 L382,230 L366,242"/>
+    <path d="M680,230 L720,230"/>
+    <path d="M706,218 L722,230 L706,242"/>
+    <path d="M1020,230 L1060,230"/>
+    <path d="M1006,218 L1022,230 L1006,242"/>
   </g>
 
-  <g font-family="'Comic Sans MS','Segoe Print','Bradley Hand',cursive">
-    <g transform="translate(170,210)">
-      <circle r="17" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-62" text-anchor="middle" fill="#f4efe0" font-size="32" font-weight="700">Client</text>
-      <path d="M-56,-48 Q-18,-44 56,-48" stroke="#6fcf8e" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <text y="-22" text-anchor="middle" fill="#bcd4c2" font-size="20">Initial briefing</text>
-      <text y="52" text-anchor="middle" fill="#f4efe0" font-size="20">Photos, pricing,</text>
-      <text y="78" text-anchor="middle" fill="#f4efe0" font-size="20">maintenance and cancellation</text>
-    </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <!-- card 1: Client -->
+    <rect x="40" y="60" width="300" height="340" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="190" cy="120" r="30" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="190" y="130" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">1</text>
+    <text x="190" y="210" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Client</text>
+    <text x="190" y="240" text-anchor="middle" fill="#716b54" font-size="20">Initial briefing</text>
+    <text x="190" y="282" text-anchor="middle" fill="#55503f" font-size="22">Photos, pricing,</text>
+    <text x="190" y="308" text-anchor="middle" fill="#55503f" font-size="22">maintenance and</text>
+    <text x="190" y="334" text-anchor="middle" fill="#55503f" font-size="22">cancellation</text>
 
-    <g transform="translate(620,210)">
-      <circle r="17" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-62" text-anchor="middle" fill="#f4efe0" font-size="32" font-weight="700">Figma</text>
-      <path d="M-52,-48 Q-18,-44 52,-48" stroke="#6fcf8e" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <text y="-22" text-anchor="middle" fill="#bcd4c2" font-size="20">Original design</text>
-      <text y="52" text-anchor="middle" fill="#f4efe0" font-size="20">Style references,</text>
-      <text y="78" text-anchor="middle" fill="#f4efe0" font-size="20">structure and identity</text>
-    </g>
+    <!-- card 2: Figma -->
+    <rect x="380" y="60" width="300" height="340" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="530" cy="120" r="30" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="530" y="130" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">2</text>
+    <text x="530" y="210" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Figma</text>
+    <text x="530" y="240" text-anchor="middle" fill="#716b54" font-size="20">Original design</text>
+    <text x="530" y="282" text-anchor="middle" fill="#55503f" font-size="22">Style references,</text>
+    <text x="530" y="308" text-anchor="middle" fill="#55503f" font-size="22">structure and identity</text>
 
-    <g transform="translate(1070,210)">
-      <circle r="17" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-62" text-anchor="middle" fill="#f4efe0" font-size="32" font-weight="700">Claude Design</text>
-      <path d="M-118,-48 Q0,-44 118,-48" stroke="#6fcf8e" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <text y="-22" text-anchor="middle" fill="#bcd4c2" font-size="20">Interface refinement</text>
-      <text y="52" text-anchor="middle" fill="#f4efe0" font-size="20">Handoff prepared</text>
-      <text y="78" text-anchor="middle" fill="#f4efe0" font-size="20">for implementation</text>
-    </g>
+    <!-- card 3: Claude Design -->
+    <rect x="720" y="60" width="300" height="340" rx="16" fill="#faf6ea" stroke="#ddd4b8" stroke-width="2"/>
+    <circle cx="870" cy="120" r="30" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="870" y="130" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">3</text>
+    <text x="870" y="210" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Claude Design</text>
+    <text x="870" y="240" text-anchor="middle" fill="#716b54" font-size="20">Interface refinement</text>
+    <text x="870" y="282" text-anchor="middle" fill="#55503f" font-size="22">Handoff prepared</text>
+    <text x="870" y="308" text-anchor="middle" fill="#55503f" font-size="22">for implementation</text>
 
-    <g transform="translate(1530,210)">
-      <circle r="18" fill="#6fcf8e" stroke="#f4efe0" stroke-width="2.5"/>
-      <text y="-62" text-anchor="middle" fill="#f4efe0" font-size="32" font-weight="700">Claude Code</text>
-      <path d="M-90,-48 Q0,-44 90,-48" stroke="#6fcf8e" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <text y="-22" text-anchor="middle" fill="#bcd4c2" font-size="20">Implementation</text>
-      <text y="52" text-anchor="middle" fill="#f4efe0" font-size="20">Real Next.js project,</text>
-      <text y="78" text-anchor="middle" fill="#f4efe0" font-size="20">ready for production</text>
-    </g>
+    <!-- card 4: Claude Code -->
+    <rect x="1060" y="60" width="300" height="340" rx="16" fill="#faf6ea" stroke="#2f7d46" stroke-width="2.5"/>
+    <circle cx="1210" cy="120" r="30" fill="#ffffff" stroke="#2f7d46" stroke-width="2.5"/>
+    <text x="1210" y="130" text-anchor="middle" fill="#2f7d46" font-size="26" font-weight="700">4</text>
+    <text x="1210" y="210" text-anchor="middle" fill="#201d16" font-size="28" font-weight="700">Claude Code</text>
+    <text x="1210" y="240" text-anchor="middle" fill="#716b54" font-size="20">Implementation</text>
+    <text x="1210" y="282" text-anchor="middle" fill="#55503f" font-size="22">Real Next.js project,</text>
+    <text x="1210" y="308" text-anchor="middle" fill="#55503f" font-size="22">ready for production</text>
   </g>
 </svg>
